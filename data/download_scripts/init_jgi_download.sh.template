@@ -1,0 +1,3 @@
+curl 'https://signon-old.jgi.doe.gov/signon/create' --data-urlencode 'login=EMAILADDRESS' --data-urlencode 'password=JGIPASSWORD' -c cookies > /dev/null 
+
+curl 'https://genome.jgi.doe.gov/portal/ext-api/downloads/get-directory?organism=Genofbecologies&organizedByFileType=true' -b cookies > Genofbecologies.xml
