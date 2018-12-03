@@ -7,9 +7,9 @@ use warnings;
 my %stats;
 
 my $dir = shift || 'genomes';
-my %cols = map { $_ => 1 }  qw(zz_BUSCO_Complete zz_BUSCO_Single
-    zz_BUSCO_Duplicate zz_BUSCO_Fragmented
-    zz_BUSCO_Missing zz_BUSCO_NumGenes);
+my %cols = map { $_ => 1 }  qw(z1_BUSCO_Complete z2_BUSCO_Single
+    z3_BUSCO_Duplicate z4_BUSCO_Fragmented
+    z5_BUSCO_Missing z6_BUSCO_NumGenes);
 
 opendir(DIR,$dir) || die $!;
 
@@ -37,12 +37,12 @@ foreach my $file ( readdir(DIR) ) {
      open(my $fh => $busco_file) || die $!;
      while(<$fh>) {	 
 	 if (/^\s+C:(\d+\.\d+)\%\[S:(\d+\.\d+)%,D:(\d+\.\d+)%\],F:(\d+\.\d+)%,M:(\d+\.\d+)%,n:(\d+)/ ) {
-	     $stats{$stem}->{"zz_BUSCO_Complete"} = $1;
-	     $stats{$stem}->{"zz_BUSCO_Single"} = $2;
-	     $stats{$stem}->{"zz_BUSCO_Duplicate"} = $3;
-	     $stats{$stem}->{"zz_BUSCO_Fragmented"} = $4;
-	     $stats{$stem}->{"zz_BUSCO_Missing"} = $5;
-	     $stats{$stem}->{"zz_BUSCO_NumGenes"} = $6;
+	     $stats{$stem}->{"z1_BUSCO_Complete"} = $1;
+	     $stats{$stem}->{"z2_BUSCO_Single"} = $2;
+	     $stats{$stem}->{"z3_BUSCO_Duplicate"} = $3;
+	     $stats{$stem}->{"z4_BUSCO_Fragmented"} = $4;
+	     $stats{$stem}->{"z5_BUSCO_Missing"} = $5;
+	     $stats{$stem}->{"z6_BUSCO_NumGenes"} = $6;
 	 }
      }
 
