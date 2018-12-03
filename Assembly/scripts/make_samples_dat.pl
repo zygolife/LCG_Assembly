@@ -29,7 +29,7 @@ for my $file (readdir(DAT)) {
 		my $sp = $row[5];
 		$sp =~ s/\s+/_/g;
 		next if $skip{$sp};
-		print join("\t",$sp,$names{$row[4]} || die("cannot find group for $row[4]")),"\n";
+		print join("\t",$sp,$names{$row[4]} || die("cannot find group for $row[4]"),$row[4]),"\n";
 	}
 }
 
