@@ -43,18 +43,21 @@ foreach my $file ( readdir(DIR) ) {
 	     $stats{$stem}->{"z4_BUSCO_Fragmented"} = $4;
 	     $stats{$stem}->{"z5_BUSCO_Missing"} = $5;
 	     $stats{$stem}->{"z6_BUSCO_NumGenes"} = $6;
-	 }
+	 } 
      }
 
  } else {
-     #warn("Cannot find $busco_file");
+    warn("Cannot find $busco_file");
  }
 }
 
 
 my @cols = sort keys %cols;
-
-print join("\t", qw(SampleID), @cols), "\n";
+my @cols2 = sort keys %cols;
+for my $m ( @cols2 ) {
+	$m =~ s/^z\d+_//;
+}
+print join("\t", qw(SampleID), @cols2), "\n";
 foreach my $sp ( sort keys %stats ) {    
 	print join("\t", $sp, map { $stats{$sp}->{$_} || '-' } @cols), "\n";
 }
