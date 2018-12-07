@@ -22,12 +22,12 @@ fi
 BASE=Conidiobolus_pumilus_ARSEF_6383
 ASMFILE=$ASM/${BASE}.masurca.fasta
 WORKDIR=working_AAFTF
-VECCLEAN=$ASM/${BASE}.masurca_vecscreen.fasta
-PURGE=$ASM/${BASE}.masurca_sourpurge.fasta
-CLEANDUP=$ASM/${BASE}.masurca_rmdup.fasta
-PILON=$ASM/${BASE}.masurca_pilon.fasta
-SORTED=$ASM/${BASE}.masurca_sorted.fasta
-STATS=$ASM/${BASE}.masurca_sorted.stats.txt
+VECCLEAN=$ASM/${BASE}.masurca.vecscreen.fasta
+PURGE=$ASM/${BASE}.masurca.sourpurge.fasta
+CLEANDUP=$ASM/${BASE}.masurca.rmdup.fasta
+PILON=$ASM/${BASE}.masurca.pilon.fasta
+SORTED=$ASM/${BASE}.masurca.sorted.fasta
+STATS=$ASM/${BASE}.masurca.sorted.stats.txt
 
 LEFT=$WORKDIR/${BASE}_filtered_1.fastq.gz
 RIGHT=$WORKDIR/${BASE}_filtered_2.fastq.gz
@@ -44,12 +44,12 @@ if [ ! -f $PURGE ]; then
     AAFTF sourpurge -i $VECCLEAN -o $PURGE -c $CPU --phylum $PHYLUM --left $LEFT  --right $RIGHT
 fi
 
-if [ ! -f $CLEANDUP ]; then
-   AAFTF rmdup -i $PURGE -o $CLEANDUP -c $CPU -m $MIN_LEN
-fi
+#if [ ! -f $CLEANDUP ]; then
+#   AAFTF rmdup -i $PURGE -o $CLEANDUP -c $CPU -m $MIN_LEN
+#fi
 
 if [ ! -f $PILON ]; then
-   AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT 
+   AAFTF pilon -i $PURGE -o $PILON -c $CPU --left $LEFT --right $RIGHT 
 fi
 
 if [ ! -f $PILON ]; then

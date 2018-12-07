@@ -5,7 +5,7 @@ my %names = ( Entomophthoromycotina => 'Zoopagomycota',
 		'Mortirellomycotina' => 'Mucoromycota',
 		'Mucoromycotina'       => 'Mucoromycota');
 use strict;
-my %skip;
+my (%seen,%skip);
 if ( -f "ignore_samples.txt" ) {
     open(my $in => "ignore_samples.txt") || die $!;
     while(<$in>) {
@@ -16,7 +16,7 @@ if ( -f "ignore_samples.txt" ) {
 }
 opendir(DAT,"data") || die $!;
 for my $file (readdir(DAT)) {
-	next unless $file =~ /^1978\S+\.csv$/;
+	next unless $file =~ /^1978\S+\.csv$/ || $file =~ /^UCR\.csv$/;
 	open(my $in => "data/$file") || die $!;
 	my $header = <$in>;
 	while( <$in>) { 
@@ -29,6 +29,7 @@ for my $file (readdir(DAT)) {
 		my $sp = $row[5];
 		$sp =~ s/\s+/_/g;
 		next if $skip{$sp};
+		next if $seen{$sp}++;
 		print join("\t",$sp,$names{$row[4]} || die("cannot find group for $row[4]"),$row[4]),"\n";
 	}
 }

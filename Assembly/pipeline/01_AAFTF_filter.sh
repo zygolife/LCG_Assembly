@@ -46,7 +46,7 @@ RIGHT=$WORKDIR/${BASE}_filtered_2.fastq.gz
 mkdir -p $WORKDIR
 
 echo "$BASE"
-if [ ! -f $ASMFILE ]; then    
+if [[ ! -f $ASMFILE || ! -f $SORTED ]]; then    
     if [ ! -f $LEFT ]; then
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
 	if [ ! -f $LEFTTRIM ]; then
