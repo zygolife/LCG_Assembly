@@ -1,0 +1,130 @@
+# Insert information file created by cmalign.
+# This file includes 2+<nseq> non-'#' pre-fixed lines per model used for alignment,
+# where <nseq> is the number of sequences in the target file.
+# The first non-'#' prefixed line per model includes 2 tokens, separated by a single space (' '):
+# The first token is the model name and the second is the consensus length of the model (<clen>).
+# The following <nseq> lines include (4+3*<n>) whitespace delimited tokens per line.
+# The format for these <nseq> lines is:
+#   <seqname> <seqlen> <spos> <epos> <c_1> <u_1> <i_1> <c_2> <u_2> <i_2> .... <c_x> <u_x> <i_x> .... <c_n> <u_n> <i_n>
+#   indicating <seqname> has >= 1 inserted residues after <n> different consensus positions,
+#   <seqname> is the name of the sequence
+#   <seqlen>  is the unaligned length of the sequence
+#   <spos>    is the first (5'-most) consensus position filled by a nongap for this sequence (-1 if 0 nongap consensus posns)
+#   <epos>    is the final (3'-most) consensus position filled by a nongap for this sequence (-1 if 0 nongap consensus posns)
+#   <seqlen>  is the unaligned length of the sequence
+#   <c_x> is a consensus position (between 0 and <clen>; if 0: inserts before 1st consensus posn)
+#   <u_x> is the *unaligned* position (b/t 1 and <seqlen>) in <seqname> of the first inserted residue after <c_x>.
+#   <i_x> is the number of inserted residues after position <c_x> for <seqname>.
+# Lines for sequences with 0 inserted residues will include only <seqname> <seqlen> <spos> <epos>.
+# The final non-'#' prefixed line per model includes only '//', indicating the end of info for a model.
+#
+eukarya 1881
+Mucor_pusillus_NRRL_A-13674_NODE_102 218 1662 1878  1745 85 1  1796 135 2
+Circinella_muscae_NRRL_1364_NODE_4574 326 939 1268  1189 247 1
+Mucor_hiemalis_NRRL_29268_NODE_155.1 366 1514 1881
+Absidia_cylindrospora_NRRL_1343_NODE_1747 646 1246 1878  1436 189 20  1745 515 1
+Rhizopus_stolonifer_NRRL_66458_NODE_132 236 1646 1881  1745 101 1  1796 151 1
+Absidia_cylindrospora_var._nigra_NRRL_3031_NODE_2882 514 1378 1878  1436 55 21  1745 383 1
+Mucor_mucedo_NRRL_A-11121_NODE_437 932 938 1879
+Absidia_corymbifera_Cohn_Saccardo_Trotter_NRRL_1334_NODE_490 323 939 1264  1017 80 1  1189 248 1
+Syncephalastrum_verruculosum_RSA_2127_NODE_784 539 1360 1881  1414 52 3  1436 74 18  1470 123 1  1568 222 3  1745 402 2  1793 451 1
+Syncephalastrum_verruculosum_RSA_2127_NODE_784.1 322 941 1268  1017 78 1  1189 243 1
+Lichtheimia_ramosa_NRRL_1335_NODE_1170 352 939 1293  1017 80 1  1189 248 1
+Thamnostylum_piriforme_RSA_251_NODE_2117 194 1685 1879  1745 62 1  1770 87 1  1790 107 1
+Absidia_cylindrospora_NRRL_3069_NODE_4800 225 1653 1878  1745 94 1
+Absidia_hyalospora_NRRL_1330_NODE_1049 248 1652 1879  1745 95 1  1766 115 19  1778 145 3  1805 174 1
+Phycomyces_theobromatus_NRRL_1467_NODE_538 631 1261 1881  1436 174 12  1745 493 1  1752 501 1  1766 511 8
+Syncephalastrum_sp._NRRL_1505_NODE_64 359 1525 1879  1568 45 2  1745 224 2  1793 273 1
+Rhizopus_stolonifer_NRRL_1519_NODE_127 198 1684 1881  1745 63 1  1796 113 1
+Mucor_recurvus_var._indicus_NRRL_3247_NODE_15085 182 939 1119  1113 176 1
+Mucor_pusillus_Lindt_NRRL_3470_NODE_5240 274 939 1216  1017 80 1
+Mucor_pusillus_Lindt_NRRL_3470_NODE_4691 218 1662 1878  1745 85 1  1796 135 2
+Mucor_pusillus_Lindt_NRRL_3470_NODE_24109 237 1344 1567  1436 91 21
+Dichotomocladium_elegans_NRRL_2754_NODE_3210 252 1364 1608  1436 71 13
+Dichotomocladium_elegans_NRRL_2754_NODE_830 136 942 1076  1017 77 1
+Mucor_pusillus_Lindt_NRRL_A-16035_NODE_453 278 939 1220  1017 80 1
+Mucor_pusillus_Lindt_NRRL_A-16035_NODE_257 235 1645 1878  1745 102 1  1796 152 2
+Rhizopus_nigricans_Ehrenberg_NRRL_1477_NODE_29 196 1686 1881  1745 61 1  1796 111 1
+Mucor_pusillus_NRRL_A-13674_NODE_56 278 939 1220  1017 80 1
+Mucor_pusillus_NRRL_A-13674_NODE_848 317 1249 1552  1436 186 21
+Absidia_dubia_NRRL_1322_NODE_4094 370 1336 1690  1436 99 20  1568 248 1  1654 335 1
+Absidia_dubia_NRRL_1322_NODE_4147 258 1620 1878  1745 127 1
+Absidia_dubia_NRRL_1322_NODE_2550 426 8 440  128 122 1  180 174 1  233 222 1  238 227 1  325 311 1
+Mucor_aligarensis_NRRL_3099_NODE_73 114 1612 1725
+Circinella_mucoroides_NRRL_1354_NODE_1402 324 939 1266  1189 247 1
+Absidia_coerulea_NRRL_1314_NODE_4778 226 1337 1548  1436 98 20
+Absidia_corymbifera_NRRL_2982_NODE_1376 219 939 1161  1017 80 1
+Absidia_corymbifera_NRRL_2982_NODE_1376.1 354 1374 1714  1436 61 19  1568 208 2
+Circinella_minor_CBS_143.56_NODE_21866 271 939 1213  1189 247 1
+Circinella_minor_CBS_143.56_NODE_18319 194 1687 1881  1745 60 1
+Mucor_lamprosporus_NRRL_6040_NODE_3400 231 1648 1879  1745 99 1  1796 149 2  1847 200 1
+Mucor_hiemalis_NRRL_29268_NODE_155 293 939 1231  1039 102 1
+Mucor_hiemalis_NRRL_29268_NODE_155.2 242 1239 1489
+Mucor_indicus_Lendner_NRRL_13468_NODE_2570 218 1660 1878  1745 87 1
+Lichtheimia_ramosa_NRRL_3208_NODE_1966 216 939 1158  1017 80 1
+Lichtheimia_ramosa_NRRL_3208_NODE_4196 248 1653 1879  1745 94 1  1766 114 2  1778 127 15  1782 142 8  1794 162 1  1805 174 1
+Mortierella_chlamydospora_NRRL_2769_NODE_6995 377 1004 1394  1139 133 1
+Mortierella_chlamydospora_NRRL_2769_NODE_3262 142 1066 1224  1084 20 10
+Thamnostylum_piriforme_NRRL_A-21589_NODE_1601 530 1337 1879  1436 98 20  1590 267 12  1596 284 1  1745 398 1  1770 423 1  1790 443 1
+Thamnostylum_piriforme_NRRL_A-21589_NODE_1228 300 940 1243  1189 246 1
+Mortierella_chlamydospora_AD033_NODE_2997 213 1004 1220  1139 133 1
+Mortierella_chlamydospora_AD033_NODE_6464 184 1201 1394
+Absidia_coerulea_NRRL_5926_NODE_4930 164 956 1118  1017 63 1
+Mortierella_hyalina_JES_103_NODE_4426 177 942 1118
+Mortierella_hyalina_JES_103_NODE_5136 205 1673 1879
+Circinella_angarensis_NRRL_2410_NODE_2252.1 280 939 1222  1189 247 1
+Circinella_angarensis_NRRL_2410_NODE_2243 244 1336 1566  1436 99 21
+Thamnostylum_repens_RSA_459+_NODE_1512 465 572 1239  654 84 1  693 118 21  769 159 1  804 174 8  843 221 1  1039 269 1  1189 415 1
+Thamnostylum_repens_RSA_459+_NODE_2577 180 939 1118
+Absidia_cylindrospora_var._cylindrospora_NRRL_2796_NODE_7272 216 1662 1878  1745 85 1
+Absidia_coerulea_NRRL_1313_NODE_1809 238 1340 1563  1436 95 20
+Mucor_lamprosporus_NRRL_6037_NODE_3449 231 1648 1879  1745 99 1  1796 149 2  1847 200 1
+Lichtheimia_corymbifera_NRRL_6379_NODE_3344 231 1348 1566  1436 87 19
+Zygorhynchus_macrocarpus_NRRL_2663_NODE_3106 147 1577 1723
+Circinella_muscae_NRRL_1367_NODE_3280 278 939 1220  1189 247 1
+Mortierella_ambigua_BC1065_NODE_3446 211 1083 1291  1161 75 1  1189 104 1  1206 122 1  1229 146 1  1231 149 1  1238 157 1  1269 189 1
+Absidia_blakesleeana_NRRL_1301_NODE_1222 181 939 1118  1017 80 1  1087 151 1
+Circinella_chinensis_CBS_150.53_NODE_1940 289 939 1231  1189 247 1
+Absidia_cylindrospora_NRRL_1343_NODE_2087 336 314 650  325 13 1
+Absidia_cylindrospora_NRRL_1343_NODE_2087.1 208 940 1151  1017 79 1
+Absidia_cylindrospora_NRRL_1343_NODE_3723 144 942 1085
+Rhizopus_circinans_NRRL_2913_NODE_5096 211 1202 1412
+Absidia_californica_NRRL_2967_NODE_2152 365 1336 1686  1436 99 20
+Absidia_californica_NRRL_2967_NODE_1184 195 1683 1878  1745 64 1
+Absidia_cylindrospora_NRRL_1341_NODE_650 246 1451 1696
+Mucor_mucedo_NRRL_A-11121_NODE_67 351 1039 1393  1203 165 2
+Thamnostylum_nigricans_RSA_1406_NODE_1808 174 939 1112
+Thamnostylum_nigricans_RSA_1406_NODE_530 269 1458 1724  1682 224 1  1713 256 3
+Thamnostylum_nigricans_RSA_1406_NODE_1090 172 1707 1879  1745 40 1  1768 63 1  1790 85 1
+Absidia_californica_NRRL_2709_NODE_1358 174 1704 1878  1745 43 1
+Fennellomyces_verticellatus_RSA_2446_NODE_1538 277 940 1220  1189 246 1
+Absidia_corymbifera_Cohn_Saccardo_Trotter_NRRL_1334_NODE_490.1 407 1336 1729  1436 99 19  1568 246 1
+Actinomucor_elegans_NRRL_1706_NODE_10838 271 944 1215
+Syncephalastrum_verruculosum_RSA_2127_NODE_784.2 621 8 644  27 21 1  172 161 1  180 170 1  196 182 1  227 213 4  325 303 2
+Rhizopus_arrhizus_NRRL_66595_NODE_4470 269 939 1211
+Absidia_zychae_NRRL_A-23515_NODE_416 196 1682 1879
+Lichtheimia_ramosa_NRRL_1335_NODE_1170.1 218 1683 1879  1745 64 1  1766 84 2  1778 97 15  1782 112 8  1794 132 1  1805 144 1
+Rhizopus_arrhizus_NRRL_1470_NODE_10105 162 1055 1220  1189 131 1
+Rhizopus_arrhizus_NRRL_1470_NODE_7911 243 1337 1566  1436 98 20
+Mucor_hiemalis_NRRL_A-28298_NODE_674 197 1194 1395
+Absidia_cylindrospora_NRRL_3069_NODE_5684 220 1504 1723
+Absidia_cylindrospora_NRRL_3069_NODE_2736 153 968 1118  979 13 1  980 14 1  1017 52 1
+Absidia_hyalospora_NRRL_1330_NODE_1128 268 939 1209  1017 80 1  1189 248 1
+Absidia_hyalospora_NRRL_1330_NODE_2473 360 1333 1679  1436 102 19  1568 249 2
+Helicostylum_lucknowense_NRRL_2892_NODE_3125 178 941 1118
+Helicostylum_lucknowense_NRRL_2892_NODE_1983 217 1662 1879  1680 20 3  1721 61 2  1745 85 1  1760 101 1  1786 123 1  1788 125 2  1839 178 1
+Circinella_muscae_NRRL_1360_NODE_23828 257 939 1199  1189 247 1
+Mortierella_sp_AD010_NODE_2889 218 1184 1398  1335 153 3
+Mortierella_sp_AD010_NODE_132.1 309 1065 1392  1139 72 1  1290 210 1
+Mortierella_sp_AD010_NODE_139 160 1038 1220
+Absidia_coerulea_NRRL_A-26290_NODE_1830 143 312 453  325 15 1
+Absidia_coerulea_NRRL_A-26290_NODE_4037 222 1342 1549  1436 93 20
+Mucor_lamprosporus_NRRL_6048_NODE_2841 217 1662 1879  1745 85 1  1796 135 2  1847 186 1
+Rhizopus_arrhizus_NRRL_66564_NODE_3300 72 1652 1723
+Mortierella_ovata_NRRL_13128_NODE_713 277 939 1213  1124 187 1  1132 196 2
+Mortierella_sp_AD011_NODE_1977 218 1184 1398  1335 153 3
+Mortierella_sp_AD011_NODE_156 160 1038 1220
+Syncephalastrum_sp._NRRL_1505_NODE_274 250 941 1196  1017 78 1  1189 243 1
+Syncephalastrum_sp._NRRL_1505_NODE_420 436 8 457  172 161 1  189 178 1  193 182 1  227 214 4  325 304 2
+Syncephalastrum_sp._NRRL_1505_NODE_274.1 217 1362 1566  1414 50 3  1436 72 18  1470 121 1
+//

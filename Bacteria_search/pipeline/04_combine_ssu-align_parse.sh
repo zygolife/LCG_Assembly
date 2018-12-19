@@ -6,14 +6,18 @@ module load python/3
 module load RDPTools
 module load ssu-align
 module load hmmer/3
+module load fasttree
+
+BARRNAPDIR=parsed_seqs/barrnap
+mkdir -p $BARNAPDIR
 
 ./scripts/combine_barrnap_seqs.py
 
-pushd parsed_seqs/barrnap
+pushd $BARRNAPDIR
 java -jar $RDP_JAR_PATH classify -c 0.5 -o meta_16S_rRNA.classify.tab meta_16S_rRNA.fasta
 java -jar $RDP_JAR_PATH classify -c 0.5 -o spades_16S_rRNA.classify.tab spades_16S_rRNA.fasta
 
-ssu-align meta_16S_rRNA.fasta barrnap/meta_16S_rRNA
+ssu-align meta_16S_rRNA.fasta meta_16S_rRNA
 ssu-align spades_16S_rRNA.fasta spades_16S_rRNA
 
 pushd meta_16S_rRNA
@@ -30,5 +34,9 @@ popd
 
 popd
 
-./scripts/add_taxinfo.py
-
+./scripts/add_taxinfo.py $BARRNAPDIR
+for file in $BARRNAPDIR/*fasaln
+do
+	outtree=$(basename $file .fasaln).FT.tre
+	FastTreeMP -gamma -gtr -nt < $file > $BARRNAPDIR/$outtree
+done

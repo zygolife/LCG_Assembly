@@ -1,0 +1,196 @@
+# Insert information file created by cmalign.
+# This file includes 2+<nseq> non-'#' pre-fixed lines per model used for alignment,
+# where <nseq> is the number of sequences in the target file.
+# The first non-'#' prefixed line per model includes 2 tokens, separated by a single space (' '):
+# The first token is the model name and the second is the consensus length of the model (<clen>).
+# The following <nseq> lines include (4+3*<n>) whitespace delimited tokens per line.
+# The format for these <nseq> lines is:
+#   <seqname> <seqlen> <spos> <epos> <c_1> <u_1> <i_1> <c_2> <u_2> <i_2> .... <c_x> <u_x> <i_x> .... <c_n> <u_n> <i_n>
+#   indicating <seqname> has >= 1 inserted residues after <n> different consensus positions,
+#   <seqname> is the name of the sequence
+#   <seqlen>  is the unaligned length of the sequence
+#   <spos>    is the first (5'-most) consensus position filled by a nongap for this sequence (-1 if 0 nongap consensus posns)
+#   <epos>    is the final (3'-most) consensus position filled by a nongap for this sequence (-1 if 0 nongap consensus posns)
+#   <seqlen>  is the unaligned length of the sequence
+#   <c_x> is a consensus position (between 0 and <clen>; if 0: inserts before 1st consensus posn)
+#   <u_x> is the *unaligned* position (b/t 1 and <seqlen>) in <seqname> of the first inserted residue after <c_x>.
+#   <i_x> is the number of inserted residues after position <c_x> for <seqname>.
+# Lines for sequences with 0 inserted residues will include only <seqname> <seqlen> <spos> <epos>.
+# The final non-'#' prefixed line per model includes only '//', indicating the end of info for a model.
+#
+bacteria 1582
+Mucor_pusillus_Lindt_NRRL_3470_NODE_12 806 535 1410  621 88 2  622 91 1  658 121 3  859 324 5  872 341 2  890 356 4  957 420 1  958 421 7  1055 491 3  1123 549 2  1190 593 3
+Rhizopus_arrhizus_NRRL_2582_NODE_61 1230 328 1580  869 538 1  1051 719 1  1060 728 1
+Rhizopus_arrhizus_NRRL_2582_NODE_4 373 7 403  73 68 1
+Rhizopus_microsporus_NRRL_5554_NODE_2 1529 7 1580  73 68 1  225 196 1  227 198 1  231 203 1  233 205 1  869 837 1  1051 1018 1  1060 1027 1
+Mucor_pusillus_Lindt_NRRL_A-16035_NODE_301 548 535 1123  621 88 2  622 91 1  658 121 3  859 324 5  872 341 2  890 356 4  957 420 1  958 421 7  1055 482 3
+Mucor_pusillus_NRRL_A-13674_NODE_259 548 535 1123  621 88 2  622 91 1  658 121 3  859 324 5  872 341 2  890 356 4  957 420 1  958 421 7  1055 482 3
+Absidia_dubia_NRRL_1322_NODE_4288 396 577 975
+Absidia_dubia_NRRL_1322_NODE_6741 250 722 977
+Mucor_griseo-ochraceus_var._minuta_NRRL_3246_NODE_3307 332 770 1105  1028 257 1  1062 289 1
+Mucor_aligarensis_NRRL_3099_NODE_2746 623 402 1059  1023 589 1
+Circinella_mucoroides_NRRL_1354_NODE_1711 408 489 909
+Rhizopus_microsporus_NRRL_5558_NODE_1146 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Thamnostylum_repens_Tieghem_Upadhyay_NRRL_6240_NODE_98 1527 7 1580  73 68 1  98 86 1  869 835 1  1051 1016 1  1060 1025 1
+Thamnostylum_repens_Tieghem_Upadhyay_NRRL_6240_NODE_123 67 1513 1579
+Thamnostylum_repens_Tieghem_Upadhyay_NRRL_6240_NODE_319 67 1513 1579
+Rhizopus_microsporus_NRRL_5553_NODE_1215 1529 7 1580  73 68 1  225 196 1  227 198 1  231 203 1  233 205 1  869 837 1  1051 1018 1  1060 1027 1
+Rhizopus_microsporus_NRRL_5547_NODE_1246 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Mortierella_sp_GBA39_NODE_104 339 6 352  75 70 1  98 94 1
+Mucor_pakistanicus_NRRL_6589_NODE_38 1129 132 1289
+Mortierella_hyalina_JES_103_NODE_8 1541 7 1580  73 68 1  98 92 1
+Mortierella_hyalina_JES_103_NODE_5715 1236 235 1484  869 631 1  1023 785 1  1028 790 1  1062 822 1  1067 827 1  1320 1073 1
+Mortierella_hyalina_JES_103_NODE_69 1510 3 1569  48 41 1  139 116 1  201 151 1  249 178 1  357 286 6  365 294 3  366 298 1  432 361 2  456 387 1  504 410 2  621 529 1  658 564 1  743 650 1  869 769 1  1045 928 1  1055 933 56  1199 1111 1  1204 1117 6  1475 1384 1  1485 1391 15  1490 1411 22  1498 1438 2
+Mortierella_hyalina_JES_103_NODE_9470 215 1362 1580
+Mortierella_hyalina_JES_103_NODE_10549 265 815 1088
+Mortierella_hyalina_JES_103_NODE_10435 238 238 474  439 203 1
+Mortierella_hyalina_JES_103_NODE_4 265 6 278  75 70 1  98 94 1
+Mortierella_hyalina_JES_103_NODE_16653 158 1409 1567
+Mortierella_hyalina_JES_103_NODE_16656 158 1409 1567
+Mortierella_hyalina_JES_103_NODE_20448 87 1494 1580
+Mortierella_hyalina_JES_103_NODE_22165 61 1519 1579
+Mortierella_hyalina_JES_103_NODE_20563 61 1519 1579
+Mortierella_hyalina_JES_103_NODE_20798 57 1523 1579
+Mortierella_hyalina_JES_103_NODE_16634 57 1523 1579
+Circinella_angarensis_NRRL_2410_NODE_2628 741 7 766  73 68 1  98 88 1  303 279 3
+Circinella_angarensis_NRRL_2410_NODE_4099 305 102 421
+Circinella_angarensis_NRRL_2410_NODE_5111 249 997 1256  1028 32 1  1062 64 1
+Circinella_angarensis_NRRL_2410_NODE_5217 241 702 948
+Rhizopus_microsporus_NRRL_5548_NODE_1176 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Chaetocladium_brefeldii_NRRL_1350_NODE_36 1541 7 1580  73 68 1  98 92 1
+Mucor_fragilis_NRRL_2569_NODE_264 244 1227 1472
+Mucor_fragilis_NRRL_2569_NODE_260 229 821 1052
+Zygorhynchus_macrocarpus_NRRL_2663_NODE_8251 781 584 1379  863 276 1  869 283 1  1031 442 1  1032 443 1  1046 458 1  1049 461 1
+Zygorhynchus_macrocarpus_NRRL_2663_NODE_13756 296 500 797
+Zygorhynchus_macrocarpus_NRRL_2663_NODE_16308 249 1236 1484
+Rhizopus_oryzae_NRRL_62023_NODE_179 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Absidia_coerulea_NRRL_A-9483_NODE_5066 465 836 1304  1163 325 1
+Absidia_coerulea_NRRL_A-9483_NODE_5725 235 1346 1580
+Pilaira_caucasica_CBS_523.68_NODE_1319 1532 7 1579  75 66 1  97 89 1
+Pilaira_caucasica_CBS_523.68_NODE_3924 810 7 842  73 68 1  98 86 1  499 468 1
+Mucor_genevensis_NRRL_3101_NODE_6168 389 501 892
+Syzygites_sp._MES_3091_NODE_3882 274 1011 1295
+Syzygites_sp._MES_3091_NODE_4165 240 710 951  869 158 1
+Apophysomyces_sp._BC105_NODE_80 1527 7 1580  73 68 1  1051 1016 1  1060 1025 1
+Circinella_chinensis_NRRL_2415_NODE_2131 1335 6 1392  1163 1107 1
+Pirella_circinans_var._volvogradensis_RSA_2566_NODE_3463 1404 145 1580
+Rhizopus_sp._NRRL_A-11791_NODE_1052 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Thamnostylum_nigricans_RSA_1406_NODE_1541 323 927 1258
+Thamnostylum_nigricans_RSA_1406_NODE_1483 329 603 933
+Thamnostylum_nigricans_RSA_1406_NODE_1541.1 259 1318 1579
+Thamnostylum_nigricans_RSA_1406_NODE_1483.1 223 99 339
+Rhizopus_microsporus_NRRL_13129_NODE_1106 1529 7 1580  73 68 1  225 196 1  227 198 1  231 203 1  233 205 1  869 837 1  1051 1018 1  1060 1027 1
+Benjaminiella_youngii_IMI_325629_NODE_1496 1532 7 1579  75 66 1  97 89 1
+Benjaminiella_youngii_IMI_325629_NODE_4809 1089 7 1124  73 68 1  98 86 1  499 468 1  1051 1016 1  1060 1025 1
+Benjaminiella_youngii_IMI_325629_NODE_11162 295 1071 1379
+Benjaminiella_youngii_IMI_325629_NODE_8690 239 1337 1579
+Mucor_petrinsularis_var._ovalisporus_NRRL_2536_NODE_2857 754 25 795  73 50 1  98 74 1
+Mucor_petrinsularis_var._ovalisporus_NRRL_2536_NODE_3528 428 997 1434  1028 32 1  1062 64 1
+Mucor_petrinsularis_var._ovalisporus_NRRL_2536_NODE_5245 227 536 762
+Actinomucor_elegans_NRRL_1706_NODE_4410 1067 500 1580
+Actinomucor_elegans_NRRL_1706_NODE_272 547 7 572  73 68 1  98 92 1
+Syncephalastrum_verruculosum_RSA_2127_NODE_687 1532 7 1579  75 66 1  97 89 1
+Syncephalastrum_verruculosum_RSA_2127_NODE_1147 1089 7 1124  73 68 1  98 86 1  499 468 1  1051 1016 1  1060 1025 1
+Syncephalastrum_verruculosum_RSA_2127_NODE_3734 617 335 955
+Syncephalastrum_verruculosum_RSA_2127_NODE_1050 239 1337 1579
+Mucor_foenicola_NRRL_A-10991_NODE_18792 646 103 748  225 123 1  233 132 1
+Mucor_foenicola_NRRL_A-10991_NODE_33876 305 1186 1495  1208 23 1
+Mucor_foenicola_NRRL_A-10991_NODE_33791 231 1079 1316  1281 196 1
+Rhizopus_liquefaciens_NRRL_1514_NODE_12 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Mucor_circinelloides_f._lusitanicus_NRRL_3629_NODE_59 223 1037 1266  1049 14 1
+Mucor_ramosissimus_NRRL_3042_NODE_11710 335 750 1089  1028 276 1  1062 308 1
+Mucor_ramosissimus_NRRL_3042_NODE_13983 250 439 714
+Rhizopus_sp._NRRL_2934_NODE_1327 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Apophysomyces_sp._BC1034_NODE_1363 1527 7 1580  73 68 1  1051 1016 1  1060 1025 1
+Rhizopus_arrhizus_NRRL_A-11376_NODE_94 1558 6 1580  75 71 8  97 93 7  98 101 1
+Rhizopus_arrhizus_NRRL_A-11376_NODE_228 1529 7 1580  73 68 1  225 196 1  227 198 1  231 203 1  233 205 1  869 837 1  1051 1018 1  1060 1027 1
+Circinella_simplex_CBS_142.35_NODE_2093 1527 7 1580  73 68 1  98 86 1  499 468 1  1051 1016 1  1060 1025 1
+Circinella_simplex_CBS_142.35_NODE_3936 1039 335 1387
+Circinella_simplex_CBS_142.35_NODE_5052 733 364 1124  1028 635 2  1049 658 1
+Circinella_simplex_CBS_142.35_NODE_6203 501 335 837
+Circinella_simplex_CBS_142.35_NODE_7799 329 789 1120
+Circinella_simplex_CBS_142.35_NODE_3561 366 7 382  192 166 1  198 173 25
+Circinella_simplex_CBS_142.35_NODE_2087 357 7 381  73 68 1  98 92 1
+Circinella_simplex_CBS_142.35_NODE_8653 243 1333 1579
+Circinella_simplex_CBS_142.35_NODE_12647 190 1198 1387
+Circinella_simplex_CBS_142.35_NODE_2552 175 1403 1580
+Circinella_simplex_CBS_142.35_NODE_15474 124 1333 1456
+Circinella_simplex_CBS_142.35_NODE_12105 53 1527 1579
+Mucor_hiemalis_f._hiemalis_NRRL_3624_NODE_3525 217 718 938
+Rhizopus_microsporus_NRRL_5546_NODE_1182 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Rhizopus_microsporus_NRRL_5550_NODE_1172 1527 7 1580  73 68 1  869 835 1  1051 1016 1  1060 1025 1
+Rhizopus_arrhizus_NRRL_A-13860_NODE_6866 251 1052 1311
+Phycomyces_theobromatus_NRRL_1467_NODE_5762 273 697 971
+Modicella_reniformis_MES-2146_NODE_21 1039 6 1090  743 701 3  883 839 1  1028 984 1  1055 1006 4
+Modicella_reniformis_MES-2146_NODE_61 764 7 811  201 171 1  743 696 2
+Modicella_reniformis_MES-2146_NODE_10637 523 1089 1569  1160 73 1  1163 75 1  1169 82 13  1173 95 2  1216 136 1  1299 220 1  1300 221 4  1458 381 12  1465 400 2  1485 421 5  1490 431 10  1498 449 4  1514 468 1
+Modicella_reniformis_MES-2146_NODE_35216 213 1208 1420
+Modicella_reniformis_MES-2146_NODE_4641.1 209 798 1010  876 80 1
+Modicella_reniformis_MES-2146_NODE_43017 129 1292 1420
+Modicella_reniformis_MES-2146_NODE_42171 159 1410 1569
+Modicella_reniformis_MES-2146_NODE_46 157 1412 1569
+Modicella_reniformis_MES-2146_NODE_45254 149 1102 1260
+Rhizopus_oligosporus_Saito_NRRL_A-26124_NODE_1225 791 781 1580  869 87 1  1051 268 1  1060 277 1  1490 691 12
+Rhizopus_oligosporus_Saito_NRRL_A-26124_NODE_9114 749 7 781  73 68 1
+Rhizopus_arrhizus_NRRL_66564_NODE_1195 1529 7 1580  73 68 1  225 196 1  227 198 1  231 203 1  233 205 1  869 837 1  1051 1018 1  1060 1027 1
+Mucor_pusillus_Lindt_NRRL_3470_NODE_4081 297 49 414  86 30 1  227 111 2  260 140 3  366 246 4
+Rhizopus_arrhizus_NRRL_2582_NODE_3003 151 253 403
+Mucor_pusillus_Lindt_NRRL_A-16035_NODE_301.1 229 49 347  86 30 1  227 111 2  260 140 3
+Mucor_pusillus_NRRL_A-13674_NODE_259.1 229 49 347  86 30 1  227 111 2  260 140 3  285 168 2
+Absidia_dubia_NRRL_1322_NODE_7413 228 38 277  97 60 1
+Mucor_pakistanicus_NRRL_6589_NODE_96 224 519 743
+Mucor_hiemalis_NRRL_29268_NODE_108 779 530 1411  957 382 7  958 389 1  1028 451 1  1062 467 1  1134 529 1  1135 530 1  1190 561 12  1272 640 3
+Rhizopus_arrhizus_NRRL_2286_NODE_152 221 105 322  200 76 12  215 101 19  227 125 4  231 133 1  259 157 2
+Mortierella_hyalina_JES_103_NODE_135 950 8 1096  165 129 1  227 155 1  366 286 5  621 514 3  658 547 1  736 626 1  958 835 6  1055 914 1
+Mortierella_hyalina_JES_103_NODE_16696 149 6 153  75 70 1  97 93 1  98 95 1
+Mortierella_hyalina_JES_103_NODE_16660 149 6 153  75 70 1  97 93 1  98 95 1
+Mortierella_hyalina_JES_103_NODE_17766 154 21 174  75 55 1  98 79 1
+Mortierella_hyalina_JES_103_NODE_18611 146 21 166  75 55 1  98 79 1
+Mortierella_hyalina_JES_103_NODE_16815 155 117 279
+Mortierella_hyalina_JES_103_NODE_21860 59 14 72
+Mortierella_hyalina_JES_103_NODE_20780 75 100 174
+Mortierella_hyalina_JES_103_NODE_22434 75 102 176
+Mortierella_hyalina_JES_103_NODE_21 53 6 58
+Mucor_fragilis_NRRL_2569_NODE_224 305 381 686
+Zygorhynchus_macrocarpus_NRRL_2663_NODE_14061 299 160 468
+Rhizopus_sp._NRRL_3368_NODE_6612 271 440 711
+Pirella_circinans_var._volvogradensis_RSA_2566_NODE_8456 149 7 164  73 68 1  98 84 1
+Pilaira_moreaui_CBS_181.26_NODE_606 782 530 1411  574 46 3  869 302 1  957 380 7  958 387 1  1023 451 1  1055 460 1  1135 534 1  1190 565 11  1199 576 8  1204 589 1  1272 643 1  1276 646 3
+Actinomucor_elegans_NRRL_1706_NODE_15840 77 496 572
+Syncephalastrum_verruculosum_RSA_2127_NODE_2876 362 6 385  73 69 1  98 93 1
+Rhizopus_arrhizus_NRRL_66595_NODE_1 289 105 389  197 74 8  201 86 2  215 101 19  227 125 4  231 133 1  258 156 2  362 261 2  366 266 4
+Absidia_zychae_NRRL_A-23515_NODE_258 289 49 414  148 81 1  231 108 1  258 131 2  366 238 4
+Mortierella_epicladia_AD058_NODE_61 180 7 197  73 68 1  98 90 1
+Mucor_foenicola_NRRL_A-10991_NODE_33516 313 275 587
+Mucor_foenicola_NRRL_A-10991_NODE_37287.1 112 7 116  73 68 1  98 94 1
+Mortierella_elongata_GBA24_NODE_1 874 536 1411  634 98 1  640 103 1  695 157 3  707 164 5  726 188 3  736 195 5  1055 481 9  1155 586 10  1160 601 3  1169 610 8  1176 621 13  1190 643 10  1200 653 13  1323 789 1
+Rhizopus_arrhizus_NRRL_A-11376_NODE_23747 55 8 62
+Circinella_simplex_CBS_142.35_NODE_6063 358 6 381  73 69 1  98 93 1
+Circinella_simplex_CBS_142.35_NODE_16642 109 1134 1249
+Circinella_simplex_CBS_142.35_NODE_16777 109 1134 1249
+Circinella_simplex_CBS_142.35_NODE_19909 98 1091 1195
+Circinella_simplex_CBS_142.35_NODE_25181 61 328 388
+Mortierella_elongata_GBA40_NODE_1 874 536 1411  634 98 1  640 103 1  695 157 3  707 164 5  726 188 3  736 195 5  1055 481 9  1155 586 10  1160 601 3  1169 610 8  1176 621 13  1190 643 10  1200 653 13  1323 789 1
+Dissophora_ornata_NRRL_22417_NODE_871 188 114 339  165 43 1  217 78 1
+Modicella_reniformis_MES-2146_NODE_4641 407 9 472  162 137 5  231 172 1  366 297 5
+Modicella_reniformis_MES-2146_NODE_32984 234 338 577
+Modicella_reniformis_MES-2146_NODE_45241 149 1102 1260
+Modicella_reniformis_MES-2146_NODE_41700 160 1165 1319  1290 121 11
+Modicella_reniformis_MES-2146_NODE_41769 160 1165 1319  1290 121 11
+Modicella_reniformis_MES-2146_NODE_45694 145 1412 1557
+Modicella_reniformis_MES-2146_NODE_52630 85 895 979
+Modicella_reniformis_MES-2146_NODE_36659 208 61 292
+Modicella_reniformis_MES-2146_NODE_89384 92 1371 1462
+Modicella_reniformis_MES-2146_NODE_59787 107 313 418  364 53 3
+Modicella_reniformis_MES-2146_NODE_67161 101 1089 1198
+Modicella_reniformis_MES-2146_NODE_75289 79 1064 1142
+Modicella_reniformis_MES-2146_NODE_69545 80 1064 1143
+Modicella_reniformis_MES-2146_NODE_74712 98 1092 1198
+Modicella_reniformis_MES-2146_NODE_68782 111 795 908  883 86 1
+Modicella_reniformis_MES-2146_NODE_132551 68 1089 1156
+Modicella_reniformis_MES-2146_NODE_88038 97 809 908  883 72 1
+Rhizopus_sp._NRRL_A-18472_NODE_6042 263 147 419
+Rhizopus_oryzae_NRRL_66569_NODE_1.1 270 49 328  200 119 12  215 144 19  227 168 4  231 176 1  260 201 2
+Rhizopus_formosaensis_NRRL_A-10180_NODE_15 289 49 347  200 119 12  215 144 19  227 168 4  231 176 1  258 199 2
+Mortierella_ovata_NRRL_13128_NODE_420 277 49 345  148 84 3  150 88 8  177 115 8  201 142 1  217 159 1  231 166 2  258 189 2
+//

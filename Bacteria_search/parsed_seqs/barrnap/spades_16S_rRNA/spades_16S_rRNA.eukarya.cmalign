@@ -1,0 +1,128 @@
+# ssu-cmalign :: align sequences to an RNA CM
+# INFERNAL s0.1.1 (Feb 2016)
+# Copyright (C) 2016 Howard Hughes Medical Institute.
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# command: ssu-cmalign --cm-name eukarya --mxsize 4096 --no-null3 --sub --ifile spades_16S_rRNA/spades_16S_rRNA.eukarya.ifile -o spades_16S_rRNA/spades_16S_rRNA.eukarya.stk /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm spades_16S_rRNA/spades_16S_rRNA.eukarya.fa
+# date:    Tue Dec 18 23:57:58 2018
+#
+# cm name                    algorithm  config  sub  bands     tau
+# -------------------------  ---------  ------  ---  -----  ------
+# eukarya                      opt acc  global  yes    hmm   1e-07
+#
+#                                                                                      bit scores                            
+#                                                                                   ------------------                       
+#   seq idx  seq name                                                          len     total    struct  avg prob      elapsed
+# ---------  --------------------------------------------------------------  -----  --------  --------  --------  -----------
+          1  Mucor_pusillus_NRRL_A-13674_NODE_102                              218    228.98     33.36     0.996  00:00:00.06
+          2  Circinella_muscae_NRRL_1364_NODE_4574                             326    435.46     32.73     0.996  00:00:00.08
+          3  Mucor_hiemalis_NRRL_29268_NODE_155.1                              366    572.96     69.21     1.000  00:00:00.08
+          4  Absidia_cylindrospora_NRRL_1343_NODE_1747                         646    890.05     74.30     0.988  00:00:00.16
+          5  Rhizopus_stolonifer_NRRL_66458_NODE_132                           236    224.81     13.99     0.987  00:00:00.06
+          6  Absidia_cylindrospora_var._nigra_NRRL_3031_NODE_2882              514    659.05     71.01     0.987  00:00:00.13
+          7  Mucor_mucedo_NRRL_A-11121_NODE_437                                932   1388.43    100.25     0.997  00:00:00.26
+          8  Absidia_corymbifera_Cohn_Saccardo_Trotter_NRRL_1334_NODE_490      323    452.94     25.50     0.992  00:00:00.08
+          9  Syncephalastrum_verruculosum_RSA_2127_NODE_784                    539    637.25    100.14     0.961  00:00:00.15
+         10  Syncephalastrum_verruculosum_RSA_2127_NODE_784.1                  322    407.16     51.45     0.989  00:00:00.08
+         11  Lichtheimia_ramosa_NRRL_1335_NODE_1170                            352    478.30     25.62     0.992  00:00:00.08
+         12  Thamnostylum_piriforme_RSA_251_NODE_2117                          194    180.49     31.89     0.940  00:00:00.05
+         13  Absidia_cylindrospora_NRRL_3069_NODE_4800                         225    282.08     36.36     1.000  00:00:00.06
+         14  Absidia_hyalospora_NRRL_1330_NODE_1049                            248    220.95     29.34     0.961  00:00:00.08
+         15  Phycomyces_theobromatus_NRRL_1467_NODE_538                        631    559.97     66.95     0.951  00:00:00.20
+         16  Syncephalastrum_sp._NRRL_1505_NODE_64                             359    431.68     74.13     0.991  00:00:00.09
+         17  Rhizopus_stolonifer_NRRL_1519_NODE_127                            198    238.00     38.40     0.999  00:00:00.06
+         18  Mucor_recurvus_var._indicus_NRRL_3247_NODE_15085                  182    291.32     24.51     1.000  00:00:00.04
+         19  Mucor_pusillus_Lindt_NRRL_3470_NODE_5240                          274    329.70     48.10     0.988  00:00:00.07
+         20  Mucor_pusillus_Lindt_NRRL_3470_NODE_4691                          218    220.69     36.15     0.996  00:00:00.06
+         21  Mucor_pusillus_Lindt_NRRL_3470_NODE_24109                         237    255.24     16.55     0.955  00:00:00.06
+         22  Dichotomocladium_elegans_NRRL_2754_NODE_3210                      252    324.35     27.10     0.965  00:00:00.06
+         23  Dichotomocladium_elegans_NRRL_2754_NODE_830                       136    169.47      7.66     1.000  00:00:00.03
+         24  Mucor_pusillus_Lindt_NRRL_A-16035_NODE_453                        278    375.35     52.41     0.988  00:00:00.07
+         25  Mucor_pusillus_Lindt_NRRL_A-16035_NODE_257                        235    246.86     32.71     0.995  00:00:00.06
+         26  Rhizopus_nigricans_Ehrenberg_NRRL_1477_NODE_29                    196    215.54     29.57     0.994  00:00:00.05
+         27  Mucor_pusillus_NRRL_A-13674_NODE_56                               278    353.83     43.84     0.988  00:00:00.07
+         28  Mucor_pusillus_NRRL_A-13674_NODE_848                              317    379.90      6.93     0.967  00:00:00.08
+         29  Absidia_dubia_NRRL_1322_NODE_4094                                 370    396.44     25.19     0.961  00:00:00.09
+         30  Absidia_dubia_NRRL_1322_NODE_4147                                 258    302.99     39.70     0.996  00:00:00.07
+         31  Absidia_dubia_NRRL_1322_NODE_2550                                 426    555.72     35.58     0.987  00:00:00.11
+         32  Mucor_aligarensis_NRRL_3099_NODE_73                               114    163.16      5.01     1.000  00:00:00.02
+         33  Circinella_mucoroides_NRRL_1354_NODE_1402                         324    400.27     35.26     0.991  00:00:00.08
+         34  Absidia_coerulea_NRRL_1314_NODE_4778                              226    298.73     24.37     0.962  00:00:00.05
+         35  Absidia_corymbifera_NRRL_2982_NODE_1376                           219    282.00     22.97     0.986  00:00:00.06
+         36  Absidia_corymbifera_NRRL_2982_NODE_1376.1                         354    363.28     23.90     0.956  00:00:00.09
+         37  Circinella_minor_CBS_143.56_NODE_21866                            271    371.97     35.26     0.995  00:00:00.06
+         38  Circinella_minor_CBS_143.56_NODE_18319                            194    180.69     39.07     0.982  00:00:00.06
+         39  Mucor_lamprosporus_NRRL_6040_NODE_3400                            231    125.89      8.40     0.975  00:00:00.06
+         40  Mucor_hiemalis_NRRL_29268_NODE_155                                293    500.58     31.05     1.000  00:00:00.07
+         41  Mucor_hiemalis_NRRL_29268_NODE_155.2                              242    350.26     32.36     0.990  00:00:00.05
+         42  Mucor_indicus_Lendner_NRRL_13468_NODE_2570                        218    164.50     12.75     0.993  00:00:00.06
+         43  Lichtheimia_ramosa_NRRL_3208_NODE_1966                            216    265.85     15.08     0.988  00:00:00.05
+         44  Lichtheimia_ramosa_NRRL_3208_NODE_4196                            248    174.94     22.08     0.887  00:00:00.08
+         45  Mortierella_chlamydospora_NRRL_2769_NODE_6995                     377    349.25     -9.38     0.985  00:00:00.09
+         46  Mortierella_chlamydospora_NRRL_2769_NODE_3262                     142     91.52     -2.61     0.963  00:00:00.04
+         47  Thamnostylum_piriforme_NRRL_A-21589_NODE_1601                     530    380.12     29.50     0.935  00:00:00.16
+         48  Thamnostylum_piriforme_NRRL_A-21589_NODE_1228                     300    347.89     30.84     0.994  00:00:00.07
+         49  Mortierella_chlamydospora_AD033_NODE_2997                         213    226.36      2.11     0.982  00:00:00.05
+         50  Mortierella_chlamydospora_AD033_NODE_6464                         184    153.29    -11.49     0.989  00:00:00.05
+         51  Absidia_coerulea_NRRL_5926_NODE_4930                              164    209.31     -1.42     1.000  00:00:00.04
+         52  Mortierella_hyalina_JES_103_NODE_4426                             177    319.14     12.78     1.000  00:00:00.04
+         53  Mortierella_hyalina_JES_103_NODE_5136                             205    263.61     41.43     1.000  00:00:00.05
+         54  Circinella_angarensis_NRRL_2410_NODE_2252.1                       280    389.83     35.26     0.995  00:00:00.06
+         55  Circinella_angarensis_NRRL_2410_NODE_2243                         244    274.38     10.74     0.952  00:00:00.06
+         56  Thamnostylum_repens_RSA_459+_NODE_1512                            465    296.24     15.20     0.876  00:00:00.28
+         57  Thamnostylum_repens_RSA_459+_NODE_2577                            180    258.36     19.61     1.000  00:00:00.05
+         58  Absidia_cylindrospora_var._cylindrospora_NRRL_2796_NODE_7272      216    264.60     39.53     1.000  00:00:00.05
+         59  Absidia_coerulea_NRRL_1313_NODE_1809                              238    273.88     15.17     0.964  00:00:00.05
+         60  Mucor_lamprosporus_NRRL_6037_NODE_3449                            231    125.89      8.40     0.975  00:00:00.07
+         61  Lichtheimia_corymbifera_NRRL_6379_NODE_3344                       231    242.24      2.81     0.949  00:00:00.06
+         62  Zygorhynchus_macrocarpus_NRRL_2663_NODE_3106                      147    145.73     -6.98     0.997  00:00:00.03
+         63  Circinella_muscae_NRRL_1367_NODE_3280                             278    376.07     32.64     0.995  00:00:00.07
+         64  Mortierella_ambigua_BC1065_NODE_3446                              211    228.84     11.14     0.963  00:00:00.05
+         65  Absidia_blakesleeana_NRRL_1301_NODE_1222                          181    225.10      7.56     0.979  00:00:00.04
+         66  Circinella_chinensis_CBS_150.53_NODE_1940                         289    395.48     35.32     0.995  00:00:00.06
+         67  Absidia_cylindrospora_NRRL_1343_NODE_2087                         336    504.57     15.66     1.000  00:00:00.08
+         68  Absidia_cylindrospora_NRRL_1343_NODE_2087.1                       208    270.82     28.19     0.984  00:00:00.05
+         69  Absidia_cylindrospora_NRRL_1343_NODE_3723                         144    262.23     10.13     1.000  00:00:00.03
+         70  Rhizopus_circinans_NRRL_2913_NODE_5096                            211    206.16    -12.94     0.999  00:00:00.05
+         71  Absidia_californica_NRRL_2967_NODE_2152                           365    445.83     32.49     0.978  00:00:00.09
+         72  Absidia_californica_NRRL_2967_NODE_1184                           195    240.91     34.44     0.999  00:00:00.05
+         73  Absidia_cylindrospora_NRRL_1341_NODE_650                          246    334.59     37.66     1.000  00:00:00.07
+         74  Mucor_mucedo_NRRL_A-11121_NODE_67                                 351    330.50    -19.56     0.977  00:00:00.08
+         75  Thamnostylum_nigricans_RSA_1406_NODE_1808                         174    242.21     17.68     1.000  00:00:00.04
+         76  Thamnostylum_nigricans_RSA_1406_NODE_530                          269    278.81     29.18     0.982  00:00:00.07
+         77  Thamnostylum_nigricans_RSA_1406_NODE_1090                         172    171.02     37.04     0.944  00:00:00.05
+         78  Absidia_californica_NRRL_2709_NODE_1358                           174    201.50     32.60     0.999  00:00:00.04
+         79  Fennellomyces_verticellatus_RSA_2446_NODE_1538                    277    365.94     35.59     0.994  00:00:00.07
+         80  Absidia_corymbifera_Cohn_Saccardo_Trotter_NRRL_1334_NODE_490.1    407    344.82     -1.41     0.970  00:00:00.11
+         81  Actinomucor_elegans_NRRL_1706_NODE_10838                          271    379.92     49.15     0.998  00:00:00.06
+         82  Syncephalastrum_verruculosum_RSA_2127_NODE_784.2                  621    773.55     51.37     0.987  00:00:00.18
+         83  Rhizopus_arrhizus_NRRL_66595_NODE_4470                            269    420.03     41.40     0.978  00:00:00.06
+         84  Absidia_zychae_NRRL_A-23515_NODE_416                              196    173.71     15.49     0.998  00:00:00.05
+         85  Lichtheimia_ramosa_NRRL_1335_NODE_1170.1                          218    176.67     30.63     0.871  00:00:00.07
+         86  Rhizopus_arrhizus_NRRL_1470_NODE_10105                            162    216.56     16.35     0.991  00:00:00.04
+         87  Rhizopus_arrhizus_NRRL_1470_NODE_7911                             243    258.44     14.45     0.960  00:00:00.06
+         88  Mucor_hiemalis_NRRL_A-28298_NODE_674                              197    221.28     -1.29     0.992  00:00:00.05
+         89  Absidia_cylindrospora_NRRL_3069_NODE_5684                         220    230.50     12.67     0.999  00:00:00.06
+         90  Absidia_cylindrospora_NRRL_3069_NODE_2736                         153    163.97     -4.65     0.991  00:00:00.03
+         91  Absidia_hyalospora_NRRL_1330_NODE_1128                            268    359.90     24.96     0.988  00:00:00.07
+         92  Absidia_hyalospora_NRRL_1330_NODE_2473                            360    408.50     26.33     0.969  00:00:00.09
+         93  Helicostylum_lucknowense_NRRL_2892_NODE_3125                      178    248.50     15.22     1.000  00:00:00.04
+         94  Helicostylum_lucknowense_NRRL_2892_NODE_1983                      217    132.42     32.72     0.850  00:00:00.06
+         95  Circinella_muscae_NRRL_1360_NODE_23828                            257    337.20     35.19     0.994  00:00:00.07
+         96  Mortierella_sp_AD010_NODE_2889                                    218    135.43    -26.40     0.999  00:00:00.05
+         97  Mortierella_sp_AD010_NODE_132.1                                   309    233.19     -0.47     0.967  00:00:00.08
+         98  Mortierella_sp_AD010_NODE_139                                     160     99.21     -4.09     0.971  00:00:00.05
+         99  Absidia_coerulea_NRRL_A-26290_NODE_1830                           143    179.02      5.02     1.000  00:00:00.04
+        100  Absidia_coerulea_NRRL_A-26290_NODE_4037                           222    236.45     15.23     0.963  00:00:00.05
+        101  Mucor_lamprosporus_NRRL_6048_NODE_2841                            217     98.85      8.40     0.973  00:00:00.07
+        102  Rhizopus_arrhizus_NRRL_66564_NODE_3300                             72    126.95      3.84     1.000  00:00:00.02
+        103  Mortierella_ovata_NRRL_13128_NODE_713                             277    432.34     35.89     0.984  00:00:00.07
+        104  Mortierella_sp_AD011_NODE_1977                                    218    135.43    -26.40     0.999  00:00:00.05
+        105  Mortierella_sp_AD011_NODE_156                                     160     99.21     -4.09     0.971  00:00:00.05
+        106  Syncephalastrum_sp._NRRL_1505_NODE_274                            250    320.55     50.91     0.985  00:00:00.06
+        107  Syncephalastrum_sp._NRRL_1505_NODE_420                            436    512.06     35.63     0.980  00:00:00.13
+        108  Syncephalastrum_sp._NRRL_1505_NODE_274.1                          217    233.61     25.74     0.918  00:00:00.06
+# Alignment saved in file spades_16S_rRNA/spades_16S_rRNA.eukarya.stk.
+# Per-sequence insert information saved in file spades_16S_rRNA/spades_16S_rRNA.eukarya.ifile.
+#
+# CPU time: 7.75u 0.31s 00:00:08.06 Elapsed: 00:00:08.07

@@ -1,0 +1,70 @@
+# ssu-align :: align SSU rRNA sequences
+# SSU-ALIGN 0.1.1 (Feb 2016)
+# Copyright (C) 2016 Howard Hughes Medical Institute
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# command: ssu-align spades_16S_rRNA.fasta spades_16S_rRNA
+# date:    Tue Dec 18 23:56:59 2018
+#
+# Validating input sequence file ... done.
+#
+# Stage 1: Determining SSU start/end positions and best-matching models...
+#
+# output file name                  description                                
+# --------------------------------  -------------------------------------------
+  spades_16S_rRNA.tab               locations/scores of hits defined by HMM(s)
+  spades_16S_rRNA.archaea.hitlist   list of sequences to align with archaea CM
+  spades_16S_rRNA.archaea.fa              1 sequence  to align with archaea CM
+  spades_16S_rRNA.bacteria.hitlist  list of sequences to align with bacteria CM
+  spades_16S_rRNA.bacteria.fa           174 sequences to align with bacteria CM
+  spades_16S_rRNA.eukarya.hitlist   list of sequences to align with eukarya CM
+  spades_16S_rRNA.eukarya.fa            108 sequences to align with eukarya CM
+#
+# Stage 2: Aligning each sequence to its best-matching model...
+#
+# output file name                  description
+# --------------------------------  ---------------------------------------
+  spades_16S_rRNA.archaea.stk       archaea alignment
+  spades_16S_rRNA.archaea.cmalign   archaea cmalign output
+  spades_16S_rRNA.archaea.ifile     archaea insert info
+  spades_16S_rRNA.bacteria.stk      bacteria alignment
+  spades_16S_rRNA.bacteria.cmalign  bacteria cmalign output
+  spades_16S_rRNA.bacteria.ifile    bacteria insert info
+  spades_16S_rRNA.eukarya.stk       eukarya alignment
+  spades_16S_rRNA.eukarya.cmalign   eukarya cmalign output
+  spades_16S_rRNA.eukarya.ifile     eukarya insert info
+  spades_16S_rRNA.scores            list of CM/HMM scores for each sequence
+  spades_16S_rRNA.nomatch           list of seqs that don't match any model
+#
+# Summary statistics:
+#
+# model or       number  fraction        average   average               
+# category      of seqs  of total         length  coverage    nucleotides
+# ------------  -------  --------  -------------  --------  -------------
+  *input*           332    1.0000         407.21    1.0000         135193
+#
+  archaea             1    0.0030         240.00    0.9836            240
+  bacteria          174    0.5241         517.86    0.9658          90108
+  eukarya           108    0.3253         270.16    0.9842          29177
+#
+  *all-models*      283    0.8524         422.35    0.9703         119525
+  *no-models*        49    0.1476         245.08    0.0000          12009
+#
+# Speed statistics:
+#
+# stage      num seqs  seq/sec  seq/sec/model    nucleotides    nt/sec
+# ---------  --------  -------  -------------  -------------  --------
+  search          332   11.058          3.686         135193    4502.9
+  alignment       283    7.628          7.628         119525    3221.8
+#
+#
+# List of executed commands saved in:     spades_16S_rRNA.ssu-align.log.
+# Output printed to the screen saved in:  spades_16S_rRNA.ssu-align.sum.
+#
+# All output files created in directory ./spades_16S_rRNA/
+#
+# CPU time (search):     00:00:30.02  (hh:mm:ss)
+# CPU time (alignment):  00:00:37.10  (hh:mm:ss)
+# CPU time (total):      00:01:07.51  (hh:mm:ss)
+#
+# SSU-ALIGN-SUCCESS

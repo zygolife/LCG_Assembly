@@ -1,0 +1,167 @@
+# ssu-align :: align SSU rRNA sequences
+# SSU-ALIGN 0.1.1 (Feb 2016)
+# Copyright (C) 2016 Howard Hughes Medical Institute
+# Freely distributed under the BSD open source license.
+# - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+# command: ssu-align spades_16S_rRNA.fasta spades_16S_rRNA
+# date:    Tue Dec 18 23:56:59 2018
+
+Printing global hask key as read from ssu.pm:
+
+Global hash key: DF_ALIMASK_PFRACT    value: 0.95
+Global hash key: DF_ALIMASK_PTHRESH   value: 0.95
+Global hash key: DF_CMALIGN_OPTS      value:  --no-null3 --sub 
+Global hash key: DF_CMBUILD_GAPTHRESH value: 0.8
+Global hash key: DF_CMSEARCH_ALG_FLAG value:  --viterbi
+Global hash key: DF_CMSEARCH_OPTS     value:  --hmm-cW 1.5 --no-null3 --noalign 
+Global hash key: DF_CMSEARCH_T        value: -1
+Global hash key: DF_CM_FILE           value: /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm
+Global hash key: DF_MASK_FILE         value: /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.mask
+Global hash key: DF_MERGE_INIT_WAIT_SECS value: 3
+Global hash key: DF_MINBIT            value: 50
+Global hash key: DF_MINLEN            value: 1
+Global hash key: DF_MXSIZE            value: 4096
+Global hash key: DF_NO_NAME           value: <NONE>
+Global hash key: DF_TEMPLATE_FILE     value: /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.ps
+Global hash key: VERSION              value: 0.1
+Global hash key: VERSION_PSTR         value: 0p1
+Global hash key: cmalign              value: ssu-cmalign
+Global hash key: cmbuild              value: ssu-cmbuild
+Global hash key: cmsearch             value: ssu-cmsearch
+Global hash key: esl-alimanip         value: ssu-esl-alimanip
+Global hash key: esl-alimask          value: ssu-esl-alimask
+Global hash key: esl-alimerge         value: ssu-esl-alimerge
+Global hash key: esl-alistat          value: ssu-esl-alistat
+Global hash key: esl-reformat         value: ssu-esl-reformat
+Global hash key: esl-seqstat          value: ssu-esl-seqstat
+Global hash key: esl-sfetch           value: ssu-esl-sfetch
+Global hash key: esl-ssdraw           value: ssu-esl-ssdraw
+Global hash key: esl-weight           value: ssu-esl-weight
+Global hash key: ps2pdf               value: ps2pdf
+Global hash key: ssu-align            value: ssu-align
+Global hash key: ssu-merge            value: ssu-merge
+
+Executing:      ssu-esl-seqstat -h > /dev/null  2> spades_16S_rRNA/ssutmp0erraa50929
+Returned:       0
+Output (STDOUT) sent to /dev/null.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp0erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-cmsearch -h > /dev/null  2> spades_16S_rRNA/ssutmp1erraa50929
+Returned:       0
+Output (STDOUT) sent to /dev/null.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp1erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-esl-sfetch -h > /dev/null  2> spades_16S_rRNA/ssutmp2erraa50929
+Returned:       0
+Output (STDOUT) sent to /dev/null.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp2erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-esl-reformat -h > /dev/null  2> spades_16S_rRNA/ssutmp3erraa50929
+Returned:       0
+Output (STDOUT) sent to /dev/null.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp3erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-cmalign -h > /dev/null  2> spades_16S_rRNA/ssutmp4erraa50929
+Returned:       0
+Output (STDOUT) sent to /dev/null.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp4erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-esl-seqstat --rna -a spades_16S_rRNA.fasta > spades_16S_rRNA/spades_16S_rRNA.seqstat  2> spades_16S_rRNA/ssutmp5erraa50929
+Returned:       0
+Output (STDOUT) saved in file spades_16S_rRNA/spades_16S_rRNA.seqstat.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp5erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/spades_16S_rRNA.seqstat) with perl's unlink function ... done.
+
+Executing:      ssu-cmsearch --hmm-cW 1.5 --no-null3 --noalign -T -1 --tab spades_16S_rRNA/spades_16S_rRNA.tab --viterbi /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm spades_16S_rRNA.fasta > spades_16S_rRNA/spades_16S_rRNA.cmsearch  2> spades_16S_rRNA/ssutmp6erraa50929
+Returned:       0
+Output (STDOUT) saved in file spades_16S_rRNA/spades_16S_rRNA.cmsearch.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp6erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/spades_16S_rRNA.cmsearch) with perl's unlink function ... done.
+
+Executing:      ssu-esl-sfetch --index spades_16S_rRNA.fasta > spades_16S_rRNA/ssutmp7outaa50929  2> spades_16S_rRNA/ssutmp7erraa50929
+Returned:       0
+Output (STDOUT): 
+Creating SSI index for spades_16S_rRNA.fasta...    done.
+Indexed 332 sequences (332 names).
+SSI index written to file spades_16S_rRNA.fasta.ssi
+
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp7outaa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/ssutmp7erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-esl-sfetch -Cf spades_16S_rRNA.fasta spades_16S_rRNA/spades_16S_rRNA.archaea.sfetch | ssu-esl-reformat -o spades_16S_rRNA/spades_16S_rRNA.archaea.fa --informat fasta -r fasta - > spades_16S_rRNA/ssutmp8outaa50929  2> spades_16S_rRNA/ssutmp8erraa50929
+Returned:       0
+Output (STDOUT): ***NONE***
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp8outaa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/ssutmp8erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/spades_16S_rRNA.archaea.sfetch) with perl's unlink function ... done.
+
+Executing:      ssu-esl-sfetch -Cf spades_16S_rRNA.fasta spades_16S_rRNA/spades_16S_rRNA.bacteria.sfetch | ssu-esl-reformat -o spades_16S_rRNA/spades_16S_rRNA.bacteria.fa --informat fasta -r fasta - > spades_16S_rRNA/ssutmp9outaa50929  2> spades_16S_rRNA/ssutmp9erraa50929
+Returned:       0
+Output (STDOUT): ***NONE***
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp9outaa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/ssutmp9erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/spades_16S_rRNA.bacteria.sfetch) with perl's unlink function ... done.
+
+Executing:      ssu-esl-sfetch -Cf spades_16S_rRNA.fasta spades_16S_rRNA/spades_16S_rRNA.eukarya.sfetch | ssu-esl-reformat -o spades_16S_rRNA/spades_16S_rRNA.eukarya.fa --informat fasta -r fasta - > spades_16S_rRNA/ssutmp10outaa50929  2> spades_16S_rRNA/ssutmp10erraa50929
+Returned:       0
+Output (STDOUT): ***NONE***
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp10outaa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/ssutmp10erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA/spades_16S_rRNA.eukarya.sfetch) with perl's unlink function ... done.
+
+Executing:      ssu-cmalign --cm-name archaea --mxsize 4096 --no-null3 --sub --ifile spades_16S_rRNA/spades_16S_rRNA.archaea.ifile -o spades_16S_rRNA/spades_16S_rRNA.archaea.stk /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm spades_16S_rRNA/spades_16S_rRNA.archaea.fa > spades_16S_rRNA/spades_16S_rRNA.archaea.cmalign  2> spades_16S_rRNA/ssutmp11erraa50929
+Returned:       0
+Output (STDOUT) saved in file spades_16S_rRNA/spades_16S_rRNA.archaea.cmalign.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp11erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-cmalign --cm-name bacteria --mxsize 4096 --no-null3 --sub --ifile spades_16S_rRNA/spades_16S_rRNA.bacteria.ifile -o spades_16S_rRNA/spades_16S_rRNA.bacteria.stk /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm spades_16S_rRNA/spades_16S_rRNA.bacteria.fa > spades_16S_rRNA/spades_16S_rRNA.bacteria.cmalign  2> spades_16S_rRNA/ssutmp12erraa50929
+Returned:       0
+Output (STDOUT) saved in file spades_16S_rRNA/spades_16S_rRNA.bacteria.cmalign.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp12erraa50929) with perl's unlink function ... done.
+
+Executing:      ssu-cmalign --cm-name eukarya --mxsize 4096 --no-null3 --sub --ifile spades_16S_rRNA/spades_16S_rRNA.eukarya.ifile -o spades_16S_rRNA/spades_16S_rRNA.eukarya.stk /opt/linux/centos/7.x/x86_64/pkgs/ssu-align/0.1.1/share/ssu-align-0.1.1/ssu-align-0p1.cm spades_16S_rRNA/spades_16S_rRNA.eukarya.fa > spades_16S_rRNA/spades_16S_rRNA.eukarya.cmalign  2> spades_16S_rRNA/ssutmp13erraa50929
+Returned:       0
+Output (STDOUT) saved in file spades_16S_rRNA/spades_16S_rRNA.eukarya.cmalign.
+Output (STDERR): ***NONE***
+
+About to remove file (spades_16S_rRNA/ssutmp13erraa50929) with perl's unlink function ... done.
+
+About to remove file (spades_16S_rRNA.fasta.ssi) with perl's unlink function ... done.
+
+Tue Dec 18 23:58:06 PST 2018
+Linux i01 3.10.0-693.11.6.el7.x86_64 #1 SMP Thu Jan 4 01:06:37 UTC 2018 x86_64 x86_64 x86_64 GNU/Linux
