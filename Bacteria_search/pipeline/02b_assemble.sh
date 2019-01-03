@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 32G --out logs/assemble.%a.log --time 4:00:00 -p batch
+#SBATCH --nodes 1 --ntasks 8 --mem 32G --out logs/assemble.%a.log --time 24:00:00 -p batch
 
 MEM=32
 CPU=$SLURM_CPUS_ON_NODE
@@ -25,7 +25,9 @@ if [ ! -f $INDIR/${BASE}_R1.filter1.fq.gz ]; then
 	exit
 elif [ ! -d $OUTPUT/${BASE}.spades ]; then
 	spades.py --threads $CPU --mem $MEM -1 $INDIR/${BASE}_R1.filter1.fq.gz -2 $INDIR/${BASE}_R2.filter1.fq.gz --tmp-dir $TEMP -o $OUTPUT/${BASE}.spades --cov-cutoff auto --careful 
-else
+elif [ ! -f $OUTPUT/${BASE}.spades/scaffolds.fasta ]; then
+	spades.py --continue -o $OUTPUT/${BASE}.spades
+else 
     echo "skipping already started/run $BASE.spades in $OUTDIR"
     exit
 fi
