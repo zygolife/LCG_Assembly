@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 16G --out logs/subtract.%a.log --time 2:00:00 -p short
+#SBATCH --nodes 1 --ntasks 8 --mem 48G --out logs/subtract.%a.log --time 2:00:00 -p short
 
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
@@ -22,9 +22,13 @@ BASE=$(sed -n ${N}p $SAMPLEFILE | cut -f1)
 SUBPHYLUM=$(sed -n ${N}p $SAMPLEFILE | cut -f3)
 REFFILE=""
 if [[ $SUBPHYLUM == "Mucoromycotina" ]]; then
-    REFFILE=Mucor_Rhizopus.fa
+    REFFILE=Mucoromycotina.fa
 elif [[ $SUBPHYLUM == "Mortirellomycotina" ]]; then
     REFFILE=Mortierella.fa
+elif [[ $SUBPHYLUM == "Kickxellomycotina" ]]; then
+	REFFILE=Kickxellomycotina.fa
+elif [[ $SUBPHYLUM == "Entomophthoromycotina" ]]; then
+	REFFILE=Ento.fa
 else
     echo "Skipping $BASE"
     exit
