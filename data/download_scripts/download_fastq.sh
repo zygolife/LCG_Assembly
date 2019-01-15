@@ -14,7 +14,7 @@ IFS=","
 tail -n +2 $SAMPLES | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Notes
 do
  n=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g') 
- echo "n is $n Species is $Species barcode is $JGIBarcode XML is $XML"
+ echo "n is $n Species is $Species barcode is $JGIBarcode"
  grep $JGIBarcode $XML | grep filter-FUNGAL 
 
  url=$(grep $JGIBarcode $XML | grep filter-FUNGAL | perl -p -e 's/.+\s+url=\"([^"]+)\".+/$1/; s/\/ext-api\S+url=//')
@@ -23,6 +23,9 @@ do
      if [ ! -e $ODIR/$n.fastq.gz ]; then
     	 echo "$HOST$url $n.fastq.gz $ODIR/$n.fastq.gz  -- filter-FUNGAL"
 	 curl "$HOST$url" -b cookies > $ODIR/$n.fastq.gz
+     fi
+     if [ ! -e $ODIR/$n.fastq.gz ]; then
+	echo "did not download $n $Species $JGIBarcode"
      fi
      continue
  fi
