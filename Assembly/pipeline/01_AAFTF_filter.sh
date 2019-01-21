@@ -15,7 +15,7 @@ if [ ! $N ]; then
     fi
 fi
 
-module load AAFTF/git-live
+module load AAFTF
 
 OUTDIR=input
 SAMPLEFILE=samples.dat

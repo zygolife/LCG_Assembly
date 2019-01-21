@@ -7,7 +7,7 @@ CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
 MIN_LEN=1000
 
-module load AAFTF/git-live
+module load AAFTF
 
 OUTDIR=input
 PHYLUM=Zoopagomycota
