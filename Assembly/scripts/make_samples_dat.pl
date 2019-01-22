@@ -23,7 +23,7 @@ for my $file (readdir(DAT)) {
 		next if /^\s+$/;
 		# ideally all skipping is done based on these notes
 		# but provide some more context to it
-		next if /Contaminant|Too low/i;
+		next if /Contamination|Contaminant|Too low/i;
 		chomp;
 		my @row = split(/,/,$_);
 		my $sp = $row[5];
