@@ -77,7 +77,7 @@ foreach my $file ( readdir(DIR) ) {
 		    warn("$inbase for $nm not matching $stem\n");
 		    exit;
 		}		
-	    } elsif( /^(Reads|Mapped reads|Average coverage):\s+(\d+)/ ){
+	    } elsif( /^(Reads|Mapped reads|Average coverage):\s+((\d+\.)?\d+)/ ){
 		unless( exists $header_seen{$1} ) {
 		    $header_seen{$1} = 1;
 		    push @header, $1;
@@ -107,5 +107,5 @@ foreach my $file ( readdir(DIR) ) {
 
 print join("\t", qw(SampleID), @header), "\n";
 foreach my $sp ( sort keys %stats ) {    
-    print join("\t", $sp, map { $stats{$sp}->{$_} || '-' } @header), "\n";
+    print join("\t", $sp, map { $stats{$sp}->{$_} || 'NA' } @header), "\n";
 }
