@@ -16,7 +16,7 @@ if ( -f "ignore_samples.txt" ) {
 }
 opendir(DAT,"data") || die $!;
 for my $file (readdir(DAT)) {
-	next unless $file =~ /^1978\S+\.csv$/ || $file =~ /^UCR\.csv$/;
+	next unless $file =~ /^1978\S+\.csv$/ || $file =~ /^(UFL|UCR)\.csv$/;
 	open(my $in => "data/$file") || die $!;
 	my $header = <$in>;
 	while( <$in>) { 
