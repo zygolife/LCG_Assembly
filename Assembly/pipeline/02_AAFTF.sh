@@ -49,9 +49,8 @@ if [ ! -f $ASMFILE ]; then
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
 	exit
     fi
-	mkdir -p /scratch/$USER
     AAFTF assemble -c $CPU --left $LEFT --right $RIGHT  \
-	-o $ASMFILE -w $WORKDIR/spades_$BASE --spades_tmpdir /scratch/$USER
+	-o $ASMFILE -w $WORKDIR/spades_$BASE --mem $MEM
     
     if [ -s $ASMFILE ]; then
 	rm -rf $WORKDIR/spades_${BASE}
