@@ -89,18 +89,6 @@ do
 	    else
 		$GFFCONVERT -g $f.$CTGTYPE.predict -f  ${CTGTYPE}_contigs.fa -o $f.${CTGTYPE}.glimmerORFs -p $f
 	    fi
-	     for hmm in $(ls $HMMFOLDER)
-	    do
-		nm=$(basename $hmm .hmm)
-		if [ ! -f $f.$CTGTYPE.glimmerORFs.$nm.hmmsearch ]; then		    
-		    hmmsearch -E $EVALUECUTOFF --domtblout $f.$CTGTYPE.glimmerORFs.$nm.domtbl \
-			$HMMFOLDER/$hmm  $f.$CTGTYPE.glimmerORFs.aa.fasta > $f.$CTGTYPE.glimmerORFs.$nm.hmmsearch
-		    grep -v '^#' $f.$CTGTYPE.glimmerORFs.$nm.domtbl | awk '{print $1}' | sort | uniq >  $f.$CTGTYPE.glimmerORFs.$nm.list.txt
-		    esl-sfetch --index $f.$CTGTYPE.glimmerORFs.aa.fasta
-		    esl-sfetch -f $f.$CTGTYPE.glimmerORFs.aa.fasta  $f.$CTGTYPE.glimmerORFs.$nm.list.txt >  $f.$CTGTYPE.glimmerORFs.$nm.hits.fasta
-		fi
-	    done
-
 	fi
     fi    
     popd
