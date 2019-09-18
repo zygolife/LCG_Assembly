@@ -15,16 +15,16 @@ tail -n +2 $SAMPLES | while read ProjID JGISample JGIProjName JGIBarcode SubPhyl
 do
  n=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g') 
  echo "n is $n Species is $Species barcode is $JGIBarcode"
- grep $JGIBarcode $XML | grep filter-FUNGAL 
+ grep $JGIBarcode $XML | grep filter-
 
- url=$(grep $JGIBarcode $XML | grep filter-FUNGAL | perl -p -e 's/.+\s+url=\"([^"]+)\".+/$1/; s/\/ext-api\S+url=//')
+ url=$(grep $JGIBarcode $XML | grep filter- | perl -p -e 's/.+\s+url=\"([^"]+)\".+/$1/; s/\/ext-api\S+url=//')
  if [ $url ];  then
      echo "$JGIBarcode $url $n"
-     if [ ! -e $ODIR/$n.fastq.gz ]; then
+     if [ ! -s $ODIR/$n.fastq.gz ]; then
     	 echo "$HOST$url $n.fastq.gz $ODIR/$n.fastq.gz  -- filter-FUNGAL"
 	 curl "$HOST$url" -b cookies > $ODIR/$n.fastq.gz
      fi
-     if [ ! -e $ODIR/$n.fastq.gz ]; then
+     if [ ! -s $ODIR/$n.fastq.gz ]; then
 	echo "did not download $n $Species $JGIBarcode"
      fi
      continue
@@ -33,12 +33,12 @@ do
  if [ ! -z $url ]; then
      echo "$JGIBarcode $url $n"
      echo "$HOST$url"
-     if [ ! -e $ODIR/$n.fastq.gz ]; then
+     if [ ! -s $ODIR/$n.fastq.gz ]; then
 	 echo "$HOST$url $n.fastq.gz $ODIR/$n.fastq.gz -- anqdpht"
 	 curl "$HOST$url" -b cookies > $ODIR/$n.fastq.gz
      fi
      continue
  fi
- 
+
 # exit
 done
