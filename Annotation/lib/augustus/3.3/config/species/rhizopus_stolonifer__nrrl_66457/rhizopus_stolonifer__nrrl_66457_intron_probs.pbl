@@ -1,0 +1,6506 @@
+#intron model parameters
+# begin of content independent part
+#
+# ASS probabilities
+#only nonpseudocount values are shown
+[ASS]
+# Size of vector
+64
+# c_ass (ASS count)
+815
+# asspseudocount (added to all possible patterns, no matter if they occur)
+0.00266
+# Probabilities * 1000
+aaa	6.14
+aac	8.59
+aag	11
+aat	23.3
+aca	14.7
+acc	9.82
+acg	1.23
+act	7.36
+aga	13.5
+agc	2.46
+agg	12.3
+agt	16
+ata	3.68
+atc	11
+atg	11
+att	12.3
+caa	23.3
+cac	6.14
+cag	9.82
+cat	16
+cca	7.36
+ccc	8.59
+ccg	2.46
+cct	9.82
+cga	8.59
+cgc	3.68
+cgg	3.68
+cgt	16
+cta	1.23
+ctc	4.91
+ctg	6.14
+ctt	13.5
+gaa	3.68
+gag	2.46
+gat	1.23
+gct	2.46
+ggc	1.23
+ggg	1.23
+gta	2.46
+gtt	1.23
+taa	77.3
+tac	50.3
+tag	25.8
+tat	83.4
+tca	17.2
+tcc	20.9
+tcg	7.36
+tct	33.1
+tga	65
+tgc	36.8
+tgg	29.4
+tgt	61.3
+tta	35.6
+ttc	33.1
+ttg	44.2
+ttt	57.7
+
+
+#
+# DSS probabilities
+#only nonpseudocount values are shown
+[DSS]
+# Size of vector
+4096
+# c_dss (DSS count)
+815
+# dsspseudocount (added to all possible patterns, no matter if they occur)
+0.0005
+# Probabilities * 1000
+aaaaaa	14.5
+aaaaac	3.65
+aaaaag	19.2
+aaaaat	7.23
+aaaaca	1.24
+aaaacc	0.0108
+aaaacg	0.0474
+aaaact	0.0209
+aaaaga	1.24
+aaaagc	0.0148
+aaaagg	2.42
+aaaagt	0.023
+aaaata	3.62
+aaaatc	0.027
+aaaatg	1.24
+aaaatt	2.41
+aaacaa	1.22
+aaacac	0.0108
+aaacag	0.0392
+aaacat	0.0169
+aaacca	0.00874
+aaaccc	0.00264
+aaaccg	0.000612
+aaacct	0.000612
+aaacga	0.0108
+aaacgc	0.00264
+aaacgg	0.00468
+aaacgt	0.000612
+aaacta	1.2
+aaactc	1.19
+aaactg	0.00874
+aaactt	0.0108
+aaagaa	0.0352
+aaagac	0.00671
+aaagag	0.0392
+aaagat	0.0148
+aaagca	0.00671
+aaagcc	0.000612
+aaagcg	0.000612
+aaagct	0.000612
+aaagga	1.19
+aaaggc	0.00264
+aaaggg	0.00874
+aaaggt	0.00264
+aaagta	0.0108
+aaagtc	0.00264
+aaagtg	0.00468
+aaagtt	0.00874
+aaataa	1.22
+aaatac	0.0108
+aaatag	1.23
+aaatat	0.0169
+aaatca	1.19
+aaatcc	0.00264
+aaatcg	0.00671
+aaatct	0.00468
+aaatga	0.0108
+aaatgc	0.00264
+aaatgg	0.0108
+aaatgt	0.000612
+aaatta	0.023
+aaattc	0.00468
+aaattg	1.2
+aaattt	0.0169
+aacaaa	2.54
+aacaac	1.22
+aacaag	8.42
+aacaat	0.0596
+aacaca	0.0189
+aacacc	0.00874
+aacacg	0.0169
+aacact	0.00264
+aacaga	0.023
+aacagc	1.19
+aacagg	0.023
+aacagt	0.00264
+aacata	0.025
+aacatc	0.00671
+aacatg	0.0209
+aacatt	0.0148
+aaccaa	0.00874
+aaccac	0.00264
+aaccag	0.0189
+aaccat	0.000612
+aaccca	0.000612
+aacccc	0.000612
+aacccg	0.000612
+aaccct	0.000612
+aaccga	0.00264
+aaccgc	0.00264
+aaccgg	0.000612
+aaccgt	0.000612
+aaccta	0.00264
+aacctc	0.00264
+aacctg	0.000612
+aacctt	0.00468
+aacgaa	0.00671
+aacgac	0.00264
+aacgag	0.0189
+aacgat	0.00468
+aacgca	0.00264
+aacgcc	0.000612
+aacgcg	0.000612
+aacgct	0.000612
+aacgga	0.00671
+aacggc	0.00264
+aacggg	0.00264
+aacggt	0.000612
+aacgta	0.000612
+aacgtc	0.000612
+aacgtg	0.000612
+aacgtt	0.00468
+aactaa	0.0108
+aactac	0.00264
+aactag	0.0189
+aactat	0.000612
+aactca	0.00468
+aactcc	0.000612
+aactcg	0.00264
+aactct	0.00264
+aactga	1.19
+aactgc	0.00468
+aactgg	0.00468
+aactgt	0.00264
+aactta	0.00671
+aacttc	0.000612
+aacttg	0.0128
+aacttt	0.00874
+aagaaa	54.9
+aagaac	4.91
+aagaag	13.3
+aagaat	15.6
+aagaca	7.26
+aagacc	0.0291
+aagacg	0.0433
+aagact	1.24
+aagaga	6.07
+aagagc	0.023
+aagagg	0.0453
+aagagt	0.0535
+aagata	8.46
+aagatc	1.22
+aagatg	1.26
+aagatt	6.01
+aagcaa	0.104
+aagcac	0.0108
+aagcag	1.21
+aagcat	0.0311
+aagcca	0.0128
+aagccc	0.000612
+aagccg	0.00264
+aagcct	0.00468
+aagcga	0.0128
+aagcgc	0.000612
+aagcgg	0.00468
+aagcgt	0.000612
+aagcta	0.0209
+aagctc	0.00468
+aagctg	0.0108
+aagctt	0.023
+aaggaa	1.29
+aaggac	0.0148
+aaggag	1.22
+aaggat	1.22
+aaggca	0.0169
+aaggcc	0.000612
+aaggcg	0.00468
+aaggct	0.00874
+aaggga	1.2
+aagggc	0.00264
+aagggg	0.00671
+aagggt	0.00671
+aaggta	0.025
+aaggtc	0.00468
+aaggtg	0.0128
+aaggtt	1.21
+aagtaa	1.29
+aagtac	0.0128
+aagtag	1.23
+aagtat	0.0413
+aagtca	0.023
+aagtcc	0.00264
+aagtcg	0.0148
+aagtct	1.2
+aagtga	0.023
+aagtgc	0.00264
+aagtgg	1.2
+aagtgt	0.0108
+aagtta	2.41
+aagttc	0.0209
+aagttg	3.59
+aagttt	3.59
+aataaa	7.29
+aataac	1.24
+aataag	10.8
+aataat	0.0738
+aataca	0.0311
+aatacc	1.2
+aatacg	1.21
+aatact	0.00671
+aataga	0.027
+aatagc	0.00671
+aatagg	0.025
+aatagt	0.000612
+aatata	0.0413
+aatatc	0.00671
+aatatg	0.0352
+aatatt	0.0209
+aatcaa	0.0148
+aatcac	0.00468
+aatcag	0.0209
+aatcat	0.00671
+aatcca	0.000612
+aatccc	0.00264
+aatccg	0.00264
+aatcct	0.00264
+aatcga	0.000612
+aatcgc	0.000612
+aatcgg	0.000612
+aatcgt	0.00264
+aatcta	0.00468
+aatctc	0.00671
+aatctg	0.00264
+aatctt	1.19
+aatgaa	0.0189
+aatgac	0.00264
+aatgag	0.023
+aatgat	0.00468
+aatgca	0.000612
+aatgcc	0.00468
+aatgcg	0.00264
+aatgct	0.00264
+aatgga	0.00671
+aatggc	0.000612
+aatggg	0.000612
+aatggt	0.00264
+aatgta	0.00264
+aatgtc	0.00264
+aatgtg	0.00264
+aatgtt	1.2
+aattaa	0.0169
+aattac	0.00264
+aattag	0.023
+aattat	0.00264
+aattca	0.00264
+aattcc	0.00264
+aattcg	0.00264
+aattct	0.00468
+aattga	0.00264
+aattgc	0.00264
+aattgg	0.00468
+aattgt	0.00264
+aattta	0.00874
+aatttc	0.00264
+aatttg	0.0148
+aatttt	1.2
+acaaaa	0.0819
+acaaac	0.0291
+acaaag	9.58
+acaaat	2.41
+acaaca	0.00468
+acaacc	0.00671
+acaacg	0.0189
+acaact	0.00468
+acaaga	1.19
+acaagc	0.00468
+acaagg	0.027
+acaagt	0.00671
+acaata	0.0148
+acaatc	1.19
+acaatg	1.21
+acaatt	0.0128
+acacaa	0.00468
+acacac	0.00264
+acacag	0.0189
+acacat	1.19
+acacca	0.000612
+acaccc	0.000612
+acaccg	0.000612
+acacct	0.00264
+acacga	0.00468
+acacgc	0.000612
+acacgg	0.000612
+acacgt	0.00264
+acacta	0.00468
+acactc	0.00468
+acactg	0.00264
+acactt	0.00264
+acagaa	0.000612
+acagac	0.000612
+acagag	0.0189
+acagat	0.00874
+acagca	0.000612
+acagcc	0.000612
+acagcg	0.000612
+acagct	0.000612
+acagga	0.00671
+acaggc	0.000612
+acaggg	0.000612
+acaggt	0.000612
+acagta	0.00468
+acagtc	0.00264
+acagtg	0.00264
+acagtt	0.000612
+acataa	0.00468
+acatac	0.000612
+acatag	0.0189
+acatat	0.00671
+acatca	0.00468
+acatcc	0.000612
+acatcg	0.000612
+acatct	0.000612
+acatga	0.00468
+acatgc	0.000612
+acatgg	0.000612
+acatgt	0.000612
+acatta	1.19
+acattc	0.00468
+acattg	0.00874
+acattt	0.00264
+accaaa	0.0128
+accaac	0.00468
+accaag	0.0677
+accaat	0.00468
+accaca	0.00264
+accacc	1.19
+accacg	0.00468
+accact	0.00264
+accaga	0.00264
+accagc	0.00468
+accagg	0.00468
+accagt	0.000612
+accata	0.00264
+accatc	0.00671
+accatg	1.19
+accatt	0.00264
+acccaa	0.00264
+acccac	0.000612
+acccag	0.00264
+acccat	0.00468
+acccca	0.000612
+accccc	0.00264
+accccg	0.000612
+acccct	0.000612
+acccga	0.000612
+acccgc	0.000612
+acccgg	0.000612
+acccgt	0.000612
+acccta	0.000612
+accctc	0.000612
+accctg	0.00264
+accctt	0.000612
+accgaa	0.000612
+accgac	0.000612
+accgag	0.000612
+accgat	0.00264
+accgca	0.00264
+accgcc	0.00264
+accgcg	0.000612
+accgct	0.000612
+accgga	0.00264
+accggc	0.000612
+accggg	0.00264
+accggt	0.000612
+accgta	0.000612
+accgtc	0.000612
+accgtg	0.00264
+accgtt	0.000612
+acctaa	0.000612
+acctac	0.000612
+acctag	0.00264
+acctat	0.000612
+acctca	0.000612
+acctcc	0.00264
+acctcg	0.000612
+acctct	0.000612
+acctga	0.00264
+acctgc	0.000612
+acctgg	0.000612
+acctgt	0.000612
+acctta	0.00264
+accttc	0.000612
+accttg	0.00671
+accttt	0.00264
+acgaaa	2.51
+acgaac	0.025
+acgaag	3.65
+acgaat	0.0555
+acgaca	0.0209
+acgacc	0.00468
+acgacg	0.00671
+acgact	0.00264
+acgaga	0.0189
+acgagc	0.000612
+acgagg	0.00874
+acgagt	0.00264
+acgata	0.0209
+acgatc	0.00671
+acgatg	0.023
+acgatt	0.0189
+acgcaa	0.00468
+acgcac	0.000612
+acgcag	0.00874
+acgcat	0.00468
+acgcca	0.000612
+acgccc	0.000612
+acgccg	0.000612
+acgcct	0.000612
+acgcga	0.00264
+acgcgc	0.000612
+acgcgg	0.000612
+acgcgt	0.000612
+acgcta	0.000612
+acgctc	0.000612
+acgctg	0.000612
+acgctt	0.00264
+acggaa	0.0108
+acggac	0.000612
+acggag	0.00874
+acggat	0.00264
+acggca	0.000612
+acggcc	0.000612
+acggcg	0.000612
+acggct	0.000612
+acggga	0.00468
+acgggc	0.000612
+acgggg	0.000612
+acgggt	0.000612
+acggta	0.000612
+acggtc	0.000612
+acggtg	0.00264
+acggtt	0.00264
+acgtaa	0.00671
+acgtac	0.000612
+acgtag	0.00874
+acgtat	0.000612
+acgtca	0.000612
+acgtcc	0.000612
+acgtcg	0.000612
+acgtct	0.00264
+acgtga	0.000612
+acgtgc	0.000612
+acgtgg	0.00264
+acgtgt	0.000612
+acgtta	0.00671
+acgttc	0.00264
+acgttg	0.00671
+acgttt	0.00671
+actaaa	0.0372
+actaac	0.00874
+actaag	2.46
+actaat	0.0148
+actaca	0.00264
+actacc	1.2
+actacg	0.0108
+actact	0.00264
+actaga	0.00468
+actagc	0.00264
+actagg	0.00874
+actagt	0.000612
+actata	0.00468
+actatc	0.00671
+actatg	1.2
+actatt	0.00264
+actcaa	0.00468
+actcac	0.00264
+actcag	0.00671
+actcat	1.19
+actcca	0.000612
+actccc	0.00264
+actccg	0.000612
+actcct	0.00264
+actcga	0.00264
+actcgc	0.000612
+actcgg	0.000612
+actcgt	0.00264
+actcta	0.000612
+actctc	0.00264
+actctg	0.00264
+actctt	0.00671
+actgaa	0.00671
+actgac	0.000612
+actgag	0.00874
+actgat	0.00264
+actgca	0.00264
+actgcc	0.00468
+actgcg	0.000612
+actgct	0.000612
+actgga	1.19
+actggc	0.00264
+actggg	0.00264
+actggt	0.00264
+actgta	0.00264
+actgtc	0.000612
+actgtg	0.00264
+actgtt	0.00468
+acttaa	0.000612
+acttac	0.000612
+acttag	0.00468
+acttat	0.00264
+acttca	0.00264
+acttcc	0.00264
+acttcg	0.000612
+acttct	0.000612
+acttga	0.00264
+acttgc	0.000612
+acttgg	0.000612
+acttgt	0.000612
+acttta	0.00264
+actttc	0.000612
+actttg	0.00264
+actttt	0.00264
+agaaaa	15.5
+agaaac	0.0494
+agaaag	9.61
+agaaat	0.0636
+agaaca	0.0291
+agaacc	0.000612
+agaacg	0.0209
+agaact	0.000612
+agaaga	0.0311
+agaagc	0.000612
+agaagg	0.023
+agaagt	0.000612
+agaata	0.0372
+agaatc	0.00874
+agaatg	1.22
+agaatt	0.00671
+agacaa	0.0291
+agacac	0.000612
+agacag	0.0209
+agacat	0.00468
+agacca	0.000612
+agaccc	0.000612
+agaccg	0.000612
+agacct	0.000612
+agacga	0.00264
+agacgc	0.000612
+agacgg	0.000612
+agacgt	0.000612
+agacta	0.00264
+agactc	0.00264
+agactg	0.00468
+agactt	0.00264
+agagaa	0.0352
+agagac	0.00264
+agagag	1.2
+agagat	0.00264
+agagca	0.000612
+agagcc	0.000612
+agagcg	0.00264
+agagct	0.000612
+agagga	0.00264
+agaggc	0.000612
+agaggg	0.00264
+agaggt	0.000612
+agagta	0.000612
+agagtc	0.000612
+agagtg	0.00671
+agagtt	0.000612
+agataa	0.0291
+agatac	0.000612
+agatag	0.023
+agatat	0.000612
+agatca	0.00264
+agatcc	0.00264
+agatcg	0.00264
+agatct	0.000612
+agatga	0.000612
+agatgc	0.000612
+agatgg	0.00264
+agatgt	0.000612
+agatta	0.00468
+agattc	0.00468
+agattg	1.19
+agattt	0.00264
+agcaaa	1.24
+agcaac	0.00671
+agcaag	1.24
+agcaat	0.00671
+agcaca	0.00468
+agcacc	0.00264
+agcacg	0.00264
+agcact	0.000612
+agcaga	0.00264
+agcagc	0.00264
+agcagg	0.00264
+agcagt	0.000612
+agcata	0.00468
+agcatc	0.00264
+agcatg	0.0148
+agcatt	0.000612
+agccaa	0.00671
+agccac	0.00264
+agccag	1.19
+agccat	0.00264
+agccca	0.000612
+agcccc	0.000612
+agcccg	0.00264
+agccct	0.000612
+agccga	0.00264
+agccgc	0.000612
+agccgg	0.00264
+agccgt	0.000612
+agccta	0.000612
+agcctc	0.000612
+agcctg	0.00468
+agcctt	0.00264
+agcgaa	0.00468
+agcgac	0.000612
+agcgag	0.00671
+agcgat	0.00264
+agcgca	0.00264
+agcgcc	0.000612
+agcgcg	0.000612
+agcgct	0.000612
+agcgga	0.000612
+agcggc	0.000612
+agcggg	0.00264
+agcggt	0.000612
+agcgta	0.000612
+agcgtc	0.000612
+agcgtg	0.00264
+agcgtt	0.000612
+agctaa	0.00264
+agctac	0.000612
+agctag	0.00671
+agctat	0.000612
+agctca	0.000612
+agctcc	0.000612
+agctcg	0.00264
+agctct	0.000612
+agctga	0.00264
+agctgc	0.000612
+agctgg	0.00264
+agctgt	0.000612
+agctta	0.00264
+agcttc	0.00468
+agcttg	1.19
+agcttt	0.00264
+aggaaa	6.11
+aggaac	0.0311
+aggaag	2.49
+aggaat	0.0514
+aggaca	0.025
+aggacc	0.00264
+aggacg	0.00468
+aggact	0.00264
+aggaga	0.023
+aggagc	0.00264
+aggagg	0.00468
+aggagt	0.00264
+aggata	0.0311
+aggatc	1.19
+aggatg	0.025
+aggatt	0.0209
+aggcaa	0.0108
+aggcac	0.000612
+aggcag	0.00874
+aggcat	0.00264
+aggcca	0.000612
+aggccc	0.000612
+aggccg	0.000612
+aggcct	0.00264
+aggcga	0.000612
+aggcgc	0.000612
+aggcgg	0.000612
+aggcgt	0.00264
+aggcta	0.00264
+aggctc	0.00671
+aggctg	0.00264
+aggctt	1.19
+agggaa	0.0169
+agggac	0.000612
+agggag	0.0108
+agggat	0.00264
+agggca	0.000612
+agggcc	0.000612
+agggcg	0.000612
+agggct	0.000612
+agggga	0.00264
+aggggc	0.000612
+aggggg	0.000612
+aggggt	0.000612
+agggta	0.000612
+agggtc	0.00468
+agggtg	0.000612
+agggtt	0.00468
+aggtaa	0.0128
+aggtac	0.00264
+aggtag	0.00671
+aggtat	0.000612
+aggtca	0.000612
+aggtcc	0.00264
+aggtcg	0.000612
+aggtct	0.00264
+aggtga	0.000612
+aggtgc	0.00264
+aggtgg	0.00264
+aggtgt	0.000612
+aggtta	0.00671
+aggttc	1.19
+aggttg	0.0128
+aggttt	0.0108
+agtaaa	3.64
+agtaac	0.0189
+agtaag	4.82
+agtaat	1.2
+agtaca	0.00874
+agtacc	0.00671
+agtacg	0.0169
+agtact	0.00264
+agtaga	0.00874
+agtagc	0.000612
+agtagg	0.0128
+agtagt	0.00264
+agtata	1.2
+agtatc	0.00874
+agtatg	2.39
+agtatt	0.0108
+agtcaa	0.00874
+agtcac	0.000612
+agtcag	0.0108
+agtcat	0.00468
+agtcca	0.000612
+agtccc	0.000612
+agtccg	0.000612
+agtcct	0.000612
+agtcga	0.000612
+agtcgc	0.000612
+agtcgg	0.000612
+agtcgt	0.000612
+agtcta	0.00264
+agtctc	0.00264
+agtctg	0.00468
+agtctt	0.00468
+agtgaa	1.2
+agtgac	0.00264
+agtgag	0.0128
+agtgat	0.00468
+agtgca	0.00264
+agtgcc	0.00264
+agtgcg	0.000612
+agtgct	0.000612
+agtgga	0.00468
+agtggc	0.000612
+agtggg	0.000612
+agtggt	0.000612
+agtgta	0.00468
+agtgtc	0.000612
+agtgtg	0.00468
+agtgtt	0.00264
+agttaa	0.00874
+agttac	0.000612
+agttag	0.00874
+agttat	0.00264
+agttca	0.000612
+agttcc	0.000612
+agttcg	0.000612
+agttct	0.000612
+agttga	0.000612
+agttgc	0.000612
+agttgg	0.000612
+agttgt	0.000612
+agttta	0.00468
+agtttc	0.00264
+agtttg	0.00874
+agtttt	0.00468
+ataaaa	0.0901
+ataaac	0.023
+ataaag	4.87
+ataaat	1.22
+ataaca	0.00468
+ataacc	0.00468
+ataacg	0.00874
+ataact	0.00264
+ataaga	0.00874
+ataagc	0.00264
+ataagg	0.0148
+ataagt	0.00671
+ataata	0.00874
+ataatc	1.19
+ataatg	0.025
+ataatt	0.0148
+atacaa	0.00671
+atacac	0.000612
+atacag	0.00874
+atacat	0.00468
+atacca	0.00468
+ataccc	0.000612
+ataccg	0.000612
+atacct	0.000612
+atacga	1.19
+atacgc	0.00264
+atacgg	0.00264
+atacgt	0.00264
+atacta	0.00468
+atactc	0.00671
+atactg	0.000612
+atactt	0.000612
+atagaa	0.00468
+atagac	0.000612
+atagag	0.0128
+atagat	0.00468
+atagca	0.00264
+atagcc	0.00264
+atagcg	0.000612
+atagct	0.000612
+atagga	0.00468
+ataggc	0.000612
+ataggg	0.00264
+ataggt	0.000612
+atagta	0.000612
+atagtc	0.00264
+atagtg	0.000612
+atagtt	0.000612
+atataa	0.00264
+atatac	0.000612
+atatag	0.0108
+atatat	0.00264
+atatca	0.00264
+atatcc	0.000612
+atatcg	0.000612
+atatct	0.000612
+atatga	0.00264
+atatgc	0.000612
+atatgg	0.000612
+atatgt	0.000612
+atatta	0.00264
+atattc	0.00264
+atattg	0.00671
+atattt	0.000612
+atcaaa	0.0392
+atcaac	0.0108
+atcaag	2.45
+atcaat	0.0189
+atcaca	0.00468
+atcacc	0.00468
+atcacg	0.00468
+atcact	0.000612
+atcaga	0.00264
+atcagc	0.00264
+atcagg	0.00671
+atcagt	0.00264
+atcata	0.000612
+atcatc	0.00264
+atcatg	0.0189
+atcatt	0.00671
+atccaa	1.19
+atccac	0.00264
+atccag	0.00874
+atccat	0.00468
+atccca	0.00468
+atcccc	0.000612
+atcccg	0.000612
+atccct	0.000612
+atccga	0.00468
+atccgc	0.000612
+atccgg	0.00264
+atccgt	0.000612
+atccta	0.00671
+atcctc	0.00264
+atcctg	0.00264
+atcctt	0.000612
+atcgaa	0.0108
+atcgac	0.00264
+atcgag	0.00874
+atcgat	1.19
+atcgca	1.19
+atcgcc	0.00468
+atcgcg	0.00468
+atcgct	0.00468
+atcgga	0.00468
+atcggc	0.00264
+atcggg	1.19
+atcggt	0.00468
+atcgta	0.00264
+atcgtc	0.000612
+atcgtg	0.00468
+atcgtt	0.00264
+atctaa	0.00264
+atctac	0.000612
+atctag	0.00671
+atctat	0.00264
+atctca	0.00468
+atctcc	0.000612
+atctcg	0.00264
+atctct	0.000612
+atctga	0.00264
+atctgc	0.000612
+atctgg	0.00468
+atctgt	0.000612
+atctta	0.00468
+atcttc	0.00264
+atcttg	1.19
+atcttt	0.00264
+atgaaa	12.1
+atgaac	2.44
+atgaag	17.9
+atgaat	4.85
+atgaca	1.22
+atgacc	0.00874
+atgacg	0.0453
+atgact	0.023
+atgaga	1.22
+atgagc	0.00874
+atgagg	0.0433
+atgagt	1.2
+atgata	0.0555
+atgatc	0.025
+atgatg	4.79
+atgatt	3.59
+atgcaa	0.025
+atgcac	0.00468
+atgcag	0.0352
+atgcat	0.00874
+atgcca	0.00264
+atgccc	0.000612
+atgccg	0.000612
+atgcct	0.000612
+atgcga	0.00468
+atgcgc	0.000612
+atgcgg	0.000612
+atgcgt	0.00264
+atgcta	0.000612
+atgctc	0.00264
+atgctg	0.00874
+atgctt	0.00874
+atggaa	1.21
+atggac	0.00874
+atggag	0.0392
+atggat	0.0148
+atggca	0.00671
+atggcc	0.00468
+atggcg	0.000612
+atggct	0.000612
+atggga	0.00671
+atgggc	0.000612
+atgggg	0.00264
+atgggt	0.00264
+atggta	0.00264
+atggtc	0.000612
+atggtg	0.00874
+atggtt	0.00874
+atgtaa	0.027
+atgtac	0.00468
+atgtag	0.0331
+atgtat	0.0108
+atgtca	0.00264
+atgtcc	0.00264
+atgtcg	0.00264
+atgtct	0.00264
+atgtga	0.00264
+atgtgc	0.000612
+atgtgg	0.00264
+atgtgt	0.00264
+atgtta	0.00671
+atgttc	0.00264
+atgttg	0.0189
+atgttt	0.0128
+attaaa	2.43
+attaac	0.023
+attaag	6.04
+attaat	0.027
+attaca	0.00874
+attacc	1.2
+attacg	0.0148
+attact	0.00264
+attaga	0.00671
+attagc	0.00264
+attagg	0.0128
+attagt	0.00264
+attata	0.00671
+attatc	0.00671
+attatg	0.0291
+attatt	0.00671
+attcaa	0.00874
+attcac	0.00264
+attcag	0.0108
+attcat	0.00264
+attcca	0.000612
+attccc	0.00874
+attccg	0.000612
+attcct	0.000612
+attcga	0.00264
+attcgc	0.00264
+attcgg	0.000612
+attcgt	0.000612
+attcta	0.00264
+attctc	1.19
+attctg	0.00264
+attctt	0.00468
+attgaa	1.2
+attgac	0.00468
+attgag	0.0128
+attgat	0.00468
+attgca	0.00671
+attgcc	1.19
+attgcg	0.00264
+attgct	0.00264
+attgga	0.00468
+attggc	0.00264
+attggg	0.00264
+attggt	0.000612
+attgta	0.00264
+attgtc	0.00468
+attgtg	0.000612
+attgtt	0.00264
+atttaa	0.00671
+atttac	0.000612
+atttag	0.0148
+atttat	0.000612
+atttca	0.000612
+atttcc	0.00671
+atttcg	0.000612
+atttct	0.000612
+atttga	0.000612
+atttgc	0.000612
+atttgg	0.000612
+atttgt	0.000612
+atttta	0.000612
+attttc	0.00264
+attttg	0.00264
+attttt	0.00468
+caaaaa	20.3
+caaaac	1.26
+caaaag	12
+caaaat	2.45
+caaaca	1.24
+caaacc	0.0108
+caaacg	2.4
+caaact	0.0108
+caaaga	0.0494
+caaagc	0.00468
+caaagg	1.22
+caaagt	0.00671
+caaata	3.62
+caaatc	0.00874
+caaatg	0.0413
+caaatt	0.0209
+caacaa	0.0413
+caacac	0.00264
+caacag	0.0209
+caacat	0.00468
+caacca	0.00264
+caaccc	0.000612
+caaccg	0.00468
+caacct	0.000612
+caacga	0.000612
+caacgc	0.000612
+caacgg	0.00468
+caacgt	0.000612
+caacta	0.0108
+caactc	0.00264
+caactg	0.000612
+caactt	0.00264
+caagaa	1.22
+caagac	0.00468
+caagag	0.0311
+caagat	0.0108
+caagca	0.00468
+caagcc	0.000612
+caagcg	0.00671
+caagct	0.000612
+caagga	0.00671
+caaggc	0.00264
+caaggg	1.19
+caaggt	0.00264
+caagta	0.0128
+caagtc	0.000612
+caagtg	0.00264
+caagtt	0.00264
+caataa	0.0413
+caatac	0.00264
+caatag	0.025
+caatat	0.00671
+caatca	0.00671
+caatcc	0.00264
+caatcg	0.00671
+caatct	0.00264
+caatga	0.00468
+caatgc	0.00264
+caatgg	0.00874
+caatgt	0.00264
+caatta	1.2
+caattc	0.00468
+caattg	0.0169
+caattt	1.19
+cacaaa	2.5
+cacaac	0.0189
+cacaag	6.03
+cacaat	0.023
+cacaca	0.0128
+cacacc	0.00264
+cacacg	0.0169
+cacact	0.000612
+cacaga	0.00874
+cacagc	0.00264
+cacagg	0.0209
+cacagt	0.000612
+cacata	0.0189
+cacatc	0.000612
+cacatg	0.0169
+cacatt	0.00468
+caccaa	0.00671
+caccac	0.000612
+caccag	0.0108
+caccat	0.000612
+caccca	0.000612
+cacccc	0.000612
+cacccg	0.000612
+caccct	0.000612
+caccga	0.00264
+caccgc	0.000612
+caccgg	0.000612
+caccgt	0.000612
+caccta	0.00468
+cacctc	0.000612
+cacctg	0.000612
+cacctt	0.00264
+cacgaa	0.00874
+cacgac	0.000612
+cacgag	0.0169
+cacgat	0.00468
+cacgca	0.000612
+cacgcc	0.000612
+cacgcg	0.000612
+cacgct	0.000612
+cacgga	0.00264
+cacggc	0.000612
+cacggg	0.00264
+cacggt	0.000612
+cacgta	0.000612
+cacgtc	0.000612
+cacgtg	0.000612
+cacgtt	0.000612
+cactaa	0.00671
+cactac	0.000612
+cactag	0.0128
+cactat	0.000612
+cactca	0.00264
+cactcc	0.000612
+cactcg	0.00468
+cactct	0.000612
+cactga	1.19
+cactgc	0.00264
+cactgg	0.00671
+cactgt	0.00264
+cactta	0.00671
+cacttc	0.000612
+cacttg	0.0108
+cacttt	0.00671
+cagaaa	37
+cagaac	0.104
+cagaag	12
+cagaat	2.51
+cagaca	2.47
+cagacc	1.19
+cagacg	1.23
+cagact	0.0189
+cagaga	0.0901
+cagagc	0.00671
+cagagg	2.4
+cagagt	0.0148
+cagata	3.66
+cagatc	0.0169
+cagatg	1.24
+cagatt	2.41
+cagcaa	1.25
+cagcac	0.00264
+cagcag	0.0291
+cagcat	0.0108
+cagcca	0.00671
+cagccc	0.00264
+cagccg	0.00468
+cagcct	0.000612
+cagcga	0.00468
+cagcgc	0.000612
+cagcgg	0.00671
+cagcgt	0.000612
+cagcta	0.0108
+cagctc	0.000612
+cagctg	0.0108
+cagctt	0.00671
+caggaa	1.27
+caggac	0.00874
+caggag	1.22
+caggat	2.39
+caggca	0.00671
+caggcc	0.00468
+caggcg	0.00874
+caggct	0.00468
+caggga	0.00468
+cagggc	0.000612
+cagggg	0.0108
+cagggt	0.00468
+caggta	0.0108
+caggtc	0.000612
+caggtg	0.0128
+caggtt	0.0128
+cagtaa	0.0738
+cagtac	0.00264
+cagtag	1.22
+cagtat	0.0128
+cagtca	0.00874
+cagtcc	0.00468
+cagtcg	1.2
+cagtct	0.00671
+cagtga	0.00671
+cagtgc	0.00264
+cagtgg	1.21
+cagtgt	0.00468
+cagtta	1.21
+cagttc	0.0128
+cagttg	4.77
+cagttt	1.21
+cataaa	0.147
+cataac	0.0169
+cataag	7.24
+cataat	0.023
+cataca	0.00874
+catacc	0.00468
+catacg	0.027
+catact	0.000612
+cataga	0.00468
+catagc	0.000612
+catagg	0.023
+catagt	0.000612
+catata	1.21
+catatc	0.00468
+catatg	1.21
+catatt	0.0108
+catcaa	0.00264
+catcac	0.00264
+catcag	0.0148
+catcat	0.00264
+catcca	0.000612
+catccc	0.000612
+catccg	0.000612
+catcct	0.000612
+catcga	0.000612
+catcgc	0.000612
+catcgg	0.00264
+catcgt	0.000612
+catcta	0.00264
+catctc	0.000612
+catctg	0.00468
+catctt	0.00468
+catgaa	0.00671
+catgac	0.00264
+catgag	1.2
+catgat	0.00671
+catgca	0.000612
+catgcc	0.000612
+catgcg	0.00264
+catgct	0.000612
+catgga	0.000612
+catggc	0.000612
+catggg	0.00671
+catggt	0.000612
+catgta	0.00264
+catgtc	0.000612
+catgtg	0.00671
+catgtt	0.00671
+cattaa	0.000612
+cattac	0.000612
+cattag	0.0209
+cattat	0.00264
+cattca	0.000612
+cattcc	0.000612
+cattcg	0.00671
+cattct	0.00264
+cattga	0.00468
+cattgc	0.00468
+cattgg	1.19
+cattgt	0.00468
+cattta	0.0148
+catttc	0.00468
+catttg	1.2
+catttt	1.2
+ccaaaa	0.0494
+ccaaac	0.00671
+ccaaag	1.24
+ccaaat	0.0189
+ccaaca	0.00468
+ccaacc	0.000612
+ccaacg	0.00671
+ccaact	0.000612
+ccaaga	0.00264
+ccaagc	0.000612
+ccaagg	0.00874
+ccaagt	0.000612
+ccaata	0.00874
+ccaatc	0.00264
+ccaatg	0.00671
+ccaatt	0.000612
+ccacaa	0.000612
+ccacac	0.000612
+ccacag	0.00264
+ccacat	0.00264
+ccacca	0.000612
+ccaccc	0.000612
+ccaccg	0.000612
+ccacct	0.000612
+ccacga	0.00264
+ccacgc	0.000612
+ccacgg	0.000612
+ccacgt	0.000612
+ccacta	0.00264
+ccactc	0.000612
+ccactg	0.000612
+ccactt	0.000612
+ccagaa	0.00671
+ccagac	0.000612
+ccagag	0.00468
+ccagat	0.00264
+ccagca	0.00264
+ccagcc	0.000612
+ccagcg	0.000612
+ccagct	0.000612
+ccagga	0.00264
+ccaggc	0.000612
+ccaggg	0.00264
+ccaggt	0.000612
+ccagta	1.19
+ccagtc	0.00264
+ccagtg	0.00264
+ccagtt	0.00264
+ccataa	0.000612
+ccatac	0.000612
+ccatag	0.00264
+ccatat	0.000612
+ccatca	0.000612
+ccatcc	0.00264
+ccatcg	0.000612
+ccatct	0.000612
+ccatga	0.000612
+ccatgc	0.000612
+ccatgg	0.000612
+ccatgt	0.000612
+ccatta	0.00671
+ccattc	0.000612
+ccattg	0.000612
+ccattt	0.00264
+cccaaa	1.2
+cccaac	0.0108
+cccaag	3.6
+cccaat	0.0148
+cccaca	0.00671
+cccacc	0.00264
+cccacg	0.00874
+cccact	0.000612
+cccaga	0.00468
+cccagc	0.00264
+cccagg	1.19
+cccagt	0.00264
+cccata	0.00264
+cccatc	0.000612
+cccatg	0.0128
+cccatt	0.000612
+ccccaa	0.00264
+ccccac	0.000612
+ccccag	0.00671
+ccccat	0.000612
+ccccca	0.000612
+cccccc	0.000612
+cccccg	0.000612
+ccccct	0.000612
+ccccga	0.00264
+ccccgc	0.000612
+ccccgg	0.00264
+ccccgt	0.000612
+ccccta	0.00468
+cccctc	0.000612
+cccctg	0.000612
+cccctt	0.000612
+cccgaa	0.00468
+cccgac	0.000612
+cccgag	0.00671
+cccgat	0.000612
+cccgca	0.000612
+cccgcc	0.000612
+cccgcg	0.000612
+cccgct	0.000612
+cccgga	0.000612
+cccggc	0.000612
+cccggg	0.00264
+cccggt	0.000612
+cccgta	0.00264
+cccgtc	0.000612
+cccgtg	0.000612
+cccgtt	0.000612
+ccctaa	0.00264
+ccctac	0.000612
+ccctag	0.00874
+ccctat	0.000612
+ccctca	0.000612
+ccctcc	0.000612
+ccctcg	0.000612
+ccctct	0.000612
+ccctga	0.00264
+ccctgc	0.000612
+ccctgg	0.00264
+ccctgt	0.000612
+ccctta	0.000612
+cccttc	0.000612
+cccttg	0.000612
+cccttt	0.00264
+ccgaaa	1.29
+ccgaac	1.19
+ccgaag	0.0514
+ccgaat	2.39
+ccgaca	1.19
+ccgacc	0.00671
+ccgacg	0.00874
+ccgact	0.00671
+ccgaga	0.00671
+ccgagc	0.00264
+ccgagg	0.00874
+ccgagt	0.00468
+ccgata	0.0128
+ccgatc	0.00264
+ccgatg	0.00264
+ccgatt	0.0108
+ccgcaa	0.00874
+ccgcac	0.00264
+ccgcag	0.000612
+ccgcat	0.00468
+ccgcca	0.00468
+ccgccc	0.000612
+ccgccg	0.000612
+ccgcct	0.000612
+ccgcga	1.19
+ccgcgc	0.00264
+ccgcgg	0.00264
+ccgcgt	0.00264
+ccgcta	0.00264
+ccgctc	0.000612
+ccgctg	0.000612
+ccgctt	0.000612
+ccggaa	1.19
+ccggac	0.00468
+ccggag	0.00468
+ccggat	0.0108
+ccggca	0.00468
+ccggcc	0.00264
+ccggcg	0.000612
+ccggct	0.000612
+ccggga	0.00468
+ccgggc	0.000612
+ccgggg	0.000612
+ccgggt	0.000612
+ccggta	0.00468
+ccggtc	0.000612
+ccggtg	0.00264
+ccggtt	0.000612
+ccgtaa	0.00468
+ccgtac	0.00264
+ccgtag	0.00264
+ccgtat	0.00468
+ccgtca	0.00264
+ccgtcc	0.000612
+ccgtcg	0.00264
+ccgtct	0.000612
+ccgtga	0.00264
+ccgtgc	0.000612
+ccgtgg	0.00264
+ccgtgt	0.000612
+ccgtta	0.00264
+ccgttc	0.000612
+ccgttg	0.0108
+ccgttt	0.00264
+cctaaa	1.2
+cctaac	0.00671
+cctaag	0.0718
+cctaat	1.19
+cctaca	0.00468
+cctacc	0.00468
+cctacg	0.00264
+cctact	0.00264
+cctaga	0.00264
+cctagc	0.000612
+cctagg	0.00468
+cctagt	0.00264
+cctata	0.00468
+cctatc	0.000612
+cctatg	0.00468
+cctatt	0.00264
+cctcaa	0.00468
+cctcac	0.000612
+cctcag	0.000612
+cctcat	0.00468
+cctcca	0.000612
+cctccc	0.000612
+cctccg	0.000612
+cctcct	0.000612
+cctcga	0.00264
+cctcgc	0.000612
+cctcgg	0.000612
+cctcgt	0.000612
+cctcta	0.000612
+cctctc	0.000612
+cctctg	0.000612
+cctctt	0.00264
+cctgaa	0.00468
+cctgac	0.000612
+cctgag	0.00671
+cctgat	0.00264
+cctgca	0.000612
+cctgcc	0.000612
+cctgcg	0.000612
+cctgct	0.000612
+cctgga	0.00264
+cctggc	0.000612
+cctggg	0.000612
+cctggt	0.000612
+cctgta	0.00264
+cctgtc	0.000612
+cctgtg	0.000612
+cctgtt	0.00264
+ccttaa	0.00264
+ccttac	0.000612
+ccttag	0.000612
+ccttat	0.00264
+ccttca	0.00264
+ccttcc	0.000612
+ccttcg	0.000612
+ccttct	0.000612
+ccttga	0.000612
+ccttgc	0.000612
+ccttgg	0.00264
+ccttgt	0.000612
+ccttta	0.00264
+cctttc	0.000612
+cctttg	0.00264
+cctttt	0.00468
+cgaaaa	1.26
+cgaaac	0.00874
+cgaaag	2.43
+cgaaat	0.0108
+cgaaca	0.00671
+cgaacc	0.00264
+cgaacg	0.0148
+cgaact	0.000612
+cgaaga	0.00264
+cgaagc	0.000612
+cgaagg	0.00874
+cgaagt	0.000612
+cgaata	0.0108
+cgaatc	0.00264
+cgaatg	1.19
+cgaatt	0.00264
+cgacaa	0.00264
+cgacac	0.000612
+cgacag	0.00468
+cgacat	0.00264
+cgacca	0.000612
+cgaccc	0.00264
+cgaccg	0.000612
+cgacct	0.000612
+cgacga	0.000612
+cgacgc	0.000612
+cgacgg	0.000612
+cgacgt	0.000612
+cgacta	0.000612
+cgactc	0.000612
+cgactg	0.00264
+cgactt	0.000612
+cgagaa	0.00874
+cgagac	0.000612
+cgagag	0.00874
+cgagat	0.000612
+cgagca	0.000612
+cgagcc	0.00264
+cgagcg	0.000612
+cgagct	0.000612
+cgagga	0.000612
+cgaggc	0.000612
+cgaggg	0.00264
+cgaggt	0.000612
+cgagta	0.00264
+cgagtc	0.000612
+cgagtg	0.00264
+cgagtt	0.000612
+cgataa	0.00264
+cgatac	0.00264
+cgatag	0.00468
+cgatat	0.000612
+cgatca	0.00264
+cgatcc	1.19
+cgatcg	0.00264
+cgatct	0.00264
+cgatga	0.000612
+cgatgc	0.00264
+cgatgg	0.000612
+cgatgt	0.000612
+cgatta	0.00468
+cgattc	0.00264
+cgattg	0.00468
+cgattt	0.00264
+cgcaaa	0.0189
+cgcaac	0.00264
+cgcaag	1.22
+cgcaat	0.00264
+cgcaca	1.19
+cgcacc	0.00264
+cgcacg	0.00671
+cgcact	0.00264
+cgcaga	0.00264
+cgcagc	0.000612
+cgcagg	0.00468
+cgcagt	0.000612
+cgcata	0.00264
+cgcatc	0.000612
+cgcatg	0.00874
+cgcatt	0.000612
+cgccaa	0.000612
+cgccac	0.000612
+cgccag	0.00468
+cgccat	0.000612
+cgccca	0.00264
+cgcccc	0.000612
+cgcccg	0.000612
+cgccct	0.000612
+cgccga	0.00264
+cgccgc	0.000612
+cgccgg	0.000612
+cgccgt	0.000612
+cgccta	0.00468
+cgcctc	0.000612
+cgcctg	0.000612
+cgcctt	0.000612
+cgcgaa	0.000612
+cgcgac	0.000612
+cgcgag	0.00264
+cgcgat	0.000612
+cgcgca	0.00264
+cgcgcc	0.000612
+cgcgcg	0.000612
+cgcgct	0.000612
+cgcgga	0.000612
+cgcggc	0.000612
+cgcggg	0.000612
+cgcggt	0.000612
+cgcgta	0.000612
+cgcgtc	0.000612
+cgcgtg	0.000612
+cgcgtt	0.000612
+cgctaa	0.000612
+cgctac	0.000612
+cgctag	0.00264
+cgctat	0.000612
+cgctca	0.00264
+cgctcc	0.00264
+cgctcg	0.000612
+cgctct	0.000612
+cgctga	0.00264
+cgctgc	0.000612
+cgctgg	0.000612
+cgctgt	0.000612
+cgctta	0.00264
+cgcttc	0.000612
+cgcttg	0.00468
+cgcttt	0.000612
+cggaaa	1.29
+cggaac	0.00671
+cggaag	0.0575
+cggaat	0.0108
+cggaca	0.0108
+cggacc	0.00264
+cggacg	0.00874
+cggact	0.000612
+cggaga	0.00264
+cggagc	0.000612
+cggagg	0.00468
+cggagt	0.000612
+cggata	0.0108
+cggatc	0.00264
+cggatg	0.00671
+cggatt	0.00468
+cggcaa	0.00468
+cggcac	0.000612
+cggcag	0.000612
+cggcat	0.000612
+cggcca	0.000612
+cggccc	0.000612
+cggccg	0.000612
+cggcct	0.000612
+cggcga	0.00264
+cggcgc	0.000612
+cggcgg	0.000612
+cggcgt	0.000612
+cggcta	0.000612
+cggctc	0.000612
+cggctg	0.000612
+cggctt	0.00264
+cgggaa	0.00671
+cgggac	0.000612
+cgggag	0.00468
+cgggat	0.00468
+cgggca	0.000612
+cgggcc	0.00264
+cgggcg	0.000612
+cgggct	0.000612
+cgggga	0.000612
+cggggc	0.000612
+cggggg	0.000612
+cggggt	0.000612
+cgggta	0.000612
+cgggtc	0.000612
+cgggtg	0.000612
+cgggtt	0.000612
+cggtaa	0.00264
+cggtac	0.000612
+cggtag	0.00264
+cggtat	0.000612
+cggtca	0.000612
+cggtcc	0.00264
+cggtcg	0.00264
+cggtct	0.000612
+cggtga	0.000612
+cggtgc	0.000612
+cggtgg	0.00264
+cggtgt	0.000612
+cggtta	0.00468
+cggttc	0.00264
+cggttg	0.0108
+cggttt	0.00264
+cgtaaa	0.0209
+cgtaac	0.00264
+cgtaag	1.23
+cgtaat	0.00671
+cgtaca	0.00468
+cgtacc	0.00264
+cgtacg	1.19
+cgtact	0.00264
+cgtaga	0.000612
+cgtagc	0.000612
+cgtagg	0.00468
+cgtagt	0.000612
+cgtata	0.00671
+cgtatc	0.000612
+cgtatg	0.0148
+cgtatt	0.00264
+cgtcaa	0.000612
+cgtcac	0.000612
+cgtcag	0.00264
+cgtcat	0.000612
+cgtcca	0.000612
+cgtccc	0.000612
+cgtccg	0.00264
+cgtcct	0.000612
+cgtcga	0.000612
+cgtcgc	0.000612
+cgtcgg	0.000612
+cgtcgt	0.000612
+cgtcta	0.00264
+cgtctc	0.000612
+cgtctg	0.000612
+cgtctt	0.000612
+cgtgaa	0.00264
+cgtgac	0.000612
+cgtgag	0.00468
+cgtgat	0.000612
+cgtgca	0.000612
+cgtgcc	0.000612
+cgtgcg	0.00264
+cgtgct	0.000612
+cgtgga	0.000612
+cgtggc	0.000612
+cgtggg	0.000612
+cgtggt	0.000612
+cgtgta	0.00264
+cgtgtc	0.000612
+cgtgtg	0.000612
+cgtgtt	0.000612
+cgttaa	0.00264
+cgttac	0.000612
+cgttag	0.00264
+cgttat	0.000612
+cgttca	0.00264
+cgttcc	0.00264
+cgttcg	0.00264
+cgttct	0.000612
+cgttga	0.00264
+cgttgc	0.000612
+cgttgg	0.00264
+cgttgt	0.000612
+cgttta	1.19
+cgtttc	0.00264
+cgtttg	0.00468
+cgtttt	0.00874
+ctaaaa	0.0616
+ctaaac	0.00468
+ctaaag	1.25
+ctaaat	0.00874
+ctaaca	0.00264
+ctaacc	0.000612
+ctaacg	0.0108
+ctaact	0.000612
+ctaaga	0.000612
+ctaagc	0.000612
+ctaagg	0.00671
+ctaagt	0.00264
+ctaata	0.00671
+ctaatc	0.00264
+ctaatg	0.00671
+ctaatt	0.000612
+ctacaa	0.000612
+ctacac	0.000612
+ctacag	0.00468
+ctacat	0.000612
+ctacca	0.00264
+ctaccc	0.000612
+ctaccg	0.000612
+ctacct	0.000612
+ctacga	0.00264
+ctacgc	0.000612
+ctacgg	0.000612
+ctacgt	0.000612
+ctacta	0.00468
+ctactc	0.000612
+ctactg	0.000612
+ctactt	0.000612
+ctagaa	0.00468
+ctagac	0.00264
+ctagag	1.19
+ctagat	0.00264
+ctagca	0.000612
+ctagcc	0.00264
+ctagcg	0.00264
+ctagct	0.000612
+ctagga	0.000612
+ctaggc	0.000612
+ctaggg	0.00468
+ctaggt	0.000612
+ctagta	0.00264
+ctagtc	0.000612
+ctagtg	0.00264
+ctagtt	0.000612
+ctataa	0.000612
+ctatac	0.000612
+ctatag	0.00468
+ctatat	0.000612
+ctatca	0.000612
+ctatcc	0.00264
+ctatcg	0.000612
+ctatct	0.000612
+ctatga	0.000612
+ctatgc	0.000612
+ctatgg	0.000612
+ctatgt	0.000612
+ctatta	0.00264
+ctattc	0.000612
+ctattg	0.00264
+ctattt	0.00468
+ctcaaa	1.21
+ctcaac	0.00671
+ctcaag	2.44
+ctcaat	0.00874
+ctcaca	0.00468
+ctcacc	0.000612
+ctcacg	0.0108
+ctcact	0.000612
+ctcaga	0.00264
+ctcagc	0.000612
+ctcagg	0.00874
+ctcagt	0.000612
+ctcata	0.00874
+ctcatc	0.00264
+ctcatg	1.19
+ctcatt	0.00264
+ctccaa	0.00874
+ctccac	0.000612
+ctccag	0.00468
+ctccat	0.000612
+ctccca	0.00468
+ctcccc	0.000612
+ctcccg	0.000612
+ctccct	0.000612
+ctccga	0.00468
+ctccgc	0.000612
+ctccgg	0.000612
+ctccgt	0.000612
+ctccta	2.38
+ctcctc	0.00468
+ctcctg	0.00671
+ctcctt	0.00468
+ctcgaa	0.00264
+ctcgac	0.000612
+ctcgag	0.00671
+ctcgat	0.00264
+ctcgca	0.00264
+ctcgcc	0.00264
+ctcgcg	0.000612
+ctcgct	0.000612
+ctcgga	0.000612
+ctcggc	0.000612
+ctcggg	0.00264
+ctcggt	0.000612
+ctcgta	0.00468
+ctcgtc	0.000612
+ctcgtg	0.00264
+ctcgtt	0.000612
+ctctaa	0.00264
+ctctac	0.000612
+ctctag	0.00468
+ctctat	0.000612
+ctctca	0.00264
+ctctcc	0.000612
+ctctcg	0.000612
+ctctct	0.000612
+ctctga	0.00264
+ctctgc	0.000612
+ctctgg	0.000612
+ctctgt	0.000612
+ctctta	0.00671
+ctcttc	0.000612
+ctcttg	0.00671
+ctcttt	0.00264
+ctgaaa	8.45
+ctgaac	0.0291
+ctgaag	3.68
+ctgaat	0.0433
+ctgaca	0.027
+ctgacc	0.00874
+ctgacg	2.38
+ctgact	0.00671
+ctgaga	0.0169
+ctgagc	0.000612
+ctgagg	0.0148
+ctgagt	0.00264
+ctgata	0.023
+ctgatc	0.000612
+ctgatg	0.0291
+ctgatt	0.0108
+ctgcaa	0.0169
+ctgcac	0.000612
+ctgcag	0.00874
+ctgcat	0.000612
+ctgcca	0.000612
+ctgccc	0.00264
+ctgccg	0.00468
+ctgcct	0.000612
+ctgcga	0.00264
+ctgcgc	0.000612
+ctgcgg	0.000612
+ctgcgt	0.000612
+ctgcta	0.00468
+ctgctc	0.000612
+ctgctg	0.00264
+ctgctt	0.000612
+ctggaa	0.0209
+ctggac	0.00468
+ctggag	0.0148
+ctggat	0.00468
+ctggca	0.00264
+ctggcc	1.19
+ctggcg	0.00671
+ctggct	0.00264
+ctggga	0.000612
+ctgggc	0.00264
+ctgggg	0.000612
+ctgggt	0.000612
+ctggta	0.000612
+ctggtc	0.00264
+ctggtg	0.00264
+ctggtt	0.000612
+ctgtaa	0.0169
+ctgtac	0.000612
+ctgtag	0.0108
+ctgtat	0.00264
+ctgtca	0.000612
+ctgtcc	0.00468
+ctgtcg	0.0108
+ctgtct	0.000612
+ctgtga	0.000612
+ctgtgc	0.000612
+ctgtgg	0.00468
+ctgtgt	0.000612
+ctgtta	0.00671
+ctgttc	0.00264
+ctgttg	1.2
+ctgttt	0.00671
+cttaaa	1.23
+cttaac	0.0189
+cttaag	9.55
+cttaat	0.0209
+cttaca	0.00264
+cttacc	0.00468
+cttacg	0.023
+cttact	0.000612
+cttaga	0.00264
+cttagc	0.000612
+cttagg	0.0189
+cttagt	0.000612
+cttata	0.00468
+cttatc	0.000612
+cttatg	0.025
+cttatt	0.00264
+cttcaa	0.00264
+cttcac	0.000612
+cttcag	0.0169
+cttcat	0.000612
+cttcca	0.000612
+cttccc	0.00264
+cttccg	0.000612
+cttcct	0.000612
+cttcga	0.000612
+cttcgc	0.000612
+cttcgg	0.000612
+cttcgt	0.000612
+cttcta	0.00468
+cttctc	0.00264
+cttctg	0.000612
+cttctt	0.00264
+cttgaa	0.00468
+cttgac	0.000612
+cttgag	0.0209
+cttgat	0.000612
+cttgca	0.000612
+cttgcc	0.00468
+cttgcg	0.000612
+cttgct	0.000612
+cttgga	0.000612
+cttggc	0.000612
+cttggg	0.000612
+cttggt	0.000612
+cttgta	0.000612
+cttgtc	0.000612
+cttgtg	0.000612
+cttgtt	0.00264
+ctttaa	0.00264
+ctttac	0.000612
+ctttag	0.0209
+ctttat	0.00264
+ctttca	0.000612
+ctttcc	0.00264
+ctttcg	0.000612
+ctttct	0.00264
+ctttga	0.000612
+ctttgc	0.000612
+ctttgg	0.00264
+ctttgt	0.00264
+ctttta	0.00468
+cttttc	0.00264
+cttttg	0.00671
+cttttt	1.19
+gaaaaa	7.24
+gaaaac	0.0392
+gaaaag	8.42
+gaaaat	0.0535
+gaaaca	0.0209
+gaaacc	0.000612
+gaaacg	0.023
+gaaact	0.000612
+gaaaga	0.027
+gaaagc	0.00468
+gaaagg	1.21
+gaaagt	0.00671
+gaaata	1.21
+gaaatc	0.00264
+gaaatg	0.027
+gaaatt	0.0128
+gaacaa	0.0148
+gaacac	0.00264
+gaacag	0.0148
+gaacat	0.000612
+gaacca	0.000612
+gaaccc	0.000612
+gaaccg	0.000612
+gaacct	0.000612
+gaacga	0.000612
+gaacgc	0.00264
+gaacgg	0.00264
+gaacgt	0.000612
+gaacta	0.00468
+gaactc	0.00264
+gaactg	0.000612
+gaactt	0.000612
+gaagaa	0.0148
+gaagac	0.000612
+gaagag	0.0148
+gaagat	0.000612
+gaagca	0.000612
+gaagcc	0.000612
+gaagcg	0.000612
+gaagct	0.000612
+gaagga	0.00264
+gaaggc	0.00264
+gaaggg	0.00468
+gaaggt	0.000612
+gaagta	0.00264
+gaagtc	0.000612
+gaagtg	0.000612
+gaagtt	0.00264
+gaataa	0.0148
+gaatac	0.00264
+gaatag	0.0169
+gaatat	0.000612
+gaatca	0.00264
+gaatcc	0.00264
+gaatcg	0.000612
+gaatct	0.000612
+gaatga	0.00264
+gaatgc	1.19
+gaatgg	0.00468
+gaatgt	0.00264
+gaatta	0.00671
+gaattc	0.00264
+gaattg	0.00468
+gaattt	0.00468
+gacaaa	3.62
+gacaac	0.0128
+gacaag	1.28
+gacaat	0.0189
+gacaca	0.0108
+gacacc	0.000612
+gacacg	0.00671
+gacact	0.000612
+gacaga	1.2
+gacagc	0.00671
+gacagg	1.19
+gacagt	0.00671
+gacata	0.0128
+gacatc	0.000612
+gacatg	0.0108
+gacatt	0.00671
+gaccaa	0.00671
+gaccac	0.00264
+gaccag	0.00264
+gaccat	0.000612
+gaccca	0.000612
+gacccc	0.000612
+gacccg	0.000612
+gaccct	0.000612
+gaccga	0.00468
+gaccgc	0.000612
+gaccgg	0.00264
+gaccgt	0.000612
+gaccta	0.000612
+gacctc	0.000612
+gacctg	0.000612
+gacctt	0.00264
+gacgaa	0.00671
+gacgac	0.000612
+gacgag	0.00468
+gacgat	0.000612
+gacgca	0.000612
+gacgcc	0.000612
+gacgcg	0.000612
+gacgct	0.000612
+gacgga	0.00264
+gacggc	0.000612
+gacggg	0.00264
+gacggt	0.000612
+gacgta	0.000612
+gacgtc	0.000612
+gacgtg	0.000612
+gacgtt	0.00264
+gactaa	0.00671
+gactac	0.000612
+gactag	0.00264
+gactat	0.000612
+gactca	0.000612
+gactcc	0.000612
+gactcg	0.00264
+gactct	0.000612
+gactga	0.00671
+gactgc	0.00264
+gactgg	0.00264
+gactgt	0.000612
+gactta	0.00468
+gacttc	0.000612
+gacttg	0.00264
+gacttt	0.00468
+gagaaa	15.7
+gagaac	1.24
+gagaag	6.08
+gagaat	6.02
+gagaca	1.24
+gagacc	0.00671
+gagacg	0.0209
+gagact	0.023
+gagaga	1.23
+gagagc	0.00671
+gagagg	0.027
+gagagt	1.21
+gagata	1.25
+gagatc	0.0169
+gagatg	2.4
+gagatt	3.6
+gagcaa	0.0291
+gagcac	0.00468
+gagcag	0.0128
+gagcat	0.0108
+gagcca	0.00264
+gagccc	0.000612
+gagccg	0.000612
+gagcct	0.000612
+gagcga	0.00264
+gagcgc	0.000612
+gagcgg	0.000612
+gagcgt	0.00264
+gagcta	0.00264
+gagctc	0.000612
+gagctg	0.00671
+gagctt	0.00874
+gaggaa	0.0311
+gaggac	0.00264
+gaggag	0.0189
+gaggat	0.0169
+gaggca	0.00264
+gaggcc	0.000612
+gaggcg	0.00264
+gaggct	0.000612
+gaggga	0.00468
+gagggc	0.000612
+gagggg	0.000612
+gagggt	0.00264
+gaggta	0.00264
+gaggtc	0.000612
+gaggtg	0.00874
+gaggtt	0.0128
+gagtaa	0.0311
+gagtac	0.00264
+gagtag	0.0169
+gagtat	0.0128
+gagtca	0.00264
+gagtcc	0.000612
+gagtcg	0.00468
+gagtct	0.00468
+gagtga	0.00264
+gagtgc	0.00264
+gagtgg	0.00671
+gagtgt	0.00468
+gagtta	0.0148
+gagttc	0.00468
+gagttg	1.21
+gagttt	1.2
+gataaa	4.84
+gataac	0.0372
+gataag	13.2
+gataat	0.0413
+gataca	0.0148
+gatacc	0.00468
+gatacg	1.21
+gatact	0.00264
+gataga	1.2
+gatagc	0.00264
+gatagg	0.0352
+gatagt	0.00468
+gatata	0.025
+gatatc	0.00264
+gatatg	1.22
+gatatt	0.0108
+gatcaa	0.0108
+gatcac	1.19
+gatcag	0.025
+gatcat	0.00468
+gatcca	0.000612
+gatccc	0.00264
+gatccg	0.00264
+gatcct	0.000612
+gatcga	0.00264
+gatcgc	0.00264
+gatcgg	0.000612
+gatcgt	0.000612
+gatcta	0.00264
+gatctc	0.00264
+gatctg	0.00264
+gatctt	0.00468
+gatgaa	0.00874
+gatgac	0.00264
+gatgag	0.0291
+gatgat	0.00264
+gatgca	0.000612
+gatgcc	0.000612
+gatgcg	0.00264
+gatgct	0.00264
+gatgga	0.00264
+gatggc	0.000612
+gatggg	0.000612
+gatggt	0.00264
+gatgta	0.00468
+gatgtc	0.00264
+gatgtg	0.00468
+gatgtt	1.19
+gattaa	0.0108
+gattac	0.00264
+gattag	0.025
+gattat	0.000612
+gattca	0.00468
+gattcc	0.000612
+gattcg	0.00264
+gattct	0.000612
+gattga	0.00468
+gattgc	0.00468
+gattgg	0.00264
+gattgt	0.000612
+gattta	1.19
+gatttc	0.00264
+gatttg	0.0108
+gatttt	0.0108
+gcaaaa	0.023
+gcaaac	0.00264
+gcaaag	1.25
+gcaaat	0.00874
+gcaaca	0.000612
+gcaacc	0.000612
+gcaacg	0.00264
+gcaact	0.000612
+gcaaga	0.00264
+gcaagc	0.000612
+gcaagg	0.00874
+gcaagt	0.00264
+gcaata	0.00264
+gcaatc	0.00264
+gcaatg	0.00468
+gcaatt	0.000612
+gcacaa	0.000612
+gcacac	0.000612
+gcacag	0.00264
+gcacat	0.00264
+gcacca	0.000612
+gcaccc	0.000612
+gcaccg	0.000612
+gcacct	0.000612
+gcacga	0.000612
+gcacgc	0.000612
+gcacgg	0.000612
+gcacgt	0.000612
+gcacta	0.000612
+gcactc	0.000612
+gcactg	0.000612
+gcactt	0.000612
+gcagaa	0.000612
+gcagac	0.000612
+gcagag	0.00671
+gcagat	0.00264
+gcagca	0.000612
+gcagcc	0.000612
+gcagcg	0.000612
+gcagct	0.000612
+gcagga	0.000612
+gcaggc	0.000612
+gcaggg	0.000612
+gcaggt	0.000612
+gcagta	0.00264
+gcagtc	0.000612
+gcagtg	0.00264
+gcagtt	0.00264
+gcataa	0.000612
+gcatac	0.000612
+gcatag	0.00264
+gcatat	0.000612
+gcatca	0.00264
+gcatcc	0.000612
+gcatcg	0.000612
+gcatct	0.000612
+gcatga	0.000612
+gcatgc	0.00264
+gcatgg	0.000612
+gcatgt	0.000612
+gcatta	0.00264
+gcattc	0.000612
+gcattg	0.000612
+gcattt	0.00264
+gccaaa	0.0128
+gccaac	0.00264
+gccaag	1.23
+gccaat	0.00264
+gccaca	0.000612
+gccacc	0.00264
+gccacg	0.00264
+gccact	0.000612
+gccaga	0.00264
+gccagc	0.000612
+gccagg	0.00874
+gccagt	0.000612
+gccata	0.000612
+gccatc	0.000612
+gccatg	0.00468
+gccatt	0.00264
+gcccaa	0.000612
+gcccac	0.000612
+gcccag	0.00264
+gcccat	0.000612
+gcccca	0.000612
+gccccc	0.000612
+gccccg	0.000612
+gcccct	0.000612
+gcccga	0.00264
+gcccgc	0.000612
+gcccgg	0.000612
+gcccgt	0.000612
+gcccta	0.000612
+gccctc	0.000612
+gccctg	0.000612
+gccctt	0.00264
+gccgaa	0.000612
+gccgac	0.000612
+gccgag	0.00671
+gccgat	0.000612
+gccgca	0.000612
+gccgcc	0.000612
+gccgcg	0.000612
+gccgct	0.000612
+gccgga	0.000612
+gccggc	0.000612
+gccggg	0.000612
+gccggt	0.000612
+gccgta	0.000612
+gccgtc	0.000612
+gccgtg	0.00264
+gccgtt	0.00468
+gcctaa	0.000612
+gcctac	0.000612
+gcctag	0.00468
+gcctat	0.00264
+gcctca	0.00264
+gcctcc	0.000612
+gcctcg	0.000612
+gcctct	0.00264
+gcctga	0.000612
+gcctgc	0.000612
+gcctgg	0.000612
+gcctgt	0.00264
+gcctta	0.00468
+gccttc	0.00264
+gccttg	0.00264
+gccttt	1.19
+gcgaaa	0.0535
+gcgaac	0.00671
+gcgaag	1.23
+gcgaat	0.0189
+gcgaca	0.00468
+gcgacc	0.000612
+gcgacg	0.00264
+gcgact	0.000612
+gcgaga	0.00264
+gcgagc	0.000612
+gcgagg	0.00671
+gcgagt	0.00264
+gcgata	0.00468
+gcgatc	0.000612
+gcgatg	0.00874
+gcgatt	0.00874
+gcgcaa	0.000612
+gcgcac	0.000612
+gcgcag	0.00264
+gcgcat	0.000612
+gcgcca	0.000612
+gcgccc	0.000612
+gcgccg	0.000612
+gcgcct	0.000612
+gcgcga	0.00264
+gcgcgc	0.000612
+gcgcgg	0.000612
+gcgcgt	0.000612
+gcgcta	0.000612
+gcgctc	0.000612
+gcgctg	0.00264
+gcgctt	0.000612
+gcggaa	0.00264
+gcggac	0.000612
+gcggag	0.0128
+gcggat	0.000612
+gcggca	0.000612
+gcggcc	0.000612
+gcggcg	0.00264
+gcggct	0.000612
+gcggga	0.000612
+gcgggc	0.000612
+gcgggg	0.00264
+gcgggt	0.000612
+gcggta	0.00264
+gcggtc	0.00264
+gcggtg	1.19
+gcggtt	0.00468
+gcgtaa	0.00264
+gcgtac	0.000612
+gcgtag	0.00264
+gcgtat	0.000612
+gcgtca	0.00264
+gcgtcc	0.000612
+gcgtcg	0.000612
+gcgtct	0.000612
+gcgtga	0.000612
+gcgtgc	0.000612
+gcgtgg	0.000612
+gcgtgt	0.000612
+gcgtta	0.000612
+gcgttc	0.000612
+gcgttg	0.00468
+gcgttt	0.00468
+gctaaa	1.21
+gctaac	0.0148
+gctaag	7.18
+gctaat	0.0169
+gctaca	0.00468
+gctacc	0.00468
+gctacg	0.0169
+gctact	0.000612
+gctaga	0.00671
+gctagc	0.00264
+gctagg	1.2
+gctagt	0.00264
+gctata	0.00264
+gctatc	0.000612
+gctatg	0.0209
+gctatt	0.00264
+gctcaa	0.00468
+gctcac	0.00264
+gctcag	0.0169
+gctcat	0.00264
+gctcca	0.00264
+gctccc	0.000612
+gctccg	0.000612
+gctcct	0.000612
+gctcga	0.000612
+gctcgc	0.000612
+gctcgg	0.00264
+gctcgt	0.000612
+gctcta	0.000612
+gctctc	0.000612
+gctctg	0.000612
+gctctt	0.00468
+gctgaa	0.00671
+gctgac	0.00468
+gctgag	2.39
+gctgat	0.00671
+gctgca	0.00264
+gctgcc	0.000612
+gctgcg	0.00468
+gctgct	0.00264
+gctgga	0.00264
+gctggc	0.000612
+gctggg	0.00671
+gctggt	0.00264
+gctgta	0.00264
+gctgtc	0.00264
+gctgtg	0.00874
+gctgtt	1.19
+gcttaa	0.00468
+gcttac	0.000612
+gcttag	0.0189
+gcttat	0.000612
+gcttca	1.19
+gcttcc	0.00264
+gcttcg	0.00264
+gcttct	0.00264
+gcttga	0.00264
+gcttgc	0.000612
+gcttgg	0.00264
+gcttgt	0.000612
+gcttta	0.00468
+gctttc	0.000612
+gctttg	0.000612
+gctttt	0.00468
+ggaaaa	0.0555
+ggaaac	0.00264
+ggaaag	1.23
+ggaaat	0.00264
+ggaaca	0.000612
+ggaacc	0.000612
+ggaacg	0.00468
+ggaact	0.000612
+ggaaga	0.000612
+ggaagc	0.000612
+ggaagg	0.00468
+ggaagt	0.00264
+ggaata	0.00264
+ggaatc	0.000612
+ggaatg	0.00671
+ggaatt	0.000612
+ggacaa	0.000612
+ggacac	0.000612
+ggacag	0.00264
+ggacat	0.00264
+ggacca	0.000612
+ggaccc	0.000612
+ggaccg	0.000612
+ggacct	0.000612
+ggacga	0.00264
+ggacgc	0.000612
+ggacgg	0.000612
+ggacgt	0.000612
+ggacta	0.000612
+ggactc	0.000612
+ggactg	0.000612
+ggactt	0.000612
+ggagaa	0.00468
+ggagac	0.000612
+ggagag	0.00671
+ggagat	0.000612
+ggagca	0.000612
+ggagcc	0.000612
+ggagcg	0.000612
+ggagct	0.000612
+ggagga	0.000612
+ggaggc	0.000612
+ggaggg	0.000612
+ggaggt	0.000612
+ggagta	0.000612
+ggagtc	0.000612
+ggagtg	0.000612
+ggagtt	0.000612
+ggataa	0.000612
+ggatac	0.000612
+ggatag	0.00264
+ggatat	0.000612
+ggatca	0.000612
+ggatcc	0.00264
+ggatcg	0.000612
+ggatct	0.000612
+ggatga	0.000612
+ggatgc	0.00264
+ggatgg	0.000612
+ggatgt	0.000612
+ggatta	0.000612
+ggattc	0.000612
+ggattg	0.00264
+ggattt	0.000612
+ggcaaa	0.0148
+ggcaac	0.00264
+ggcaag	1.21
+ggcaat	0.00264
+ggcaca	0.00264
+ggcacc	0.000612
+ggcacg	0.00264
+ggcact	0.000612
+ggcaga	0.00468
+ggcagc	0.000612
+ggcagg	0.00468
+ggcagt	0.000612
+ggcata	0.000612
+ggcatc	0.000612
+ggcatg	0.00468
+ggcatt	0.000612
+ggccaa	0.00264
+ggccac	0.000612
+ggccag	0.00468
+ggccat	0.000612
+ggccca	0.00264
+ggcccc	0.000612
+ggcccg	0.000612
+ggccct	0.000612
+ggccga	1.19
+ggccgc	0.00264
+ggccgg	0.00264
+ggccgt	0.00264
+ggccta	0.00264
+ggcctc	0.000612
+ggcctg	0.000612
+ggcctt	0.000612
+ggcgaa	0.000612
+ggcgac	0.000612
+ggcgag	0.00468
+ggcgat	0.000612
+ggcgca	0.000612
+ggcgcc	0.000612
+ggcgcg	0.000612
+ggcgct	0.000612
+ggcgga	0.00264
+ggcggc	0.000612
+ggcggg	0.000612
+ggcggt	0.000612
+ggcgta	0.000612
+ggcgtc	0.000612
+ggcgtg	0.000612
+ggcgtt	0.000612
+ggctaa	0.000612
+ggctac	0.000612
+ggctag	0.00264
+ggctat	0.000612
+ggctca	0.000612
+ggctcc	0.000612
+ggctcg	0.000612
+ggctct	0.000612
+ggctga	0.00264
+ggctgc	0.000612
+ggctgg	0.000612
+ggctgt	0.000612
+ggctta	0.00264
+ggcttc	0.000612
+ggcttg	0.00468
+ggcttt	0.00264
+gggaaa	1.25
+gggaac	0.00874
+gggaag	1.23
+gggaat	0.0148
+gggaca	0.00468
+gggacc	0.000612
+gggacg	0.00264
+gggact	0.000612
+gggaga	0.00468
+gggagc	0.000612
+gggagg	0.00264
+gggagt	0.00264
+gggata	0.00671
+gggatc	0.00264
+gggatg	0.00874
+gggatt	0.00671
+gggcaa	0.00264
+gggcac	0.000612
+gggcag	0.00468
+gggcat	0.000612
+gggcca	0.000612
+gggccc	0.000612
+gggccg	0.000612
+gggcct	0.000612
+gggcga	0.00264
+gggcgc	0.000612
+gggcgg	0.000612
+gggcgt	0.000612
+gggcta	0.000612
+gggctc	0.000612
+gggctg	0.000612
+gggctt	0.00264
+ggggaa	0.00468
+ggggac	0.00264
+ggggag	1.19
+ggggat	0.00264
+ggggca	0.000612
+ggggcc	0.000612
+ggggcg	0.00264
+ggggct	0.000612
+ggggga	0.000612
+gggggc	0.000612
+gggggg	0.00264
+gggggt	0.000612
+ggggta	0.000612
+ggggtc	0.000612
+ggggtg	0.00468
+ggggtt	0.000612
+gggtaa	0.00468
+gggtac	0.000612
+gggtag	0.00468
+gggtat	0.000612
+gggtca	0.000612
+gggtcc	0.000612
+gggtcg	0.000612
+gggtct	0.000612
+gggtga	0.000612
+gggtgc	0.000612
+gggtgg	0.000612
+gggtgt	0.000612
+gggtta	0.000612
+gggttc	0.00264
+gggttg	0.00264
+gggttt	0.00264
+ggtaaa	1.21
+ggtaac	0.00264
+ggtaag	0.0616
+ggtaat	0.00468
+ggtaca	0.00264
+ggtacc	0.000612
+ggtacg	0.00468
+ggtact	0.000612
+ggtaga	0.00468
+ggtagc	0.000612
+ggtagg	0.00264
+ggtagt	0.000612
+ggtata	0.00468
+ggtatc	0.000612
+ggtatg	0.0108
+ggtatt	0.00264
+ggtcaa	0.00264
+ggtcac	0.00264
+ggtcag	0.000612
+ggtcat	0.000612
+ggtcca	0.000612
+ggtccc	0.000612
+ggtccg	0.000612
+ggtcct	0.000612
+ggtcga	0.00264
+ggtcgc	0.000612
+ggtcgg	0.000612
+ggtcgt	0.000612
+ggtcta	0.000612
+ggtctc	0.000612
+ggtctg	0.000612
+ggtctt	0.000612
+ggtgaa	0.00468
+ggtgac	0.000612
+ggtgag	0.00671
+ggtgat	0.000612
+ggtgca	0.000612
+ggtgcc	0.000612
+ggtgcg	0.000612
+ggtgct	0.000612
+ggtgga	0.000612
+ggtggc	0.000612
+ggtggg	0.000612
+ggtggt	0.000612
+ggtgta	0.000612
+ggtgtc	0.000612
+ggtgtg	0.000612
+ggtgtt	0.00468
+ggttaa	0.00264
+ggttac	0.000612
+ggttag	0.00264
+ggttat	0.000612
+ggttca	0.00264
+ggttcc	0.000612
+ggttcg	0.000612
+ggttct	0.000612
+ggttga	0.000612
+ggttgc	0.000612
+ggttgg	0.000612
+ggttgt	0.000612
+ggttta	0.00468
+ggtttc	0.000612
+ggtttg	0.000612
+ggtttt	0.00264
+gtaaaa	1.21
+gtaaac	0.00468
+gtaaag	1.23
+gtaaat	0.00874
+gtaaca	0.00264
+gtaacc	0.000612
+gtaacg	0.00264
+gtaact	0.00264
+gtaaga	0.00468
+gtaagc	0.00264
+gtaagg	0.00874
+gtaagt	1.19
+gtaata	0.00468
+gtaatc	0.00264
+gtaatg	0.00468
+gtaatt	0.00264
+gtacaa	0.00264
+gtacac	0.000612
+gtacag	0.00264
+gtacat	0.000612
+gtacca	0.00264
+gtaccc	0.000612
+gtaccg	0.000612
+gtacct	0.000612
+gtacga	0.00264
+gtacgc	0.000612
+gtacgg	0.000612
+gtacgt	0.00264
+gtacta	0.000612
+gtactc	0.000612
+gtactg	0.000612
+gtactt	0.000612
+gtagaa	0.00264
+gtagac	0.000612
+gtagag	0.00671
+gtagat	0.000612
+gtagca	0.000612
+gtagcc	0.000612
+gtagcg	0.000612
+gtagct	0.000612
+gtagga	0.000612
+gtaggc	0.000612
+gtaggg	0.000612
+gtaggt	0.00264
+gtagta	0.000612
+gtagtc	0.000612
+gtagtg	0.000612
+gtagtt	0.000612
+gtataa	0.00468
+gtatac	0.000612
+gtatag	0.00468
+gtatat	0.000612
+gtatca	0.000612
+gtatcc	0.000612
+gtatcg	0.000612
+gtatct	0.000612
+gtatga	0.000612
+gtatgc	0.00264
+gtatgg	0.000612
+gtatgt	0.00264
+gtatta	0.00264
+gtattc	0.000612
+gtattg	0.000612
+gtattt	0.000612
+gtcaaa	0.023
+gtcaac	0.00468
+gtcaag	2.41
+gtcaat	0.00671
+gtcaca	0.000612
+gtcacc	0.000612
+gtcacg	0.00468
+gtcact	0.000612
+gtcaga	0.00264
+gtcagc	0.000612
+gtcagg	0.00671
+gtcagt	0.00264
+gtcata	0.00264
+gtcatc	0.000612
+gtcatg	0.00874
+gtcatt	0.000612
+gtccaa	0.00264
+gtccac	0.000612
+gtccag	0.00468
+gtccat	0.000612
+gtccca	0.000612
+gtcccc	0.000612
+gtcccg	0.000612
+gtccct	0.000612
+gtccga	0.00264
+gtccgc	0.000612
+gtccgg	0.000612
+gtccgt	0.000612
+gtccta	0.00671
+gtcctc	0.000612
+gtcctg	0.000612
+gtcctt	0.000612
+gtcgaa	0.000612
+gtcgac	0.000612
+gtcgag	0.00671
+gtcgat	0.00264
+gtcgca	0.00264
+gtcgcc	0.000612
+gtcgcg	0.000612
+gtcgct	0.000612
+gtcgga	0.000612
+gtcggc	0.000612
+gtcggg	0.00264
+gtcggt	0.000612
+gtcgta	0.00264
+gtcgtc	0.000612
+gtcgtg	0.000612
+gtcgtt	0.000612
+gtctaa	0.00468
+gtctac	0.000612
+gtctag	0.00671
+gtctat	0.000612
+gtctca	0.00468
+gtctcc	0.000612
+gtctcg	0.000612
+gtctct	0.000612
+gtctga	0.00264
+gtctgc	0.000612
+gtctgg	0.000612
+gtctgt	0.000612
+gtctta	1.19
+gtcttc	0.00264
+gtcttg	0.00468
+gtcttt	0.00468
+gtgaaa	4.85
+gtgaac	0.023
+gtgaag	3.65
+gtgaat	0.0392
+gtgaca	0.0128
+gtgacc	0.000612
+gtgacg	0.0108
+gtgact	0.00264
+gtgaga	0.0128
+gtgagc	0.000612
+gtgagg	0.00671
+gtgagt	0.00671
+gtgata	0.0128
+gtgatc	0.000612
+gtgatg	0.025
+gtgatt	0.0128
+gtgcaa	0.0108
+gtgcac	0.000612
+gtgcag	0.0108
+gtgcat	0.000612
+gtgcca	0.000612
+gtgccc	0.000612
+gtgccg	0.000612
+gtgcct	0.000612
+gtgcga	0.000612
+gtgcgc	0.000612
+gtgcgg	0.000612
+gtgcgt	0.000612
+gtgcta	0.000612
+gtgctc	0.000612
+gtgctg	0.000612
+gtgctt	0.000612
+gtggaa	0.0148
+gtggac	0.00468
+gtggag	1.2
+gtggat	0.00264
+gtggca	0.000612
+gtggcc	0.00264
+gtggcg	0.00264
+gtggct	0.000612
+gtggga	0.000612
+gtgggc	0.000612
+gtgggg	0.00264
+gtgggt	0.000612
+gtggta	0.000612
+gtggtc	0.000612
+gtggtg	0.00468
+gtggtt	0.000612
+gtgtaa	1.2
+gtgtac	0.00264
+gtgtag	0.0128
+gtgtat	0.00468
+gtgtca	0.00264
+gtgtcc	0.00264
+gtgtcg	0.00264
+gtgtct	0.000612
+gtgtga	0.00264
+gtgtgc	0.000612
+gtgtgg	0.000612
+gtgtgt	0.000612
+gtgtta	0.00671
+gtgttc	0.000612
+gtgttg	0.00468
+gtgttt	0.00264
+gttaaa	0.0352
+gttaac	0.00671
+gttaag	3.65
+gttaat	0.00671
+gttaca	0.000612
+gttacc	0.00468
+gttacg	0.0108
+gttact	0.000612
+gttaga	0.00264
+gttagc	0.000612
+gttagg	0.0128
+gttagt	0.00264
+gttata	0.00264
+gttatc	0.00264
+gttatg	1.2
+gttatt	0.00264
+gttcaa	0.000612
+gttcac	0.00264
+gttcag	0.00874
+gttcat	0.000612
+gttcca	0.000612
+gttccc	0.00264
+gttccg	0.000612
+gttcct	0.000612
+gttcga	0.000612
+gttcgc	0.000612
+gttcgg	0.000612
+gttcgt	0.000612
+gttcta	0.000612
+gttctc	0.00264
+gttctg	0.00264
+gttctt	0.000612
+gttgaa	0.00264
+gttgac	0.000612
+gttgag	0.0148
+gttgat	0.000612
+gttgca	0.000612
+gttgcc	0.00264
+gttgcg	0.000612
+gttgct	0.000612
+gttgga	0.000612
+gttggc	0.000612
+gttggg	0.000612
+gttggt	0.000612
+gttgta	0.000612
+gttgtc	0.000612
+gttgtg	0.00264
+gttgtt	0.00468
+gtttaa	0.00468
+gtttac	0.00264
+gtttag	1.2
+gtttat	0.00264
+gtttca	0.00264
+gtttcc	0.00264
+gtttcg	0.00264
+gtttct	0.000612
+gtttga	0.000612
+gtttgc	0.000612
+gtttgg	0.00264
+gtttgt	0.000612
+gtttta	0.00468
+gttttc	0.000612
+gttttg	0.00468
+gttttt	0.00264
+taaaaa	0.112
+taaaac	1.2
+taaaag	0.1
+taaaat	0.023
+taaaca	0.00874
+taaacc	0.00264
+taaacg	0.00671
+taaact	0.000612
+taaaga	1.19
+taaagc	0.00468
+taaagg	0.0148
+taaagt	0.00264
+taaata	0.023
+taaatc	0.00264
+taaatg	0.00264
+taaatt	0.00468
+taacaa	0.00264
+taacac	0.00264
+taacag	0.000612
+taacat	0.00468
+taacca	0.00264
+taaccc	0.000612
+taaccg	0.000612
+taacct	0.000612
+taacga	0.00264
+taacgc	0.000612
+taacgg	0.000612
+taacgt	0.000612
+taacta	0.00264
+taactc	0.00264
+taactg	0.000612
+taactt	0.00264
+taagaa	0.00671
+taagac	0.00264
+taagag	0.00264
+taagat	0.00264
+taagca	0.000612
+taagcc	0.000612
+taagcg	0.00264
+taagct	0.000612
+taagga	0.00468
+taaggc	0.000612
+taaggg	0.00264
+taaggt	0.000612
+taagta	0.000612
+taagtc	0.000612
+taagtg	0.000612
+taagtt	0.000612
+taataa	0.00264
+taatac	0.00264
+taatag	0.00264
+taatat	0.000612
+taatca	0.00264
+taatcc	0.000612
+taatcg	0.00264
+taatct	0.000612
+taatga	0.00264
+taatgc	0.00468
+taatgg	0.000612
+taatgt	0.000612
+taatta	0.00264
+taattc	0.000612
+taattg	0.00468
+taattt	0.00264
+tacaaa	1.23
+tacaac	0.0148
+tacaag	4.81
+tacaat	0.0148
+tacaca	0.00468
+tacacc	0.000612
+tacacg	0.0108
+tacact	0.000612
+tacaga	0.00671
+tacagc	0.00264
+tacagg	0.0108
+tacagt	0.000612
+tacata	0.00874
+tacatc	0.000612
+tacatg	0.0108
+tacatt	0.00264
+taccaa	0.00264
+taccac	0.000612
+taccag	0.0108
+taccat	0.00468
+taccca	0.000612
+tacccc	0.000612
+tacccg	0.00264
+taccct	0.00264
+taccga	0.000612
+taccgc	0.000612
+taccgg	0.000612
+taccgt	0.00264
+taccta	0.00264
+tacctc	0.00264
+tacctg	0.00264
+tacctt	1.19
+tacgaa	0.00468
+tacgac	0.00264
+tacgag	1.2
+tacgat	0.00264
+tacgca	0.000612
+tacgcc	0.000612
+tacgcg	0.00671
+tacgct	0.000612
+tacgga	0.000612
+tacggc	0.000612
+tacggg	0.00264
+tacggt	0.000612
+tacgta	0.000612
+tacgtc	0.000612
+tacgtg	0.00264
+tacgtt	0.00264
+tactaa	0.00264
+tactac	0.000612
+tactag	0.0148
+tactat	0.000612
+tactca	0.00468
+tactcc	0.00264
+tactcg	1.19
+tactct	0.00264
+tactga	0.00468
+tactgc	0.00264
+tactgg	0.00264
+tactgt	0.000612
+tactta	0.000612
+tacttc	0.000612
+tacttg	0.00671
+tacttt	0.00264
+tagaaa	9.75
+tagaac	0.0433
+tagaag	4.86
+tagaat	1.26
+tagaca	1.22
+tagacc	0.00468
+tagacg	0.0148
+tagact	0.00874
+tagaga	0.0352
+tagagc	0.000612
+tagagg	0.0148
+tagagt	0.00468
+tagata	1.24
+tagatc	0.00468
+tagatg	0.025
+tagatt	0.027
+tagcaa	0.0189
+tagcac	0.000612
+tagcag	0.0128
+tagcat	0.00468
+tagcca	0.00264
+tagccc	0.000612
+tagccg	0.00264
+tagcct	0.000612
+tagcga	0.000612
+tagcgc	0.000612
+tagcgg	0.000612
+tagcgt	0.000612
+tagcta	0.00264
+tagctc	0.000612
+tagctg	0.000612
+tagctt	0.00264
+taggaa	0.0209
+taggac	0.00264
+taggag	0.0189
+taggat	0.00874
+taggca	0.00468
+taggcc	0.00264
+taggcg	1.19
+taggct	0.00264
+taggga	0.00264
+tagggc	0.000612
+tagggg	0.00264
+tagggt	0.000612
+taggta	0.00264
+taggtc	0.000612
+taggtg	0.00264
+taggtt	0.00264
+tagtaa	0.0189
+tagtac	0.000612
+tagtag	0.0128
+tagtat	0.00468
+tagtca	0.00264
+tagtcc	0.00264
+tagtcg	0.00874
+tagtct	0.00264
+tagtga	0.000612
+tagtgc	0.00264
+tagtgg	0.00468
+tagtgt	0.000612
+tagtta	0.0108
+tagttc	0.000612
+tagttg	0.0189
+tagttt	0.0108
+tataaa	3.61
+tataac	0.0148
+tataag	2.47
+tataat	0.0148
+tataca	0.0128
+tatacc	0.00671
+tatacg	0.00874
+tatact	0.000612
+tataga	0.0148
+tatagc	0.00264
+tatagg	0.00671
+tatagt	0.000612
+tatata	2.39
+tatatc	0.00468
+tatatg	0.0189
+tatatt	0.00671
+tatcaa	0.0108
+tatcac	0.00468
+tatcag	0.00671
+tatcat	1.19
+tatcca	0.000612
+tatccc	0.00264
+tatccg	0.000612
+tatcct	0.00264
+tatcga	0.000612
+tatcgc	0.00264
+tatcgg	0.000612
+tatcgt	0.00264
+tatcta	0.00468
+tatctc	0.000612
+tatctg	0.00264
+tatctt	0.00874
+tatgaa	0.00671
+tatgac	0.000612
+tatgag	0.00874
+tatgat	0.00264
+tatgca	0.000612
+tatgcc	0.000612
+tatgcg	0.00264
+tatgct	0.000612
+tatgga	0.000612
+tatggc	0.00264
+tatggg	0.000612
+tatggt	0.000612
+tatgta	0.00468
+tatgtc	0.000612
+tatgtg	0.00264
+tatgtt	0.00468
+tattaa	0.00671
+tattac	0.00264
+tattag	0.00874
+tattat	0.00264
+tattca	0.000612
+tattcc	0.00468
+tattcg	0.00468
+tattct	0.000612
+tattga	0.00264
+tattgc	1.19
+tattgg	0.00671
+tattgt	0.00264
+tattta	0.00874
+tatttc	0.00468
+tatttg	1.19
+tatttt	0.00874
+tcaaaa	2.4
+tcaaac	0.0148
+tcaaag	3.62
+tcaaat	1.21
+tcaaca	0.00468
+tcaacc	0.00264
+tcaacg	0.0108
+tcaact	0.00264
+tcaaga	0.0108
+tcaagc	0.00264
+tcaagg	1.2
+tcaagt	0.00468
+tcaata	0.00671
+tcaatc	0.00264
+tcaatg	0.0108
+tcaatt	0.00468
+tcacaa	0.00671
+tcacac	0.000612
+tcacag	0.00671
+tcacat	0.00874
+tcacca	0.00264
+tcaccc	0.000612
+tcaccg	0.000612
+tcacct	0.000612
+tcacga	0.000612
+tcacgc	0.000612
+tcacgg	0.00264
+tcacgt	0.000612
+tcacta	0.000612
+tcactc	0.000612
+tcactg	0.000612
+tcactt	0.00264
+tcagaa	0.0108
+tcagac	0.00264
+tcagag	0.00874
+tcagat	1.19
+tcagca	0.000612
+tcagcc	0.000612
+tcagcg	0.000612
+tcagct	0.00264
+tcagga	0.000612
+tcaggc	0.000612
+tcaggg	0.00264
+tcaggt	0.00264
+tcagta	0.00264
+tcagtc	0.000612
+tcagtg	0.000612
+tcagtt	0.00264
+tcataa	0.00468
+tcatac	0.000612
+tcatag	0.00874
+tcatat	0.00468
+tcatca	0.000612
+tcatcc	0.000612
+tcatcg	0.000612
+tcatct	0.000612
+tcatga	0.000612
+tcatgc	0.000612
+tcatgg	0.00264
+tcatgt	0.000612
+tcatta	0.00264
+tcattc	0.000612
+tcattg	0.000612
+tcattt	0.000612
+tccaaa	0.027
+tccaac	0.0108
+tccaag	5.98
+tccaat	0.0169
+tccaca	0.000612
+tccacc	0.00468
+tccacg	0.0108
+tccact	0.000612
+tccaga	0.000612
+tccagc	0.000612
+tccagg	0.0169
+tccagt	0.000612
+tccata	0.00264
+tccatc	0.000612
+tccatg	0.0148
+tccatt	0.00264
+tcccaa	0.00264
+tcccac	0.000612
+tcccag	0.0128
+tcccat	0.000612
+tcccca	0.000612
+tccccc	0.000612
+tccccg	0.000612
+tcccct	0.000612
+tcccga	0.000612
+tcccgc	0.000612
+tcccgg	0.000612
+tcccgt	0.000612
+tcccta	0.000612
+tccctc	0.000612
+tccctg	0.000612
+tccctt	0.00468
+tccgaa	0.000612
+tccgac	0.000612
+tccgag	0.0148
+tccgat	0.00264
+tccgca	0.000612
+tccgcc	0.000612
+tccgcg	0.000612
+tccgct	0.000612
+tccgga	0.000612
+tccggc	0.000612
+tccggg	0.000612
+tccggt	0.000612
+tccgta	0.000612
+tccgtc	0.000612
+tccgtg	0.000612
+tccgtt	0.000612
+tcctaa	0.00264
+tcctac	0.00264
+tcctag	1.2
+tcctat	0.00264
+tcctca	0.00264
+tcctcc	0.000612
+tcctcg	0.00468
+tcctct	0.000612
+tcctga	0.000612
+tcctgc	0.000612
+tcctgg	0.00264
+tcctgt	0.000612
+tcctta	0.000612
+tccttc	0.000612
+tccttg	0.00468
+tccttt	0.00264
+tcgaaa	3.63
+tcgaac	0.0148
+tcgaag	0.086
+tcgaat	1.21
+tcgaca	0.0128
+tcgacc	0.00264
+tcgacg	0.00264
+tcgact	0.00671
+tcgaga	0.0108
+tcgagc	0.00264
+tcgagg	1.19
+tcgagt	0.00671
+tcgata	1.2
+tcgatc	0.00468
+tcgatg	0.0128
+tcgatt	1.19
+tcgcaa	0.00874
+tcgcac	0.000612
+tcgcag	0.00264
+tcgcat	0.00264
+tcgcca	0.000612
+tcgccc	0.000612
+tcgccg	0.000612
+tcgcct	0.000612
+tcgcga	0.00264
+tcgcgc	0.000612
+tcgcgg	0.00264
+tcgcgt	0.000612
+tcgcta	0.00264
+tcgctc	0.000612
+tcgctg	0.000612
+tcgctt	0.00468
+tcggaa	0.00874
+tcggac	0.00264
+tcggag	0.00264
+tcggat	0.00468
+tcggca	0.000612
+tcggcc	0.000612
+tcggcg	0.00264
+tcggct	0.000612
+tcggga	0.000612
+tcgggc	0.000612
+tcgggg	0.00264
+tcgggt	0.000612
+tcggta	0.00264
+tcggtc	0.000612
+tcggtg	0.00264
+tcggtt	0.00264
+tcgtaa	0.00671
+tcgtac	0.000612
+tcgtag	0.00264
+tcgtat	0.00468
+tcgtca	0.000612
+tcgtcc	0.00264
+tcgtcg	0.00264
+tcgtct	0.000612
+tcgtga	0.000612
+tcgtgc	0.000612
+tcgtgg	0.00264
+tcgtgt	0.000612
+tcgtta	0.00468
+tcgttc	0.000612
+tcgttg	0.000612
+tcgttt	0.00264
+tctaaa	1.22
+tctaac	0.0169
+tctaag	7.17
+tctaat	0.0209
+tctaca	0.00468
+tctacc	1.19
+tctacg	0.0148
+tctact	0.00264
+tctaga	0.00264
+tctagc	0.00264
+tctagg	0.0209
+tctagt	0.000612
+tctata	0.00874
+tctatc	0.00264
+tctatg	0.0189
+tctatt	0.00671
+tctcaa	1.19
+tctcac	0.00264
+tctcag	0.0148
+tctcat	0.00874
+tctcca	0.00264
+tctccc	0.00468
+tctccg	0.000612
+tctcct	0.00264
+tctcga	0.00264
+tctcgc	0.000612
+tctcgg	0.000612
+tctcgt	0.00264
+tctcta	0.00468
+tctctc	0.00264
+tctctg	0.00264
+tctctt	1.19
+tctgaa	0.00468
+tctgac	0.000612
+tctgag	0.0169
+tctgat	0.00264
+tctgca	0.000612
+tctgcc	0.00264
+tctgcg	0.000612
+tctgct	0.000612
+tctgga	0.00264
+tctggc	0.000612
+tctggg	0.000612
+tctggt	0.000612
+tctgta	0.000612
+tctgtc	0.000612
+tctgtg	0.000612
+tctgtt	0.00468
+tcttaa	0.00468
+tcttac	0.000612
+tcttag	0.0169
+tcttat	0.000612
+tcttca	0.00264
+tcttcc	0.00468
+tcttcg	0.000612
+tcttct	0.000612
+tcttga	0.000612
+tcttgc	0.00264
+tcttgg	0.000612
+tcttgt	0.000612
+tcttta	0.000612
+tctttc	0.000612
+tctttg	0.00264
+tctttt	0.00468
+tgaaaa	3.62
+tgaaac	0.0148
+tgaaag	2.43
+tgaaat	0.0148
+tgaaca	0.00874
+tgaacc	0.00264
+tgaacg	1.19
+tgaact	0.00264
+tgaaga	0.00874
+tgaagc	0.000612
+tgaagg	0.0108
+tgaagt	0.000612
+tgaata	0.00874
+tgaatc	0.000612
+tgaatg	0.0169
+tgaatt	0.00264
+tgacaa	0.0128
+tgacac	0.00264
+tgacag	0.00671
+tgacat	1.19
+tgacca	0.00264
+tgaccc	0.000612
+tgaccg	0.00264
+tgacct	0.00264
+tgacga	0.000612
+tgacgc	0.000612
+tgacgg	0.000612
+tgacgt	0.00264
+tgacta	0.000612
+tgactc	0.000612
+tgactg	0.000612
+tgactt	0.00264
+tgagaa	2.38
+tgagac	0.00468
+tgagag	0.0108
+tgagat	0.00874
+tgagca	0.00468
+tgagcc	0.000612
+tgagcg	0.00264
+tgagct	0.000612
+tgagga	0.00468
+tgaggc	0.000612
+tgaggg	0.000612
+tgaggt	0.000612
+tgagta	0.00468
+tgagtc	0.000612
+tgagtg	0.000612
+tgagtt	0.000612
+tgataa	0.0108
+tgatac	0.000612
+tgatag	0.00468
+tgatat	0.00264
+tgatca	0.000612
+tgatcc	0.00264
+tgatcg	0.00264
+tgatct	0.000612
+tgatga	0.000612
+tgatgc	0.000612
+tgatgg	0.000612
+tgatgt	0.000612
+tgatta	0.000612
+tgattc	0.000612
+tgattg	0.00468
+tgattt	0.00264
+tgcaaa	0.023
+tgcaac	0.00468
+tgcaag	1.24
+tgcaat	0.00468
+tgcaca	0.00264
+tgcacc	0.000612
+tgcacg	0.00671
+tgcact	0.000612
+tgcaga	0.000612
+tgcagc	0.000612
+tgcagg	0.00468
+tgcagt	0.000612
+tgcata	0.00468
+tgcatc	0.00264
+tgcatg	1.2
+tgcatt	0.00468
+tgccaa	0.000612
+tgccac	0.000612
+tgccag	0.00468
+tgccat	0.00264
+tgccca	0.000612
+tgcccc	0.000612
+tgcccg	0.000612
+tgccct	0.000612
+tgccga	0.00264
+tgccgc	0.000612
+tgccgg	0.000612
+tgccgt	0.000612
+tgccta	0.000612
+tgcctc	0.000612
+tgcctg	0.00468
+tgcctt	0.00264
+tgcgaa	0.00468
+tgcgac	0.000612
+tgcgag	0.00468
+tgcgat	0.000612
+tgcgca	0.000612
+tgcgcc	0.000612
+tgcgcg	0.000612
+tgcgct	0.000612
+tgcgga	0.000612
+tgcggc	0.000612
+tgcggg	0.000612
+tgcggt	0.000612
+tgcgta	0.000612
+tgcgtc	0.000612
+tgcgtg	0.00468
+tgcgtt	0.000612
+tgctaa	0.000612
+tgctac	0.000612
+tgctag	0.00671
+tgctat	0.000612
+tgctca	0.00264
+tgctcc	0.000612
+tgctcg	0.00468
+tgctct	0.000612
+tgctga	0.000612
+tgctgc	0.000612
+tgctgg	0.00264
+tgctgt	0.000612
+tgctta	0.00264
+tgcttc	0.00264
+tgcttg	1.19
+tgcttt	0.00468
+tggaaa	4.84
+tggaac	1.21
+tggaag	8.36
+tggaat	0.0352
+tggaca	0.0128
+tggacc	0.00264
+tggacg	0.0189
+tggact	0.00264
+tggaga	0.0108
+tggagc	0.00264
+tggagg	0.0189
+tggagt	0.000612
+tggata	1.2
+tggatc	0.00874
+tggatg	1.21
+tggatt	0.00874
+tggcaa	0.00874
+tggcac	0.00264
+tggcag	0.0169
+tggcat	0.00264
+tggcca	0.000612
+tggccc	0.000612
+tggccg	0.000612
+tggcct	0.000612
+tggcga	0.000612
+tggcgc	0.000612
+tggcgg	0.000612
+tggcgt	0.000612
+tggcta	0.00264
+tggctc	0.000612
+tggctg	0.00264
+tggctt	0.00264
+tgggaa	0.0128
+tgggac	0.00468
+tgggag	0.0189
+tgggat	0.000612
+tgggca	0.000612
+tgggcc	0.000612
+tgggcg	0.00264
+tgggct	0.000612
+tgggga	0.000612
+tggggc	0.000612
+tggggg	0.000612
+tggggt	0.000612
+tgggta	0.00264
+tgggtc	0.000612
+tgggtg	0.00264
+tgggtt	0.000612
+tggtaa	0.00874
+tggtac	0.00264
+tggtag	0.0148
+tggtat	0.00264
+tggtca	0.000612
+tggtcc	0.00264
+tggtcg	0.00264
+tggtct	0.000612
+tggtga	0.000612
+tggtgc	0.000612
+tggtgg	0.000612
+tggtgt	0.000612
+tggtta	0.00468
+tggttc	0.00264
+tggttg	0.00468
+tggttt	0.00264
+tgtaaa	1.22
+tgtaac	0.00671
+tgtaag	1.24
+tgtaat	0.00874
+tgtaca	0.00264
+tgtacc	0.00468
+tgtacg	0.00874
+tgtact	0.00264
+tgtaga	0.00264
+tgtagc	0.000612
+tgtagg	0.00671
+tgtagt	0.00264
+tgtata	0.0148
+tgtatc	0.00468
+tgtatg	1.2
+tgtatt	1.19
+tgtcaa	0.00468
+tgtcac	0.000612
+tgtcag	0.00264
+tgtcat	0.00468
+tgtcca	0.000612
+tgtccc	0.00264
+tgtccg	0.000612
+tgtcct	0.000612
+tgtcga	0.000612
+tgtcgc	0.000612
+tgtcgg	0.000612
+tgtcgt	0.000612
+tgtcta	0.000612
+tgtctc	0.000612
+tgtctg	0.00264
+tgtctt	0.00671
+tgtgaa	0.00874
+tgtgac	0.000612
+tgtgag	0.00264
+tgtgat	0.000612
+tgtgca	0.000612
+tgtgcc	0.000612
+tgtgcg	0.000612
+tgtgct	0.000612
+tgtgga	0.000612
+tgtggc	0.000612
+tgtggg	0.000612
+tgtggt	0.000612
+tgtgta	0.000612
+tgtgtc	0.000612
+tgtgtg	0.00264
+tgtgtt	0.00468
+tgttaa	0.00264
+tgttac	0.000612
+tgttag	0.00468
+tgttat	0.00264
+tgttca	0.000612
+tgttcc	0.00264
+tgttcg	0.000612
+tgttct	0.00264
+tgttga	0.000612
+tgttgc	0.00264
+tgttgg	0.000612
+tgttgt	0.00264
+tgttta	0.00468
+tgtttc	0.00264
+tgtttg	0.00874
+tgtttt	1.19
+ttaaaa	1.23
+ttaaac	0.00671
+ttaaag	0.0555
+ttaaat	0.0148
+ttaaca	0.00468
+ttaacc	0.00264
+ttaacg	0.00468
+ttaact	0.00264
+ttaaga	0.00671
+ttaagc	0.00264
+ttaagg	1.19
+ttaagt	0.00468
+ttaata	0.00468
+ttaatc	0.00264
+ttaatg	0.00874
+ttaatt	0.000612
+ttacaa	0.00468
+ttacac	0.000612
+ttacag	0.00264
+ttacat	0.00264
+ttacca	1.19
+ttaccc	0.00468
+ttaccg	0.00264
+ttacct	0.00264
+ttacga	0.00468
+ttacgc	0.000612
+ttacgg	0.00264
+ttacgt	0.000612
+ttacta	0.00264
+ttactc	0.000612
+ttactg	0.000612
+ttactt	0.000612
+ttagaa	0.00671
+ttagac	0.00264
+ttagag	0.00468
+ttagat	0.00264
+ttagca	0.00264
+ttagcc	0.000612
+ttagcg	0.000612
+ttagct	0.000612
+ttagga	0.000612
+ttaggc	0.000612
+ttaggg	0.00264
+ttaggt	0.000612
+ttagta	0.000612
+ttagtc	0.000612
+ttagtg	0.000612
+ttagtt	0.000612
+ttataa	0.00264
+ttatac	0.000612
+ttatag	0.00264
+ttatat	0.00264
+ttatca	0.00468
+ttatcc	0.00468
+ttatcg	0.00264
+ttatct	0.000612
+ttatga	0.000612
+ttatgc	0.000612
+ttatgg	0.00264
+ttatgt	0.000612
+ttatta	0.00264
+ttattc	0.000612
+ttattg	0.000612
+ttattt	0.000612
+ttcaaa	0.0453
+ttcaac	0.0108
+ttcaag	3.62
+ttcaat	1.2
+ttcaca	0.00264
+ttcacc	0.00264
+ttcacg	0.00671
+ttcact	0.00468
+ttcaga	0.000612
+ttcagc	0.000612
+ttcagg	0.0108
+ttcagt	0.00264
+ttcata	0.00264
+ttcatc	0.000612
+ttcatg	0.0169
+ttcatt	0.00264
+ttccaa	0.00264
+ttccac	0.000612
+ttccag	0.00874
+ttccat	0.00264
+ttccca	0.00468
+ttcccc	0.00264
+ttcccg	0.000612
+ttccct	0.000612
+ttccga	0.000612
+ttccgc	0.000612
+ttccgg	0.000612
+ttccgt	0.000612
+ttccta	0.00468
+ttcctc	0.000612
+ttcctg	0.000612
+ttcctt	0.00264
+ttcgaa	0.000612
+ttcgac	0.00264
+ttcgag	0.0108
+ttcgat	0.00468
+ttcgca	0.00468
+ttcgcc	0.000612
+ttcgcg	0.000612
+ttcgct	0.000612
+ttcgga	0.000612
+ttcggc	0.000612
+ttcggg	0.00264
+ttcggt	0.000612
+ttcgta	0.000612
+ttcgtc	0.000612
+ttcgtg	0.000612
+ttcgtt	0.000612
+ttctaa	0.00264
+ttctac	0.000612
+ttctag	0.0108
+ttctat	0.00468
+ttctca	1.19
+ttctcc	0.00671
+ttctcg	0.00671
+ttctct	0.00264
+ttctga	0.00264
+ttctgc	0.000612
+ttctgg	0.000612
+ttctgt	0.000612
+ttctta	0.00671
+ttcttc	0.000612
+ttcttg	0.00468
+ttcttt	0.000612
+ttgaaa	17.9
+ttgaac	1.25
+ttgaag	9.62
+ttgaat	3.63
+ttgaca	0.0392
+ttgacc	0.00874
+ttgacg	0.0291
+ttgact	1.19
+ttgaga	0.0352
+ttgagc	0.00264
+ttgagg	0.027
+ttgagt	0.0108
+ttgata	1.23
+ttgatc	0.00874
+ttgatg	2.41
+ttgatt	0.023
+ttgcaa	0.0331
+ttgcac	0.00671
+ttgcag	1.21
+ttgcat	0.0108
+ttgcca	0.00264
+ttgccc	0.00468
+ttgccg	0.00468
+ttgcct	0.00264
+ttgcga	0.000612
+ttgcgc	0.000612
+ttgcgg	0.00264
+ttgcgt	0.000612
+ttgcta	0.00468
+ttgctc	0.000612
+ttgctg	0.00671
+ttgctt	0.000612
+ttggaa	0.0372
+ttggac	1.19
+ttggag	1.21
+ttggat	0.0128
+ttggca	0.000612
+ttggcc	0.00671
+ttggcg	0.00671
+ttggct	0.00264
+ttggga	0.000612
+ttgggc	0.00264
+ttgggg	0.00264
+ttgggt	0.000612
+ttggta	0.00468
+ttggtc	0.00264
+ttggtg	0.00671
+ttggtt	0.000612
+ttgtaa	0.0372
+ttgtac	0.00874
+ttgtag	0.027
+ttgtat	1.19
+ttgtca	0.00874
+ttgtcc	1.19
+ttgtcg	1.19
+ttgtct	0.00874
+ttgtga	0.00264
+ttgtgc	0.00264
+ttgtgg	0.00264
+ttgtgt	0.00264
+ttgtta	1.19
+ttgttc	0.00468
+ttgttg	0.0108
+ttgttt	0.00468
+tttaaa	0.0555
+tttaac	0.0108
+tttaag	3.64
+tttaat	0.0148
+tttaca	0.00264
+tttacc	1.2
+tttacg	0.0128
+tttact	0.00468
+tttaga	0.00264
+tttagc	0.00468
+tttagg	1.2
+tttagt	0.00264
+tttata	0.00874
+tttatc	0.00468
+tttatg	1.2
+tttatt	0.00468
+tttcaa	0.00264
+tttcac	0.00264
+tttcag	0.0108
+tttcat	0.00264
+tttcca	0.00468
+tttccc	1.19
+tttccg	0.00264
+tttcct	0.00264
+tttcga	0.000612
+tttcgc	0.00264
+tttcgg	0.00264
+tttcgt	0.000612
+tttcta	0.000612
+tttctc	0.00468
+tttctg	0.00264
+tttctt	0.00264
+tttgaa	0.00264
+tttgac	0.00264
+tttgag	0.0108
+tttgat	0.000612
+tttgca	0.000612
+tttgcc	0.00874
+tttgcg	0.000612
+tttgct	0.000612
+tttgga	0.000612
+tttggc	0.000612
+tttggg	0.00264
+tttggt	0.000612
+tttgta	0.000612
+tttgtc	0.000612
+tttgtg	0.00264
+tttgtt	0.000612
+ttttaa	0.00264
+ttttac	0.00468
+ttttag	1.2
+ttttat	0.00468
+ttttca	0.00468
+ttttcc	1.19
+ttttcg	0.00671
+ttttct	0.00264
+ttttga	0.000612
+ttttgc	0.00468
+ttttgg	0.00468
+ttttgt	0.000612
+ttttta	0.00264
+tttttc	0.00264
+tttttg	0.00671
+tttttt	0.00468
+
+#
+# Length probabilities
+#
+[LENGTH]
+# The 'd' variable
+206
+# The length probabilities from '0' to 'd' (*1000) 
+6.08e-20
+3.56e-19
+1.95e-18
+1.07e-17
+5.82e-17
+3.13e-16
+1.65e-15
+8.45e-15
+4.22e-14
+2.04e-13
+9.57e-13
+4.35e-12
+1.92e-11
+8.25e-11
+3.45e-10
+1.41e-09
+5.63e-09
+2.2e-08
+8.4e-08
+3.13e-07
+1.13e-06
+3.96e-06
+1.34e-05
+4.34e-05
+0.000134
+0.000397
+0.00112
+0.00299
+0.00759
+0.0183
+0.0417
+0.0902
+0.185
+0.359
+0.663
+1.16
+1.93
+3.06
+4.6
+6.61
+9.07
+11.9
+15
+18.2
+21.3
+24.2
+26.7
+28.9
+30.8
+32.4
+33.7
+34.8
+35.6
+36
+36.1
+35.8
+35
+33.8
+32.2
+30.5
+28.6
+26.7
+24.8
+23
+21.4
+19.8
+18.4
+17.1
+15.9
+14.7
+13.7
+12.6
+11.7
+10.8
+9.93
+9.13
+8.38
+7.68
+7.03
+6.43
+5.87
+5.35
+4.88
+4.45
+4.06
+3.71
+3.39
+3.1
+2.83
+2.6
+2.38
+2.18
+2
+1.84
+1.69
+1.56
+1.43
+1.32
+1.22
+1.13
+1.05
+0.984
+0.922
+0.868
+0.82
+0.779
+0.744
+0.715
+0.69
+0.669
+0.652
+0.638
+0.627
+0.619
+0.612
+0.607
+0.603
+0.601
+0.599
+0.597
+0.596
+0.595
+0.594
+0.593
+0.591
+0.59
+0.588
+0.586
+0.584
+0.581
+0.578
+0.575
+0.572
+0.568
+0.565
+0.561
+0.557
+0.553
+0.548
+0.544
+0.539
+0.535
+0.53
+0.525
+0.52
+0.515
+0.51
+0.505
+0.5
+0.494
+0.489
+0.483
+0.477
+0.471
+0.466
+0.46
+0.454
+0.448
+0.442
+0.437
+0.431
+0.426
+0.421
+0.416
+0.411
+0.407
+0.403
+0.399
+0.395
+0.392
+0.39
+0.388
+0.386
+0.384
+0.383
+0.383
+0.383
+0.383
+0.383
+0.384
+0.386
+0.387
+0.389
+0.391
+0.393
+0.395
+0.397
+0.4
+0.402
+0.405
+0.407
+0.409
+0.411
+0.413
+0.415
+0.417
+0.419
+0.42
+0.421
+0.422
+0.423
+0.423
+0.423
+0.423
+0.423
+0.422
+0.422
+# end of content independent part
+[1]
+# (a,c,g,t)= (0.237, 0.263, 0.263, 0.237)
+#
+# Probabilities file for the intron model
+#
+#
+# Transition probabilities
+#
+[TRANSITION]
+# the probability of an intron of length at most d
+0.816
+# mean additional length of introns with length > d
+534
+
+#
+# The emission probabilities of introns
+#
+[EMISSION]
+# size of the emission vector
+1024
+#k=
+4
+# patpseudo : pseudocount for sequence patterns
+5
+aaaaa	0.6435
+aaaac	0.07599
+aaaag	0.1356
+aaaat	0.1448
+aaaca	0.4424
+aaacc	0.1694
+aaacg	0.1335
+aaact	0.2547
+aaaga	0.4341
+aaagc	0.1494
+aaagg	0.1805
+aaagt	0.236
+aaata	0.3706
+aaatc	0.1541
+aaatg	0.2061
+aaatt	0.2692
+aacaa	0.433
+aacac	0.1665
+aacag	0.1463
+aacat	0.2542
+aacca	0.422
+aaccc	0.1857
+aaccg	0.1246
+aacct	0.2677
+aacga	0.3497
+aacgc	0.1921
+aacgg	0.1545
+aacgt	0.3038
+aacta	0.2288
+aactc	0.1717
+aactg	0.2037
+aactt	0.3957
+aagaa	0.4717
+aagac	0.1159
+aagag	0.1909
+aagat	0.2215
+aagca	0.3783
+aagcc	0.1936
+aagcg	0.119
+aagct	0.3091
+aagga	0.3616
+aaggc	0.1641
+aaggg	0.2035
+aaggt	0.2709
+aagta	0.2796
+aagtc	0.1722
+aagtg	0.2188
+aagtt	0.3293
+aataa	0.4213
+aatac	0.1592
+aatag	0.1375
+aatat	0.2819
+aatca	0.3592
+aatcc	0.2006
+aatcg	0.1344
+aatct	0.3058
+aatga	0.3359
+aatgc	0.1526
+aatgg	0.2121
+aatgt	0.2995
+aatta	0.2436
+aattc	0.1774
+aattg	0.2108
+aattt	0.3681
+acaaa	0.388
+acaac	0.1613
+acaag	0.1978
+acaat	0.253
+acaca	0.4228
+acacc	0.1879
+acacg	0.1389
+acact	0.2503
+acaga	0.3159
+acagc	0.2231
+acagg	0.1751
+acagt	0.2859
+acata	0.2657
+acatc	0.1751
+acatg	0.2013
+acatt	0.3578
+accaa	0.3951
+accac	0.1429
+accag	0.1725
+accat	0.2896
+accca	0.3883
+acccc	0.1648
+acccg	0.1299
+accct	0.317
+accga	0.323
+accgc	0.2235
+accgg	0.1571
+accgt	0.2965
+accta	0.1864
+acctc	0.1855
+acctg	0.2006
+acctt	0.4275
+acgaa	0.3486
+acgac	0.1706
+acgag	0.177
+acgat	0.3038
+acgca	0.2927
+acgcc	0.1782
+acgcg	0.2627
+acgct	0.2664
+acgga	0.3236
+acggc	0.2171
+acggg	0.1795
+acggt	0.2797
+acgta	0.257
+acgtc	0.19
+acgtg	0.1985
+acgtt	0.3544
+actaa	0.313
+actac	0.2068
+actag	0.136
+actat	0.3443
+actca	0.3623
+actcc	0.1511
+actcg	0.1522
+actct	0.3344
+actga	0.292
+actgc	0.1783
+actgg	0.1958
+actgt	0.3339
+actta	0.1562
+acttc	0.1589
+acttg	0.2328
+acttt	0.4522
+agaaa	0.4854
+agaac	0.116
+agaag	0.1983
+agaat	0.2003
+agaca	0.4068
+agacc	0.1575
+agacg	0.1654
+agact	0.2703
+agaga	0.4697
+agagc	0.148
+agagg	0.1902
+agagt	0.192
+agata	0.2849
+agatc	0.1856
+agatg	0.206
+agatt	0.3236
+agcaa	0.3693
+agcac	0.1652
+agcag	0.2159
+agcat	0.2495
+agcca	0.4383
+agccc	0.1665
+agccg	0.1246
+agcct	0.2707
+agcga	0.3014
+agcgc	0.2057
+agcgg	0.2037
+agcgt	0.2892
+agcta	0.1875
+agctc	0.1826
+agctg	0.2062
+agctt	0.4237
+aggaa	0.3737
+aggac	0.1396
+aggag	0.1983
+aggat	0.2885
+aggca	0.341
+aggcc	0.1612
+aggcg	0.1727
+aggct	0.3252
+aggga	0.3325
+agggc	0.1403
+agggg	0.2402
+agggt	0.287
+aggta	0.2853
+aggtc	0.1394
+aggtg	0.2618
+aggtt	0.3136
+agtaa	0.3821
+agtac	0.1561
+agtag	0.1773
+agtat	0.2845
+agtca	0.3633
+agtcc	0.1612
+agtcg	0.1602
+agtct	0.3153
+agtga	0.3118
+agtgc	0.1744
+agtgg	0.2012
+agtgt	0.3127
+agtta	0.1968
+agttc	0.1717
+agttg	0.2369
+agttt	0.3947
+ataaa	0.4747
+ataac	0.126
+ataag	0.137
+ataat	0.2623
+ataca	0.4406
+atacc	0.1966
+atacg	0.1182
+atact	0.2446
+ataga	0.3506
+atagc	0.1987
+atagg	0.1512
+atagt	0.2995
+atata	0.3377
+atatc	0.1665
+atatg	0.1603
+atatt	0.3355
+atcaa	0.3995
+atcac	0.1502
+atcag	0.1459
+atcat	0.3044
+atcca	0.3771
+atccc	0.1812
+atccg	0.1283
+atcct	0.3134
+atcga	0.3187
+atcgc	0.1866
+atcgg	0.1645
+atcgt	0.3302
+atcta	0.2004
+atctc	0.1801
+atctg	0.1738
+atctt	0.4457
+atgaa	0.3944
+atgac	0.1635
+atgag	0.143
+atgat	0.2992
+atgca	0.3824
+atgcc	0.1652
+atgcg	0.1122
+atgct	0.3402
+atgga	0.3143
+atggc	0.2001
+atggg	0.1604
+atggt	0.3251
+atgta	0.2642
+atgtc	0.1764
+atgtg	0.1931
+atgtt	0.3662
+attaa	0.3219
+attac	0.1749
+attag	0.1399
+attat	0.3633
+attca	0.368
+attcc	0.166
+attcg	0.132
+attct	0.334
+attga	0.3274
+attgc	0.1414
+attgg	0.2053
+attgt	0.3258
+attta	0.2267
+atttc	0.1707
+atttg	0.1687
+atttt	0.4339
+caaaa	0.4328
+caaac	0.1472
+caaag	0.1836
+caaat	0.2364
+caaca	0.4082
+caacc	0.1797
+caacg	0.1277
+caact	0.2843
+caaga	0.372
+caagc	0.1823
+caagg	0.1685
+caagt	0.2772
+caata	0.3107
+caatc	0.1694
+caatg	0.2072
+caatt	0.3127
+cacaa	0.3439
+cacac	0.2323
+cacag	0.1609
+cacat	0.2628
+cacca	0.3753
+caccc	0.1921
+caccg	0.1202
+cacct	0.3124
+cacga	0.3253
+cacgc	0.1997
+cacgg	0.1945
+cacgt	0.2806
+cacta	0.2034
+cactc	0.179
+cactg	0.2034
+cactt	0.4143
+cagaa	0.3885
+cagac	0.1871
+cagag	0.1592
+cagat	0.2651
+cagca	0.3842
+cagcc	0.2381
+cagcg	0.1028
+cagct	0.2749
+cagga	0.328
+caggc	0.1983
+caggg	0.1633
+caggt	0.3105
+cagta	0.2559
+cagtc	0.1991
+cagtg	0.2114
+cagtt	0.3336
+cataa	0.3488
+catac	0.1878
+catag	0.1302
+catat	0.3331
+catca	0.3638
+catcc	0.2152
+catcg	0.1355
+catct	0.2855
+catga	0.3298
+catgc	0.1552
+catgg	0.1987
+catgt	0.3163
+catta	0.2026
+cattc	0.1766
+cattg	0.2058
+cattt	0.4151
+ccaaa	0.3849
+ccaac	0.1487
+ccaag	0.194
+ccaat	0.2724
+ccaca	0.3229
+ccacc	0.2513
+ccacg	0.1133
+ccact	0.3125
+ccaga	0.3325
+ccagc	0.2191
+ccagg	0.1598
+ccagt	0.2887
+ccata	0.2227
+ccatc	0.2017
+ccatg	0.1916
+ccatt	0.3839
+cccaa	0.4032
+cccac	0.1645
+cccag	0.175
+cccat	0.2572
+cccca	0.2322
+ccccc	0.4274
+ccccg	0.0698
+cccct	0.2707
+cccga	0.3179
+cccgc	0.2036
+cccgg	0.1714
+cccgt	0.3071
+cccta	0.1696
+ccctc	0.257
+ccctg	0.1418
+ccctt	0.4316
+ccgaa	0.3669
+ccgac	0.1321
+ccgag	0.2034
+ccgat	0.2977
+ccgca	0.2853
+ccgcc	0.2372
+ccgcg	0.1571
+ccgct	0.3205
+ccgga	0.3388
+ccggc	0.1694
+ccggg	0.1983
+ccggt	0.2934
+ccgta	0.2484
+ccgtc	0.2067
+ccgtg	0.2359
+ccgtt	0.309
+cctaa	0.3553
+cctac	0.212
+cctag	0.1232
+cctat	0.3095
+cctca	0.2852
+cctcc	0.2432
+cctcg	0.108
+cctct	0.3636
+cctga	0.2602
+cctgc	0.2164
+cctgg	0.1813
+cctgt	0.3421
+cctta	0.1555
+ccttc	0.1896
+ccttg	0.1902
+ccttt	0.4647
+cgaaa	0.3903
+cgaac	0.1483
+cgaag	0.174
+cgaat	0.2873
+cgaca	0.3429
+cgacc	0.1776
+cgacg	0.1592
+cgact	0.3204
+cgaga	0.3437
+cgagc	0.1864
+cgagg	0.1845
+cgagt	0.2854
+cgata	0.2619
+cgatc	0.2063
+cgatg	0.2167
+cgatt	0.3152
+cgcaa	0.3374
+cgcac	0.2154
+cgcag	0.1931
+cgcat	0.2541
+cgcca	0.3476
+cgccc	0.2023
+cgccg	0.1083
+cgcct	0.3419
+cgcga	0.2841
+cgcgc	0.179
+cgcgg	0.1392
+cgcgt	0.3977
+cgcta	0.1914
+cgctc	0.2057
+cgctg	0.1935
+cgctt	0.4094
+cggaa	0.3244
+cggac	0.1694
+cggag	0.1653
+cggat	0.3409
+cggca	0.2993
+cggcc	0.2177
+cggcg	0.1293
+cggct	0.3537
+cggga	0.3047
+cgggc	0.1864
+cgggg	0.1756
+cgggt	0.3333
+cggta	0.2328
+cggtc	0.1863
+cggtg	0.2373
+cggtt	0.3437
+cgtaa	0.3392
+cgtac	0.1799
+cgtag	0.1652
+cgtat	0.3156
+cgtca	0.3459
+cgtcc	0.173
+cgtcg	0.1405
+cgtct	0.3405
+cgtga	0.3155
+cgtgc	0.1776
+cgtgg	0.15
+cgtgt	0.3569
+cgtta	0.1952
+cgttc	0.1931
+cgttg	0.2077
+cgttt	0.404
+ctaaa	0.4492
+ctaac	0.1397
+ctaag	0.1222
+ctaat	0.289
+ctaca	0.3834
+ctacc	0.1752
+ctacg	0.1274
+ctact	0.314
+ctaga	0.3774
+ctagc	0.1341
+ctagg	0.1648
+ctagt	0.3238
+ctata	0.254
+ctatc	0.1798
+ctatg	0.1568
+ctatt	0.4094
+ctcaa	0.3981
+ctcac	0.1901
+ctcag	0.1397
+ctcat	0.2721
+ctcca	0.3042
+ctccc	0.2298
+ctccg	0.1044
+ctcct	0.3616
+ctcga	0.3327
+ctcgc	0.1586
+ctcgg	0.1876
+ctcgt	0.3211
+ctcta	0.1539
+ctctc	0.29
+ctctg	0.1188
+ctctt	0.4373
+ctgaa	0.3953
+ctgac	0.1482
+ctgag	0.1545
+ctgat	0.3019
+ctgca	0.2801
+ctgcc	0.179
+ctgcg	0.1215
+ctgct	0.4194
+ctgga	0.2848
+ctggc	0.1753
+ctggg	0.1946
+ctggt	0.3454
+ctgta	0.2838
+ctgtc	0.1982
+ctgtg	0.1862
+ctgtt	0.3318
+cttaa	0.2988
+cttac	0.2313
+cttag	0.1116
+cttat	0.3583
+cttca	0.3371
+cttcc	0.1719
+cttcg	0.09559
+cttct	0.3954
+cttga	0.3235
+cttgc	0.1482
+cttgg	0.1927
+cttgt	0.3356
+cttta	0.2002
+ctttc	0.1695
+ctttg	0.1537
+ctttt	0.4765
+gaaaa	0.4549
+gaaac	0.1296
+gaaag	0.1905
+gaaat	0.225
+gaaca	0.4221
+gaacc	0.1779
+gaacg	0.1462
+gaact	0.2538
+gaaga	0.4278
+gaagc	0.1907
+gaagg	0.1794
+gaagt	0.202
+gaata	0.3179
+gaatc	0.163
+gaatg	0.2094
+gaatt	0.3098
+gacaa	0.3724
+gacac	0.16
+gacag	0.1947
+gacat	0.2729
+gacca	0.4158
+gaccc	0.1936
+gaccg	0.1414
+gacct	0.2492
+gacga	0.3671
+gacgc	0.1718
+gacgg	0.179
+gacgt	0.2821
+gacta	0.2204
+gactc	0.151
+gactg	0.2327
+gactt	0.3959
+gagaa	0.377
+gagac	0.1182
+gagag	0.2958
+gagat	0.2091
+gagca	0.3594
+gagcc	0.1776
+gagcg	0.1435
+gagct	0.3196
+gagga	0.3666
+gaggc	0.1793
+gaggg	0.2304
+gaggt	0.2236
+gagta	0.2893
+gagtc	0.154
+gagtg	0.2216
+gagtt	0.3351
+gataa	0.3225
+gatac	0.1928
+gatag	0.1462
+gatat	0.3385
+gatca	0.3668
+gatcc	0.188
+gatcg	0.1487
+gatct	0.2966
+gatga	0.3826
+gatgc	0.1493
+gatgg	0.2022
+gatgt	0.2659
+gatta	0.2385
+gattc	0.1699
+gattg	0.2079
+gattt	0.3837
+gcaaa	0.3928
+gcaac	0.163
+gcaag	0.1968
+gcaat	0.2474
+gcaca	0.3362
+gcacc	0.2227
+gcacg	0.1461
+gcact	0.295
+gcaga	0.298
+gcagc	0.2519
+gcagg	0.1893
+gcagt	0.2609
+gcata	0.2864
+gcatc	0.1849
+gcatg	0.1858
+gcatt	0.3429
+gccaa	0.3575
+gccac	0.195
+gccag	0.1473
+gccat	0.3001
+gccca	0.38
+gcccc	0.2125
+gcccg	0.13
+gccct	0.2775
+gccga	0.339
+gccgc	0.1695
+gccgg	0.139
+gccgt	0.3525
+gccta	0.1825
+gcctc	0.227
+gcctg	0.1954
+gcctt	0.3951
+gcgaa	0.3122
+gcgac	0.1918
+gcgag	0.1673
+gcgat	0.3286
+gcgca	0.3143
+gcgcc	0.2171
+gcgcg	0.18
+gcgct	0.2886
+gcgga	0.3333
+gcggc	0.1603
+gcggg	0.1827
+gcggt	0.3237
+gcgta	0.2603
+gcgtc	0.1779
+gcgtg	0.2172
+gcgtt	0.3446
+gctaa	0.3113
+gctac	0.2216
+gctag	0.09235
+gctat	0.3747
+gctca	0.3338
+gctcc	0.1761
+gctcg	0.1364
+gctct	0.3537
+gctga	0.2795
+gctgc	0.2134
+gctgg	0.1842
+gctgt	0.3229
+gctta	0.217
+gcttc	0.1993
+gcttg	0.2034
+gcttt	0.3802
+ggaaa	0.4221
+ggaac	0.1526
+ggaag	0.1974
+ggaat	0.2279
+ggaca	0.3917
+ggacc	0.1681
+ggacg	0.1664
+ggact	0.2738
+ggaga	0.3698
+ggagc	0.1615
+ggagg	0.2786
+ggagt	0.1901
+ggata	0.2767
+ggatc	0.1754
+ggatg	0.2315
+ggatt	0.3164
+ggcaa	0.3799
+ggcac	0.1805
+ggcag	0.19
+ggcat	0.2497
+ggcca	0.3836
+ggccc	0.1662
+ggccg	0.1637
+ggcct	0.2864
+ggcga	0.298
+ggcgc	0.2178
+ggcgg	0.212
+ggcgt	0.2722
+ggcta	0.1942
+ggctc	0.1499
+ggctg	0.2638
+ggctt	0.3921
+gggaa	0.3744
+gggac	0.1268
+gggag	0.2146
+gggat	0.2841
+gggca	0.3159
+gggcc	0.1617
+gggcg	0.1766
+gggct	0.3458
+gggga	0.2845
+ggggc	0.1209
+ggggg	0.4267
+ggggt	0.1679
+gggta	0.2789
+gggtc	0.1604
+gggtg	0.2385
+gggtt	0.3222
+ggtaa	0.358
+ggtac	0.1591
+ggtag	0.1458
+ggtat	0.3371
+ggtca	0.3872
+ggtcc	0.1633
+ggtcg	0.1465
+ggtct	0.303
+ggtga	0.2905
+ggtgc	0.1768
+ggtgg	0.2173
+ggtgt	0.3153
+ggtta	0.2006
+ggttc	0.1806
+ggttg	0.2247
+ggttt	0.3941
+gtaaa	0.4129
+gtaac	0.1464
+gtaag	0.1815
+gtaat	0.2592
+gtaca	0.4117
+gtacc	0.1854
+gtacg	0.1347
+gtact	0.2682
+gtaga	0.3489
+gtagc	0.1909
+gtagg	0.1682
+gtagt	0.292
+gtata	0.261
+gtatc	0.1871
+gtatg	0.1783
+gtatt	0.3736
+gtcaa	0.3767
+gtcac	0.1942
+gtcag	0.1292
+gtcat	0.2999
+gtcca	0.3408
+gtccc	0.1799
+gtccg	0.1419
+gtcct	0.3374
+gtcga	0.3531
+gtcgc	0.1918
+gtcgg	0.1286
+gtcgt	0.3265
+gtcta	0.2327
+gtctc	0.1706
+gtctg	0.2056
+gtctt	0.3911
+gtgaa	0.3344
+gtgac	0.1994
+gtgag	0.1881
+gtgat	0.2781
+gtgca	0.304
+gtgcc	0.1889
+gtgcg	0.1506
+gtgct	0.3565
+gtgga	0.2926
+gtggc	0.2341
+gtggg	0.1847
+gtggt	0.2887
+gtgta	0.2775
+gtgtc	0.1454
+gtgtg	0.2399
+gtgtt	0.3371
+gttaa	0.2986
+gttac	0.2032
+gttag	0.1391
+gttat	0.3591
+gttca	0.3766
+gttcc	0.1859
+gttcg	0.1139
+gttct	0.3236
+gttga	0.3406
+gttgc	0.1488
+gttgg	0.179
+gttgt	0.3316
+gttta	0.2491
+gtttc	0.1713
+gtttg	0.1831
+gtttt	0.3965
+taaaa	0.4287
+taaac	0.1512
+taaag	0.1805
+taaat	0.2396
+taaca	0.415
+taacc	0.1817
+taacg	0.1359
+taact	0.2674
+taaga	0.3471
+taagc	0.245
+taagg	0.1736
+taagt	0.2343
+taata	0.3312
+taatc	0.1711
+taatg	0.1796
+taatt	0.3181
+tacaa	0.3907
+tacac	0.1874
+tacag	0.1711
+tacat	0.2508
+tacca	0.4237
+taccc	0.1896
+taccg	0.09953
+tacct	0.2872
+tacga	0.3083
+tacgc	0.205
+tacgg	0.1755
+tacgt	0.3112
+tacta	0.2296
+tactc	0.1783
+tactg	0.1879
+tactt	0.4041
+tagaa	0.3948
+tagac	0.1771
+tagag	0.1724
+tagat	0.2557
+tagca	0.3558
+tagcc	0.2143
+tagcg	0.1243
+tagct	0.3056
+tagga	0.3415
+taggc	0.1822
+taggg	0.1923
+taggt	0.2841
+tagta	0.2876
+tagtc	0.1735
+tagtg	0.1944
+tagtt	0.3446
+tataa	0.3163
+tatac	0.1583
+tatag	0.1215
+tatat	0.4039
+tatca	0.3599
+tatcc	0.2018
+tatcg	0.1285
+tatct	0.3098
+tatga	0.3124
+tatgc	0.1852
+tatgg	0.1789
+tatgt	0.3235
+tatta	0.2202
+tattc	0.158
+tattg	0.1818
+tattt	0.4399
+tcaaa	0.3546
+tcaac	0.1751
+tcaag	0.2015
+tcaat	0.2688
+tcaca	0.3454
+tcacc	0.2077
+tcacg	0.1473
+tcact	0.2995
+tcaga	0.3088
+tcagc	0.2316
+tcagg	0.1598
+tcagt	0.2998
+tcata	0.2292
+tcatc	0.225
+tcatg	0.1875
+tcatt	0.3583
+tccaa	0.3982
+tccac	0.1537
+tccag	0.151
+tccat	0.2971
+tccca	0.3293
+tcccc	0.2448
+tcccg	0.104
+tccct	0.3219
+tccga	0.2955
+tccgc	0.2149
+tccgg	0.1694
+tccgt	0.3202
+tccta	0.171
+tcctc	0.232
+tcctg	0.1616
+tcctt	0.4353
+tcgaa	0.3362
+tcgac	0.1852
+tcgag	0.1842
+tcgat	0.2944
+tcgca	0.2816
+tcgcc	0.2122
+tcgcg	0.2041
+tcgct	0.302
+tcgga	0.2992
+tcggc	0.2092
+tcggg	0.1862
+tcggt	0.3054
+tcgta	0.2233
+tcgtc	0.2169
+tcgtg	0.2019
+tcgtt	0.3579
+tctaa	0.33
+tctac	0.2047
+tctag	0.1313
+tctat	0.334
+tctca	0.2404
+tctcc	0.1724
+tctcg	0.1075
+tctct	0.4797
+tctga	0.2737
+tctgc	0.1854
+tctgg	0.2053
+tctgt	0.3357
+tctta	0.1352
+tcttc	0.1965
+tcttg	0.1825
+tcttt	0.4858
+tgaaa	0.368
+tgaac	0.1626
+tgaag	0.2036
+tgaat	0.2658
+tgaca	0.3898
+tgacc	0.1804
+tgacg	0.1506
+tgact	0.2792
+tgaga	0.3214
+tgagc	0.1907
+tgagg	0.2037
+tgagt	0.2841
+tgata	0.2751
+tgatc	0.1908
+tgatg	0.2182
+tgatt	0.3159
+tgcaa	0.3236
+tgcac	0.1685
+tgcag	0.1724
+tgcat	0.3354
+tgcca	0.3859
+tgccc	0.1726
+tgccg	0.1196
+tgcct	0.322
+tgcga	0.2799
+tgcgc	0.2231
+tgcgg	0.1805
+tgcgt	0.3164
+tgcta	0.1774
+tgctc	0.1669
+tgctg	0.2342
+tgctt	0.4215
+tggaa	0.3759
+tggac	0.1344
+tggag	0.1589
+tggat	0.3308
+tggca	0.308
+tggcc	0.1627
+tggcg	0.1323
+tggct	0.397
+tggga	0.3121
+tgggc	0.1763
+tgggg	0.1891
+tgggt	0.3225
+tggta	0.2878
+tggtc	0.159
+tggtg	0.2151
+tggtt	0.3381
+tgtaa	0.318
+tgtac	0.1687
+tgtag	0.1524
+tgtat	0.3609
+tgtca	0.3665
+tgtcc	0.1667
+tgtcg	0.1239
+tgtct	0.3429
+tgtga	0.2778
+tgtgc	0.1535
+tgtgg	0.1606
+tgtgt	0.408
+tgtta	0.1889
+tgttc	0.1766
+tgttg	0.2104
+tgttt	0.4241
+ttaaa	0.4601
+ttaac	0.1253
+ttaag	0.1367
+ttaat	0.2779
+ttaca	0.3688
+ttacc	0.1983
+ttacg	0.1207
+ttact	0.3122
+ttaga	0.3618
+ttagc	0.1725
+ttagg	0.1813
+ttagt	0.2844
+ttata	0.2421
+ttatc	0.1452
+ttatg	0.1537
+ttatt	0.459
+ttcaa	0.3915
+ttcac	0.1422
+ttcag	0.1504
+ttcat	0.3159
+ttcca	0.3585
+ttccc	0.1997
+ttccg	0.1021
+ttcct	0.3396
+ttcga	0.324
+ttcgc	0.1579
+ttcgg	0.1806
+ttcgt	0.3375
+ttcta	0.1684
+ttctc	0.1766
+ttctg	0.1386
+ttctt	0.5165
+ttgaa	0.3771
+ttgac	0.1584
+ttgag	0.1614
+ttgat	0.303
+ttgca	0.2898
+ttgcc	0.1975
+ttgcg	0.1171
+ttgct	0.3956
+ttgga	0.3109
+ttggc	0.176
+ttggg	0.1856
+ttggt	0.3275
+ttgta	0.2692
+ttgtc	0.1575
+ttgtg	0.1653
+ttgtt	0.408
+tttaa	0.316
+tttac	0.1652
+tttag	0.1289
+tttat	0.3899
+tttca	0.2822
+tttcc	0.1703
+tttcg	0.09929
+tttct	0.4483
+tttga	0.2986
+tttgc	0.1553
+tttgg	0.2006
+tttgt	0.3456
+tttta	0.1357
+ttttc	0.1156
+ttttg	0.1034
+ttttt	0.6453
+
+# patterns:
+#	aaaaa	9717
+#	aaaac	1143
+#	aaaag	2044
+#	aaaat	2183
+#	aaaca	1277
+#	aaacc	486
+#	aaacg	382
+#	aaact	733
+#	aaaga	1864
+#	aaagc	638
+#	aaagg	772
+#	aaagt	1011
+#	aaata	1863
+#	aaatc	772
+#	aaatg	1034
+#	aaatt	1352
+#	aacaa	1303
+#	aacac	498
+#	aacag	437
+#	aacat	763
+#	aacca	520
+#	aaccc	226
+#	aaccg	150
+#	aacct	328
+#	aacga	330
+#	aacgc	179
+#	aacgg	143
+#	aacgt	286
+#	aacta	424
+#	aactc	317
+#	aactg	377
+#	aactt	737
+#	aagaa	1814
+#	aagac	442
+#	aagag	731
+#	aagat	849
+#	aagca	634
+#	aagcc	322
+#	aagcg	196
+#	aagct	517
+#	aagga	601
+#	aaggc	270
+#	aaggg	336
+#	aaggt	449
+#	aagta	625
+#	aagtc	383
+#	aagtg	488
+#	aagtt	737
+#	aataa	1787
+#	aatac	672
+#	aatag	580
+#	aatat	1194
+#	aatca	722
+#	aatcc	401
+#	aatcg	267
+#	aatct	614
+#	aatga	836
+#	aatgc	377
+#	aatgg	526
+#	aatgt	745
+#	aatta	893
+#	aattc	649
+#	aattg	772
+#	aattt	1352
+#	acaaa	1239
+#	acaac	512
+#	acaag	629
+#	acaat	806
+#	acaca	625
+#	acacc	275
+#	acacg	202
+#	acact	368
+#	acaga	417
+#	acagc	293
+#	acagg	229
+#	acagt	377
+#	acata	552
+#	acatc	362
+#	acatg	417
+#	acatt	745
+#	accaa	609
+#	accac	217
+#	accag	263
+#	accat	445
+#	accca	273
+#	acccc	113
+#	acccg	88
+#	accct	222
+#	accga	141
+#	accgc	96
+#	accgg	66
+#	accgt	129
+#	accta	193
+#	acctc	192
+#	acctg	208
+#	acctt	449
+#	acgaa	322
+#	acgac	155
+#	acgag	161
+#	acgat	280
+#	acgca	151
+#	acgcc	90
+#	acgcg	135
+#	acgct	137
+#	acgga	150
+#	acggc	99
+#	acggg	81
+#	acggt	129
+#	acgta	206
+#	acgtc	151
+#	acgtg	158
+#	acgtt	286
+#	actaa	384
+#	actac	252
+#	actag	164
+#	actat	423
+#	actca	345
+#	actcc	141
+#	actcg	142
+#	actct	318
+#	actga	329
+#	actgc	199
+#	actgg	219
+#	actgt	377
+#	actta	346
+#	acttc	352
+#	acttg	518
+#	acttt	1011
+#	agaaa	1706
+#	agaac	404
+#	agaag	694
+#	agaat	701
+#	agaca	460
+#	agacc	175
+#	agacg	184
+#	agact	304
+#	agaga	785
+#	agagc	244
+#	agagg	315
+#	agagt	318
+#	agata	540
+#	agatc	350
+#	agatg	389
+#	agatt	614
+#	agcaa	556
+#	agcac	246
+#	agcag	323
+#	agcat	374
+#	agcca	361
+#	agccc	134
+#	agccg	99
+#	agcct	221
+#	agcga	143
+#	agcgc	96
+#	agcgg	95
+#	agcgt	137
+#	agcta	226
+#	agctc	220
+#	agctg	249
+#	agctt	517
+#	aggaa	517
+#	aggac	190
+#	aggag	272
+#	aggat	398
+#	aggca	232
+#	aggcc	107
+#	aggcg	115
+#	aggct	221
+#	aggga	258
+#	agggc	106
+#	agggg	185
+#	agggt	222
+#	aggta	298
+#	aggtc	143
+#	aggtg	273
+#	aggtt	328
+#	agtaa	590
+#	agtac	238
+#	agtag	271
+#	agtat	438
+#	agtca	351
+#	agtcc	153
+#	agtcg	152
+#	agtct	304
+#	agtga	367
+#	agtgc	203
+#	agtgg	235
+#	agtgt	368
+#	agtta	363
+#	agttc	316
+#	agttg	438
+#	agttt	733
+#	ataaa	1852
+#	ataac	488
+#	ataag	531
+#	ataat	1021
+#	ataca	793
+#	atacc	351
+#	atacg	209
+#	atact	438
+#	ataga	496
+#	atagc	279
+#	atagg	211
+#	atagt	423
+#	atata	1202
+#	atatc	590
+#	atatg	568
+#	atatt	1194
+#	atcaa	915
+#	atcac	341
+#	atcag	331
+#	atcat	696
+#	atcca	480
+#	atccc	228
+#	atccg	160
+#	atcct	398
+#	atcga	270
+#	atcgc	156
+#	atcgg	137
+#	atcgt	280
+#	atcta	379
+#	atctc	340
+#	atctg	328
+#	atctt	849
+#	atgaa	919
+#	atgac	378
+#	atgag	330
+#	atgat	696
+#	atgca	421
+#	atgcc	179
+#	atgcg	120
+#	atgct	374
+#	atgga	430
+#	atggc	272
+#	atggg	217
+#	atggt	445
+#	atgta	549
+#	atgtc	365
+#	atgtg	400
+#	atgtt	763
+#	attaa	904
+#	attac	489
+#	attag	390
+#	attat	1021
+#	attca	773
+#	attcc	346
+#	attcg	274
+#	attct	701
+#	attga	810
+#	attgc	347
+#	attgg	506
+#	attgt	806
+#	attta	1138
+#	atttc	856
+#	atttg	846
+#	atttt	2183
+#	caaaa	1553
+#	caaac	525
+#	caaag	656
+#	caaat	846
+#	caaca	631
+#	caacc	275
+#	caacg	194
+#	caact	438
+#	caaga	697
+#	caagc	339
+#	caagg	313
+#	caagt	518
+#	caata	767
+#	caatc	416
+#	caatg	510
+#	caatt	772
+#	cacaa	525
+#	cacac	353
+#	cacag	243
+#	cacat	400
+#	cacca	329
+#	caccc	166
+#	caccg	102
+#	cacct	273
+#	cacga	184
+#	cacgc	111
+#	cacgg	108
+#	cacgt	158
+#	cacta	237
+#	cactc	208
+#	cactg	237
+#	cactt	488
+#	cagaa	483
+#	cagac	230
+#	cagag	195
+#	cagat	328
+#	cagca	350
+#	cagcc	215
+#	cagcg	90
+#	cagct	249
+#	cagga	220
+#	caggc	131
+#	caggg	107
+#	caggt	208
+#	cagta	288
+#	cagtc	223
+#	cagtg	237
+#	cagtt	377
+#	cataa	595
+#	catac	318
+#	catag	219
+#	catat	568
+#	catca	497
+#	catcc	292
+#	catcg	182
+#	catct	389
+#	catga	435
+#	catgc	202
+#	catgg	260
+#	catgt	417
+#	catta	502
+#	cattc	437
+#	cattg	510
+#	cattt	1034
+#	ccaaa	717
+#	ccaac	274
+#	ccaag	359
+#	ccaat	506
+#	ccaca	243
+#	ccacc	188
+#	ccacg	82
+#	ccact	235
+#	ccaga	253
+#	ccagc	165
+#	ccagg	119
+#	ccagt	219
+#	ccata	303
+#	ccatc	274
+#	ccatg	260
+#	ccatt	526
+#	cccaa	343
+#	cccac	137
+#	cccag	146
+#	cccat	217
+#	cccca	158
+#	ccccc	295
+#	ccccg	44
+#	cccct	185
+#	cccga	84
+#	cccgc	52
+#	cccgg	43
+#	cccgt	81
+#	cccta	129
+#	ccctc	198
+#	ccctg	107
+#	ccctt	336
+#	ccgaa	170
+#	ccgac	58
+#	ccgag	92
+#	ccgat	137
+#	ccgca	84
+#	ccgcc	69
+#	ccgcg	44
+#	ccgct	95
+#	ccgga	77
+#	ccggc	36
+#	ccggg	43
+#	ccggt	66
+#	ccgta	114
+#	ccgtc	94
+#	ccgtg	108
+#	ccgtt	143
+#	cctaa	243
+#	cctac	143
+#	cctag	81
+#	cctat	211
+#	cctca	246
+#	cctcc	209
+#	cctcg	90
+#	cctct	315
+#	cctga	173
+#	cctgc	143
+#	cctgg	119
+#	cctgt	229
+#	cctta	255
+#	ccttc	312
+#	ccttg	313
+#	ccttt	772
+#	cgaaa	374
+#	cgaac	139
+#	cgaag	164
+#	cgaat	274
+#	cgaca	163
+#	cgacc	82
+#	cgacg	73
+#	cgact	152
+#	cgaga	172
+#	cgagc	91
+#	cgagg	90
+#	cgagt	142
+#	cgata	221
+#	cgatc	173
+#	cgatg	182
+#	cgatt	267
+#	cgcaa	161
+#	cgcac	101
+#	cgcag	90
+#	cgcat	120
+#	cgcca	117
+#	cgccc	66
+#	cgccg	33
+#	cgcct	115
+#	cgcga	95
+#	cgcgc	58
+#	cgcgg	44
+#	cgcgt	135
+#	cgcta	89
+#	cgctc	96
+#	cgctg	90
+#	cgctt	196
+#	cggaa	152
+#	cggac	77
+#	cggag	75
+#	cggat	160
+#	cggca	83
+#	cggcc	59
+#	cggcg	33
+#	cggct	99
+#	cggga	80
+#	cgggc	47
+#	cgggg	44
+#	cgggt	88
+#	cggta	100
+#	cggtc	79
+#	cggtg	102
+#	cggtt	150
+#	cgtaa	225
+#	cgtac	117
+#	cgtag	107
+#	cgtat	209
+#	cgtca	187
+#	cgtcc	91
+#	cgtcg	73
+#	cgtct	184
+#	cgtga	178
+#	cgtgc	98
+#	cgtgg	82
+#	cgtgt	202
+#	cgtta	182
+#	cgttc	180
+#	cgttg	194
+#	cgttt	382
+#	ctaaa	609
+#	ctaac	186
+#	ctaag	162
+#	ctaat	390
+#	ctaca	332
+#	ctacc	149
+#	ctacg	107
+#	ctact	271
+#	ctaga	192
+#	ctagc	65
+#	ctagg	81
+#	ctagt	164
+#	ctata	358
+#	ctatc	252
+#	ctatg	219
+#	ctatt	580
+#	ctcaa	485
+#	ctcac	229
+#	ctcag	167
+#	ctcat	330
+#	ctcca	228
+#	ctccc	171
+#	ctccg	75
+#	ctcct	272
+#	ctcga	167
+#	ctcgc	77
+#	ctcgg	92
+#	ctcgt	161
+#	ctcta	254
+#	ctctc	483
+#	ctctg	195
+#	ctctt	731
+#	ctgaa	435
+#	ctgac	160
+#	ctgag	167
+#	ctgat	331
+#	ctgca	214
+#	ctgcc	135
+#	ctgcg	90
+#	ctgct	323
+#	ctgga	216
+#	ctggc	131
+#	ctggg	146
+#	ctggt	263
+#	ctgta	373
+#	ctgtc	259
+#	ctgtg	243
+#	ctgtt	437
+#	cttaa	442
+#	cttac	341
+#	cttag	162
+#	cttat	531
+#	cttca	591
+#	cttcc	299
+#	cttcg	164
+#	cttct	694
+#	cttga	606
+#	cttgc	275
+#	cttgg	359
+#	cttgt	629
+#	cttta	856
+#	ctttc	724
+#	ctttg	656
+#	ctttt	2044
+#	gaaaa	1736
+#	gaaac	491
+#	gaaag	724
+#	gaaat	856
+#	gaaca	529
+#	gaacc	220
+#	gaacg	180
+#	gaact	316
+#	gaaga	751
+#	gaagc	332
+#	gaagg	312
+#	gaagt	352
+#	gaata	666
+#	gaatc	339
+#	gaatg	437
+#	gaatt	649
+#	gacaa	500
+#	gacac	212
+#	gacag	259
+#	gacat	365
+#	gacca	242
+#	gaccc	110
+#	gaccg	79
+#	gacct	143
+#	gacga	198
+#	gacgc	90
+#	gacgg	94
+#	gacgt	151
+#	gacta	211
+#	gactc	143
+#	gactg	223
+#	gactt	383
+#	gagaa	617
+#	gagac	190
+#	gagag	483
+#	gagat	340
+#	gagca	248
+#	gagcc	120
+#	gagcg	96
+#	gagct	220
+#	gagga	318
+#	gaggc	153
+#	gaggg	198
+#	gaggt	192
+#	gagta	273
+#	gagtc	143
+#	gagtg	208
+#	gagtt	317
+#	gataa	562
+#	gatac	334
+#	gatag	252
+#	gatat	590
+#	gatca	434
+#	gatcc	220
+#	gatcg	173
+#	gatct	350
+#	gatga	523
+#	gatgc	201
+#	gatgg	274
+#	gatgt	362
+#	gatta	478
+#	gattc	339
+#	gattg	416
+#	gattt	772
+#	gcaaa	554
+#	gcaac	227
+#	gcaag	275
+#	gcaat	347
+#	gcaca	232
+#	gcacc	152
+#	gcacg	98
+#	gcact	203
+#	gcaga	228
+#	gcagc	192
+#	gcagg	143
+#	gcagt	199
+#	gcata	314
+#	gcatc	201
+#	gcatg	202
+#	gcatt	377
+#	gccaa	325
+#	gccac	175
+#	gccag	131
+#	gccat	272
+#	gccca	147
+#	gcccc	80
+#	gcccg	47
+#	gccct	106
+#	gccga	95
+#	gccgc	45
+#	gccgg	36
+#	gccgt	99
+#	gccta	122
+#	gcctc	153
+#	gcctg	131
+#	gcctt	270
+#	gcgaa	148
+#	gcgac	89
+#	gcgag	77
+#	gcgat	156
+#	gcgca	105
+#	gcgcc	71
+#	gcgcg	58
+#	gcgct	96
+#	gcgga	99
+#	gcggc	45
+#	gcggg	52
+#	gcggt	96
+#	gcgta	134
+#	gcgtc	90
+#	gcgtg	111
+#	gcgtt	179
+#	gctaa	231
+#	gctac	163
+#	gctag	65
+#	gctat	279
+#	gctca	230
+#	gctcc	119
+#	gctcg	91
+#	gctct	244
+#	gctga	253
+#	gctgc	192
+#	gctgg	165
+#	gctgt	293
+#	gctta	362
+#	gcttc	332
+#	gcttg	339
+#	gcttt	638
+#	ggaaa	645
+#	ggaac	230
+#	ggaag	299
+#	ggaat	346
+#	ggaca	221
+#	ggacc	92
+#	ggacg	91
+#	ggact	153
+#	ggaga	279
+#	ggagc	119
+#	ggagg	209
+#	ggagt	141
+#	ggata	350
+#	ggatc	220
+#	ggatg	292
+#	ggatt	401
+#	ggcaa	275
+#	ggcac	128
+#	ggcag	135
+#	ggcat	179
+#	ggcca	145
+#	ggccc	60
+#	ggccg	59
+#	ggcct	107
+#	ggcga	99
+#	ggcgc	71
+#	ggcgg	69
+#	ggcgt	90
+#	ggcta	157
+#	ggctc	120
+#	ggctg	215
+#	ggctt	322
+#	gggaa	302
+#	gggac	99
+#	gggag	171
+#	gggat	228
+#	gggca	122
+#	gggcc	60
+#	gggcg	66
+#	gggct	134
+#	gggga	195
+#	ggggc	80
+#	ggggg	295
+#	ggggt	113
+#	gggta	195
+#	gggtc	110
+#	gggtg	166
+#	gggtt	226
+#	ggtaa	373
+#	ggtac	163
+#	ggtag	149
+#	ggtat	351
+#	ggtca	225
+#	ggtcc	92
+#	ggtcg	82
+#	ggtct	175
+#	ggtga	253
+#	ggtgc	152
+#	ggtgg	188
+#	ggtgt	275
+#	ggtta	245
+#	ggttc	220
+#	ggttg	275
+#	ggttt	486
+#	gtaaa	782
+#	gtaac	274
+#	gtaag	341
+#	gtaat	489
+#	gtaca	368
+#	gtacc	163
+#	gtacg	117
+#	gtact	238
+#	gtaga	302
+#	gtagc	163
+#	gtagg	143
+#	gtagt	252
+#	gtata	468
+#	gtatc	334
+#	gtatg	318
+#	gtatt	672
+#	gtcaa	476
+#	gtcac	243
+#	gtcag	160
+#	gtcat	378
+#	gtcca	192
+#	gtccc	99
+#	gtccg	77
+#	gtcct	190
+#	gtcga	168
+#	gtcgc	89
+#	gtcgg	58
+#	gtcgt	155
+#	gtcta	261
+#	gtctc	190
+#	gtctg	230
+#	gtctt	442
+#	gtgaa	411
+#	gtgac	243
+#	gtgag	229
+#	gtgat	341
+#	gtgca	209
+#	gtgcc	128
+#	gtgcg	101
+#	gtgct	246
+#	gtgga	220
+#	gtggc	175
+#	gtggg	137
+#	gtggt	217
+#	gtgta	409
+#	gtgtc	212
+#	gtgtg	353
+#	gtgtt	498
+#	gttaa	405
+#	gttac	274
+#	gttag	186
+#	gttat	488
+#	gttca	471
+#	gttcc	230
+#	gttcg	139
+#	gttct	404
+#	gttga	526
+#	gttgc	227
+#	gttgg	274
+#	gttgt	512
+#	gttta	716
+#	gtttc	491
+#	gtttg	525
+#	gtttt	1143
+#	taaaa	2040
+#	taaac	716
+#	taaag	856
+#	taaat	1138
+#	taaca	566
+#	taacc	245
+#	taacg	182
+#	taact	363
+#	taaga	515
+#	taagc	362
+#	taagg	255
+#	taagt	346
+#	taata	930
+#	taatc	478
+#	taatg	502
+#	taatt	893
+#	tacaa	858
+#	tacac	409
+#	tacag	373
+#	tacat	549
+#	tacca	442
+#	taccc	195
+#	taccg	100
+#	tacct	298
+#	tacga	204
+#	tacgc	134
+#	tacgg	114
+#	tacgt	206
+#	tacta	353
+#	tactc	273
+#	tactg	288
+#	tactt	625
+#	tagaa	588
+#	tagac	261
+#	tagag	254
+#	tagat	379
+#	tagca	264
+#	tagcc	157
+#	tagcg	89
+#	tagct	226
+#	tagga	233
+#	taggc	122
+#	taggg	129
+#	taggt	193
+#	tagta	353
+#	tagtc	211
+#	tagtg	237
+#	tagtt	424
+#	tataa	940
+#	tatac	468
+#	tatag	358
+#	tatat	1202
+#	tatca	628
+#	tatcc	350
+#	tatcg	221
+#	tatct	540
+#	tatga	533
+#	tatgc	314
+#	tatgg	303
+#	tatgt	552
+#	tatta	930
+#	tattc	666
+#	tattg	767
+#	tattt	1863
+#	tcaaa	1070
+#	tcaac	526
+#	tcaag	606
+#	tcaat	810
+#	tcaca	424
+#	tcacc	253
+#	tcacg	178
+#	tcact	367
+#	tcaga	339
+#	tcagc	253
+#	tcagg	173
+#	tcagt	329
+#	tcata	533
+#	tcatc	523
+#	tcatg	435
+#	tcatt	836
+#	tccaa	578
+#	tccac	220
+#	tccag	216
+#	tccat	430
+#	tccca	264
+#	tcccc	195
+#	tcccg	80
+#	tccct	258
+#	tccga	138
+#	tccgc	99
+#	tccgg	77
+#	tccgt	150
+#	tccta	233
+#	tcctc	318
+#	tcctg	220
+#	tcctt	601
+#	tcgaa	309
+#	tcgac	168
+#	tcgag	167
+#	tcgat	270
+#	tcgca	133
+#	tcgcc	99
+#	tcgcg	95
+#	tcgct	143
+#	tcgga	138
+#	tcggc	95
+#	tcggg	84
+#	tcggt	141
+#	tcgta	204
+#	tcgtc	198
+#	tcgtg	184
+#	tcgtt	330
+#	tctaa	490
+#	tctac	302
+#	tctag	192
+#	tctat	496
+#	tctca	391
+#	tctcc	279
+#	tctcg	172
+#	tctct	785
+#	tctga	339
+#	tctgc	228
+#	tctgg	253
+#	tctgt	417
+#	tctta	515
+#	tcttc	751
+#	tcttg	697
+#	tcttt	1864
+#	tgaaa	1072
+#	tgaac	471
+#	tgaag	591
+#	tgaat	773
+#	tgaca	492
+#	tgacc	225
+#	tgacg	187
+#	tgact	351
+#	tgaga	391
+#	tgagc	230
+#	tgagg	246
+#	tgagt	345
+#	tgata	628
+#	tgatc	434
+#	tgatg	497
+#	tgatt	722
+#	tgcaa	406
+#	tgcac	209
+#	tgcag	214
+#	tgcat	421
+#	tgcca	279
+#	tgccc	122
+#	tgccg	83
+#	tgcct	232
+#	tgcga	133
+#	tgcgc	105
+#	tgcgg	84
+#	tgcgt	151
+#	tgcta	264
+#	tgctc	248
+#	tgctg	350
+#	tgctt	634
+#	tggaa	546
+#	tggac	192
+#	tggag	228
+#	tggat	480
+#	tggca	279
+#	tggcc	145
+#	tggcg	117
+#	tggct	361
+#	tggga	264
+#	tgggc	147
+#	tgggg	158
+#	tgggt	273
+#	tggta	442
+#	tggtc	242
+#	tggtg	329
+#	tggtt	520
+#	tgtaa	698
+#	tgtac	368
+#	tgtag	332
+#	tgtat	793
+#	tgtca	492
+#	tgtcc	221
+#	tgtcg	163
+#	tgtct	460
+#	tgtga	424
+#	tgtgc	232
+#	tgtgg	243
+#	tgtgt	625
+#	tgtta	566
+#	tgttc	529
+#	tgttg	631
+#	tgttt	1277
+#	ttaaa	1500
+#	ttaac	405
+#	ttaag	442
+#	ttaat	904
+#	ttaca	698
+#	ttacc	373
+#	ttacg	225
+#	ttact	590
+#	ttaga	490
+#	ttagc	231
+#	ttagg	243
+#	ttagt	384
+#	ttata	940
+#	ttatc	562
+#	ttatg	595
+#	ttatt	1787
+#	ttcaa	1140
+#	ttcac	411
+#	ttcag	435
+#	ttcat	919
+#	ttcca	546
+#	ttccc	302
+#	ttccg	152
+#	ttcct	517
+#	ttcga	309
+#	ttcgc	148
+#	ttcgg	170
+#	ttcgt	322
+#	ttcta	588
+#	ttctc	617
+#	ttctg	483
+#	ttctt	1814
+#	ttgaa	1140
+#	ttgac	476
+#	ttgag	485
+#	ttgat	915
+#	ttgca	406
+#	ttgcc	275
+#	ttgcg	161
+#	ttgct	556
+#	ttgga	578
+#	ttggc	325
+#	ttggg	343
+#	ttggt	609
+#	ttgta	858
+#	ttgtc	500
+#	ttgtg	525
+#	ttgtt	1303
+#	tttaa	1500
+#	tttac	782
+#	tttag	609
+#	tttat	1852
+#	tttca	1072
+#	tttcc	645
+#	tttcg	374
+#	tttct	1706
+#	tttga	1070
+#	tttgc	554
+#	tttgg	717
+#	tttgt	1239
+#	tttta	2040
+#	ttttc	1736
+#	ttttg	1553
+#	ttttt	9717
+
+# motif upstream of acceptor splice site
+[ASSMOTIF]
+# width of motif, n=
+30
+# order of markov model, k=
+3
+# markov chain emission probabilities
+ 0  0.674	0.0754	0.141	0.109	0.5	0.125	0.139	0.236	0.459	0.112	0.224	0.204	0.366	0.179	0.196	0.259	0.395	0.198	0.128	0.279	0.351	0.297	0.108	0.243	0.433	0.233	0.167	0.167	0.279	0.233	0.233	0.256	0.457	0.106	0.245	0.191	0.385	0.269	0.115	0.231	0.432	0.159	0.227	0.182	0.312	0.125	0.271	0.292	0.405	0.0992	0.132	0.364	0.476	0.167	0.119	0.238	0.359	0.188	0.156	0.297	0.298	0.0865	0.221	0.394	0.43	0.151	0.128	0.291	0.265	0.265	0.118	0.353	0.31	0.31	0.241	0.138	0.299	0.0896	0.254	0.358	0.529	0.147	0.147	0.176	0.207	0.379	0.207	0.207	0.4	0.267	0.133	0.2	0.161	0.161	0.226	0.452	0.206	0.147	0.235	0.412	0.235	0.176	0.235	0.353	0.25	0.167	0.333	0.25	0.389	0.167	0.167	0.278	0.387	0.323	0.129	0.161	0.387	0.29	0.0645	0.258	0.357	0.107	0.25	0.286	0.193	0.14	0.246	0.421	0.538	0.086	0.151	0.226	0.346	0.154	0.115	0.385	0.5	0.136	0.227	0.136	0.383	0.1	0.25	0.267	0.412	0.0882	0.147	0.353	0.333	0.133	0.133	0.4	0.333	0.167	0.111	0.389	0.138	0.172	0.138	0.552	0.385	0.154	0.256	0.205	0.222	0.111	0.278	0.389	0.231	0.115	0.346	0.308	0.27	0.162	0.189	0.378	0.231	0.288	0.115	0.365	0.276	0.172	0.172	0.379	0.244	0.156	0.156	0.444	0.246	0.0984	0.262	0.393	0.472	0.151	0.104	0.274	0.483	0.155	0.207	0.155	0.333	0.119	0.19	0.357	0.312	0.11	0.119	0.459	0.314	0.137	0.157	0.392	0.286	0.179	0.143	0.393	0.353	0.176	0.235	0.235	0.139	0.194	0.222	0.444	0.357	0.186	0.0857	0.371	0.355	0.129	0.194	0.323	0.375	0.1	0.1	0.425	0.257	0.122	0.27	0.351	0.326	0.126	0.189	0.358	0.318	0.159	0.227	0.295	0.337	0.163	0.163	0.337	0.129	0.0758	0.148	0.648
+ 1  0.663	0.0893	0.147	0.101	0.512	0.155	0.119	0.214	0.459	0.115	0.205	0.221	0.336	0.182	0.212	0.27	0.407	0.176	0.139	0.278	0.341	0.293	0.0976	0.268	0.444	0.222	0.139	0.194	0.283	0.189	0.208	0.321	0.447	0.123	0.246	0.184	0.4	0.257	0.114	0.229	0.482	0.161	0.214	0.143	0.357	0.107	0.232	0.304	0.399	0.128	0.135	0.338	0.5	0.16	0.1	0.24	0.385	0.167	0.141	0.308	0.319	0.0725	0.21	0.399	0.417	0.155	0.146	0.282	0.263	0.237	0.132	0.368	0.364	0.273	0.212	0.152	0.267	0.107	0.24	0.387	0.5	0.139	0.167	0.194	0.222	0.417	0.167	0.194	0.375	0.25	0.188	0.188	0.167	0.167	0.222	0.444	0.237	0.132	0.211	0.421	0.222	0.167	0.222	0.389	0.308	0.154	0.308	0.231	0.333	0.143	0.19	0.333	0.412	0.324	0.118	0.147	0.417	0.306	0.0556	0.222	0.371	0.114	0.229	0.286	0.219	0.123	0.233	0.425	0.534	0.102	0.144	0.22	0.361	0.111	0.139	0.389	0.547	0.113	0.208	0.132	0.338	0.117	0.234	0.312	0.405	0.108	0.162	0.324	0.312	0.125	0.125	0.438	0.368	0.158	0.105	0.368	0.143	0.171	0.171	0.514	0.44	0.14	0.26	0.16	0.211	0.158	0.263	0.368	0.281	0.156	0.312	0.25	0.275	0.15	0.175	0.4	0.242	0.242	0.129	0.387	0.267	0.2	0.167	0.367	0.2	0.127	0.164	0.509	0.268	0.0845	0.239	0.408	0.45	0.163	0.109	0.279	0.484	0.172	0.203	0.141	0.393	0.125	0.179	0.304	0.294	0.0956	0.154	0.456	0.359	0.141	0.156	0.344	0.312	0.188	0.125	0.375	0.25	0.292	0.292	0.167	0.18	0.2	0.16	0.46	0.366	0.183	0.108	0.344	0.39	0.122	0.22	0.268	0.37	0.087	0.13	0.413	0.258	0.124	0.258	0.36	0.327	0.142	0.168	0.363	0.304	0.179	0.196	0.321	0.348	0.161	0.161	0.33	0.123	0.0706	0.15	0.656
+ 2  0.667	0.0799	0.148	0.105	0.545	0.136	0.109	0.209	0.466	0.101	0.216	0.216	0.365	0.157	0.22	0.258	0.415	0.163	0.146	0.276	0.34	0.319	0.106	0.234	0.4	0.2	0.15	0.25	0.25	0.2	0.233	0.317	0.427	0.119	0.259	0.196	0.4	0.25	0.125	0.225	0.468	0.145	0.226	0.161	0.328	0.134	0.224	0.313	0.395	0.117	0.142	0.346	0.492	0.164	0.0984	0.246	0.412	0.144	0.124	0.32	0.339	0.0819	0.193	0.386	0.43	0.149	0.14	0.281	0.256	0.279	0.116	0.349	0.39	0.244	0.22	0.146	0.274	0.0952	0.262	0.369	0.512	0.146	0.146	0.195	0.214	0.429	0.19	0.167	0.375	0.25	0.188	0.188	0.195	0.171	0.195	0.439	0.286	0.119	0.19	0.405	0.261	0.13	0.261	0.348	0.235	0.118	0.353	0.294	0.348	0.13	0.217	0.304	0.395	0.326	0.116	0.163	0.39	0.317	0.0732	0.22	0.359	0.128	0.205	0.308	0.2	0.122	0.244	0.433	0.507	0.0972	0.153	0.243	0.333	0.0889	0.222	0.356	0.538	0.0923	0.246	0.123	0.318	0.114	0.239	0.33	0.348	0.109	0.196	0.348	0.35	0.1	0.15	0.4	0.435	0.174	0.087	0.304	0.128	0.179	0.154	0.538	0.469	0.109	0.25	0.172	0.174	0.13	0.261	0.435	0.297	0.162	0.297	0.243	0.262	0.167	0.167	0.405	0.278	0.222	0.125	0.375	0.312	0.188	0.156	0.344	0.203	0.119	0.153	0.525	0.262	0.0952	0.238	0.405	0.453	0.16	0.12	0.267	0.474	0.184	0.184	0.158	0.397	0.127	0.175	0.302	0.292	0.0974	0.162	0.448	0.347	0.147	0.16	0.347	0.282	0.205	0.103	0.41	0.28	0.28	0.28	0.16	0.158	0.211	0.14	0.491	0.351	0.18	0.108	0.36	0.391	0.109	0.196	0.304	0.396	0.0943	0.132	0.377	0.245	0.109	0.291	0.355	0.362	0.149	0.135	0.355	0.295	0.18	0.213	0.311	0.341	0.152	0.159	0.348	0.124	0.081	0.139	0.656
+ 3  0.661	0.0756	0.153	0.111	0.538	0.134	0.101	0.227	0.465	0.0988	0.221	0.215	0.383	0.154	0.207	0.255	0.385	0.149	0.162	0.304	0.345	0.327	0.0909	0.236	0.417	0.188	0.146	0.25	0.254	0.197	0.225	0.324	0.42	0.107	0.26	0.213	0.395	0.279	0.116	0.209	0.455	0.143	0.234	0.169	0.316	0.132	0.211	0.342	0.386	0.12	0.141	0.353	0.484	0.172	0.109	0.234	0.386	0.167	0.132	0.316	0.333	0.0847	0.185	0.397	0.444	0.163	0.126	0.267	0.25	0.292	0.104	0.354	0.429	0.224	0.204	0.143	0.268	0.113	0.258	0.361	0.468	0.128	0.191	0.213	0.2	0.38	0.2	0.22	0.4	0.25	0.2	0.15	0.174	0.196	0.196	0.435	0.283	0.13	0.196	0.391	0.292	0.125	0.25	0.333	0.278	0.111	0.333	0.278	0.423	0.115	0.192	0.269	0.378	0.311	0.133	0.178	0.362	0.298	0.0851	0.255	0.381	0.119	0.19	0.31	0.196	0.127	0.245	0.431	0.518	0.0941	0.147	0.241	0.353	0.118	0.216	0.314	0.582	0.0759	0.241	0.101	0.336	0.14	0.215	0.308	0.327	0.154	0.192	0.327	0.381	0.0952	0.143	0.381	0.444	0.185	0.0741	0.296	0.191	0.191	0.128	0.489	0.458	0.111	0.236	0.194	0.2	0.12	0.24	0.44	0.302	0.186	0.279	0.233	0.271	0.146	0.167	0.417	0.291	0.228	0.114	0.367	0.351	0.189	0.162	0.297	0.211	0.113	0.141	0.535	0.25	0.0938	0.24	0.417	0.446	0.158	0.124	0.271	0.482	0.176	0.165	0.176	0.412	0.132	0.162	0.294	0.299	0.092	0.149	0.46	0.357	0.143	0.143	0.357	0.25	0.205	0.0909	0.455	0.379	0.241	0.241	0.138	0.145	0.21	0.145	0.5	0.357	0.202	0.116	0.326	0.38	0.12	0.18	0.32	0.439	0.0877	0.123	0.351	0.275	0.107	0.26	0.359	0.373	0.154	0.13	0.343	0.308	0.167	0.167	0.359	0.333	0.14	0.153	0.373	0.129	0.0733	0.147	0.651
+ 4  0.654	0.0758	0.156	0.114	0.487	0.154	0.111	0.248	0.497	0.0898	0.216	0.198	0.39	0.165	0.19	0.255	0.348	0.156	0.163	0.333	0.333	0.333	0.098	0.235	0.381	0.19	0.143	0.286	0.253	0.187	0.227	0.333	0.417	0.114	0.274	0.194	0.395	0.279	0.14	0.186	0.474	0.128	0.205	0.192	0.319	0.139	0.194	0.347	0.366	0.113	0.134	0.387	0.423	0.155	0.127	0.296	0.389	0.15	0.133	0.327	0.327	0.0867	0.189	0.398	0.413	0.151	0.167	0.27	0.292	0.271	0.0625	0.375	0.382	0.182	0.218	0.218	0.275	0.108	0.275	0.343	0.396	0.125	0.188	0.292	0.188	0.396	0.208	0.208	0.455	0.227	0.182	0.136	0.192	0.192	0.173	0.442	0.314	0.118	0.196	0.373	0.308	0.115	0.231	0.346	0.25	0.15	0.3	0.3	0.444	0.111	0.259	0.185	0.455	0.25	0.114	0.182	0.356	0.267	0.0889	0.289	0.375	0.125	0.15	0.35	0.186	0.134	0.227	0.454	0.509	0.0982	0.147	0.245	0.379	0.0862	0.241	0.293	0.553	0.0706	0.259	0.118	0.345	0.155	0.173	0.327	0.312	0.167	0.229	0.292	0.458	0.0833	0.125	0.333	0.462	0.192	0.0769	0.269	0.227	0.182	0.136	0.455	0.449	0.115	0.231	0.205	0.269	0.115	0.154	0.462	0.349	0.163	0.279	0.209	0.312	0.146	0.146	0.396	0.333	0.167	0.0952	0.405	0.353	0.147	0.176	0.324	0.238	0.111	0.127	0.524	0.28	0.09	0.2	0.43	0.437	0.172	0.132	0.259	0.463	0.188	0.163	0.188	0.397	0.159	0.175	0.27	0.294	0.0938	0.169	0.444	0.376	0.129	0.153	0.341	0.244	0.2	0.111	0.444	0.4	0.233	0.2	0.167	0.197	0.197	0.121	0.485	0.352	0.208	0.128	0.312	0.34	0.0943	0.17	0.396	0.464	0.125	0.125	0.286	0.287	0.126	0.245	0.343	0.377	0.15	0.102	0.371	0.347	0.167	0.153	0.333	0.338	0.139	0.146	0.377	0.136	0.0714	0.149	0.643
+ 5  0.642	0.0799	0.161	0.117	0.491	0.155	0.103	0.25	0.48	0.116	0.202	0.202	0.388	0.148	0.194	0.27	0.338	0.169	0.177	0.315	0.353	0.314	0.118	0.216	0.372	0.233	0.14	0.256	0.241	0.177	0.215	0.367	0.426	0.119	0.267	0.188	0.463	0.22	0.122	0.195	0.457	0.123	0.21	0.21	0.306	0.153	0.208	0.333	0.34	0.11	0.136	0.414	0.421	0.145	0.118	0.316	0.375	0.152	0.143	0.33	0.316	0.0933	0.207	0.383	0.416	0.177	0.142	0.265	0.37	0.239	0.087	0.304	0.382	0.182	0.182	0.255	0.265	0.108	0.245	0.382	0.354	0.146	0.188	0.312	0.213	0.404	0.17	0.213	0.478	0.174	0.217	0.13	0.2	0.18	0.2	0.42	0.32	0.18	0.18	0.32	0.28	0.12	0.28	0.32	0.222	0.167	0.278	0.333	0.444	0.111	0.259	0.185	0.462	0.231	0.115	0.192	0.333	0.267	0.0889	0.311	0.35	0.15	0.15	0.35	0.17	0.13	0.22	0.48	0.482	0.107	0.173	0.238	0.377	0.0656	0.279	0.279	0.554	0.109	0.239	0.0978	0.333	0.167	0.148	0.352	0.32	0.2	0.22	0.26	0.391	0.13	0.13	0.348	0.52	0.16	0.08	0.24	0.26	0.2	0.12	0.42	0.458	0.108	0.217	0.217	0.37	0.148	0.111	0.37	0.415	0.171	0.22	0.195	0.348	0.152	0.13	0.37	0.319	0.165	0.132	0.385	0.368	0.132	0.184	0.316	0.238	0.0952	0.111	0.556	0.265	0.133	0.153	0.449	0.447	0.173	0.117	0.263	0.437	0.211	0.155	0.197	0.418	0.182	0.2	0.2	0.29	0.0852	0.199	0.426	0.386	0.12	0.157	0.337	0.25	0.225	0.15	0.375	0.367	0.267	0.2	0.167	0.246	0.174	0.101	0.478	0.352	0.208	0.136	0.304	0.3	0.1	0.16	0.44	0.529	0.118	0.176	0.176	0.277	0.128	0.22	0.376	0.393	0.145	0.104	0.358	0.319	0.139	0.153	0.389	0.358	0.128	0.155	0.358	0.143	0.0713	0.158	0.629
+ 6  0.644	0.0863	0.157	0.113	0.512	0.132	0.107	0.248	0.491	0.117	0.181	0.211	0.383	0.124	0.187	0.306	0.406	0.164	0.164	0.266	0.312	0.375	0.125	0.188	0.318	0.205	0.159	0.318	0.23	0.189	0.23	0.351	0.455	0.112	0.247	0.185	0.42	0.22	0.16	0.2	0.474	0.103	0.218	0.205	0.275	0.188	0.203	0.333	0.342	0.132	0.126	0.4	0.425	0.137	0.137	0.301	0.333	0.149	0.149	0.368	0.293	0.0976	0.224	0.385	0.404	0.174	0.165	0.257	0.408	0.245	0.0816	0.265	0.375	0.232	0.161	0.232	0.237	0.113	0.247	0.402	0.34	0.128	0.234	0.298	0.255	0.383	0.17	0.191	0.348	0.13	0.217	0.304	0.182	0.182	0.205	0.432	0.294	0.216	0.137	0.353	0.423	0.0769	0.269	0.231	0.211	0.158	0.316	0.316	0.4	0.08	0.24	0.28	0.475	0.22	0.102	0.203	0.333	0.267	0.111	0.289	0.35	0.15	0.15	0.35	0.183	0.135	0.212	0.471	0.503	0.0983	0.145	0.254	0.385	0.0615	0.262	0.292	0.516	0.143	0.242	0.0989	0.295	0.19	0.143	0.371	0.392	0.176	0.216	0.216	0.429	0.143	0.143	0.286	0.522	0.217	0.087	0.174	0.312	0.167	0.0833	0.438	0.459	0.106	0.2	0.235	0.346	0.154	0.154	0.346	0.45	0.175	0.2	0.175	0.35	0.1	0.15	0.4	0.326	0.169	0.146	0.36	0.41	0.103	0.154	0.333	0.237	0.102	0.136	0.525	0.283	0.141	0.152	0.424	0.446	0.156	0.118	0.28	0.466	0.192	0.137	0.205	0.468	0.177	0.145	0.21	0.28	0.108	0.199	0.414	0.405	0.119	0.143	0.333	0.211	0.263	0.132	0.395	0.419	0.258	0.161	0.161	0.244	0.179	0.115	0.462	0.355	0.202	0.153	0.29	0.25	0.146	0.146	0.458	0.481	0.154	0.173	0.192	0.273	0.129	0.223	0.374	0.371	0.147	0.129	0.353	0.351	0.156	0.13	0.364	0.353	0.147	0.147	0.353	0.162	0.0699	0.14	0.629
+ 7  0.619	0.102	0.165	0.113	0.479	0.134	0.101	0.286	0.515	0.123	0.166	0.196	0.374	0.138	0.215	0.272	0.39	0.135	0.191	0.284	0.348	0.348	0.109	0.196	0.318	0.205	0.136	0.341	0.273	0.143	0.221	0.364	0.431	0.122	0.254	0.193	0.404	0.211	0.158	0.228	0.479	0.113	0.197	0.211	0.268	0.197	0.197	0.338	0.35	0.144	0.133	0.372	0.44	0.133	0.12	0.307	0.277	0.125	0.188	0.411	0.304	0.117	0.206	0.374	0.393	0.148	0.164	0.295	0.391	0.217	0.109	0.283	0.382	0.182	0.164	0.273	0.253	0.115	0.23	0.402	0.318	0.114	0.227	0.341	0.245	0.347	0.163	0.245	0.318	0.136	0.227	0.318	0.179	0.179	0.179	0.462	0.298	0.191	0.149	0.362	0.48	0.08	0.24	0.2	0.211	0.158	0.263	0.368	0.3	0.133	0.267	0.3	0.424	0.22	0.0847	0.271	0.318	0.25	0.114	0.318	0.308	0.154	0.179	0.359	0.186	0.127	0.196	0.49	0.503	0.112	0.134	0.251	0.446	0.0615	0.262	0.231	0.494	0.161	0.241	0.103	0.28	0.159	0.196	0.364	0.358	0.226	0.245	0.17	0.417	0.125	0.167	0.292	0.462	0.231	0.0769	0.231	0.34	0.191	0.106	0.362	0.476	0.0833	0.19	0.25	0.346	0.154	0.154	0.346	0.425	0.225	0.2	0.15	0.333	0.128	0.154	0.385	0.358	0.16	0.136	0.346	0.459	0.135	0.162	0.243	0.158	0.123	0.14	0.579	0.265	0.133	0.153	0.449	0.405	0.189	0.108	0.297	0.436	0.205	0.115	0.244	0.492	0.169	0.108	0.231	0.283	0.106	0.2	0.411	0.36	0.146	0.157	0.337	0.237	0.263	0.132	0.368	0.452	0.29	0.161	0.0968	0.263	0.184	0.105	0.447	0.345	0.193	0.168	0.294	0.294	0.137	0.176	0.392	0.472	0.17	0.151	0.208	0.264	0.121	0.229	0.386	0.381	0.144	0.105	0.37	0.375	0.15	0.0875	0.388	0.381	0.129	0.143	0.347	0.168	0.0675	0.137	0.627
+ 8  0.617	0.103	0.165	0.116	0.463	0.103	0.125	0.309	0.518	0.127	0.163	0.193	0.393	0.141	0.209	0.257	0.399	0.138	0.181	0.283	0.37	0.326	0.109	0.196	0.279	0.186	0.14	0.395	0.284	0.21	0.21	0.296	0.45	0.1	0.244	0.206	0.4	0.2	0.164	0.236	0.422	0.141	0.188	0.25	0.211	0.197	0.239	0.352	0.364	0.142	0.136	0.358	0.397	0.137	0.137	0.329	0.261	0.126	0.218	0.395	0.294	0.139	0.199	0.368	0.375	0.15	0.183	0.292	0.388	0.245	0.102	0.265	0.375	0.219	0.141	0.266	0.266	0.117	0.245	0.372	0.319	0.128	0.191	0.362	0.239	0.304	0.196	0.261	0.364	0.136	0.182	0.318	0.238	0.167	0.19	0.405	0.255	0.213	0.149	0.383	0.444	0.148	0.259	0.148	0.167	0.167	0.278	0.389	0.323	0.161	0.258	0.258	0.469	0.188	0.0938	0.25	0.268	0.244	0.122	0.366	0.351	0.162	0.162	0.324	0.186	0.134	0.206	0.474	0.503	0.0983	0.145	0.254	0.475	0.0656	0.246	0.213	0.461	0.191	0.225	0.124	0.269	0.167	0.241	0.324	0.305	0.22	0.237	0.237	0.48	0.12	0.16	0.24	0.464	0.214	0.107	0.214	0.319	0.213	0.128	0.34	0.438	0.1	0.188	0.275	0.345	0.138	0.172	0.345	0.4	0.229	0.2	0.171	0.359	0.128	0.179	0.333	0.372	0.167	0.128	0.333	0.425	0.1	0.175	0.3	0.183	0.133	0.133	0.55	0.255	0.137	0.167	0.441	0.398	0.194	0.113	0.296	0.423	0.179	0.115	0.282	0.492	0.169	0.102	0.237	0.298	0.112	0.169	0.421	0.34	0.138	0.128	0.394	0.211	0.289	0.132	0.368	0.519	0.222	0.0741	0.185	0.273	0.169	0.143	0.416	0.352	0.194	0.148	0.306	0.261	0.152	0.174	0.413	0.456	0.211	0.175	0.158	0.278	0.118	0.208	0.396	0.385	0.144	0.112	0.358	0.402	0.146	0.0854	0.366	0.387	0.127	0.134	0.352	0.168	0.0778	0.136	0.618
+ 9  0.606	0.115	0.155	0.124	0.402	0.136	0.136	0.326	0.518	0.145	0.139	0.199	0.379	0.148	0.202	0.271	0.389	0.16	0.174	0.278	0.364	0.273	0.114	0.25	0.326	0.217	0.109	0.348	0.344	0.189	0.189	0.278	0.45	0.0944	0.228	0.228	0.355	0.226	0.145	0.274	0.435	0.145	0.177	0.242	0.284	0.149	0.216	0.351	0.372	0.16	0.128	0.34	0.359	0.167	0.141	0.333	0.23	0.156	0.213	0.402	0.263	0.146	0.217	0.374	0.367	0.142	0.2	0.292	0.451	0.216	0.098	0.235	0.35	0.217	0.15	0.283	0.234	0.131	0.215	0.421	0.354	0.125	0.188	0.333	0.233	0.302	0.163	0.302	0.348	0.13	0.217	0.304	0.22	0.171	0.195	0.415	0.255	0.213	0.149	0.383	0.435	0.217	0.217	0.13	0.2	0.2	0.267	0.333	0.314	0.2	0.2	0.286	0.522	0.188	0.0725	0.217	0.298	0.191	0.0851	0.426	0.405	0.143	0.19	0.262	0.213	0.135	0.169	0.483	0.482	0.12	0.133	0.265	0.509	0.0877	0.175	0.228	0.451	0.232	0.183	0.134	0.291	0.164	0.227	0.318	0.357	0.232	0.196	0.214	0.462	0.115	0.115	0.308	0.414	0.207	0.138	0.241	0.348	0.196	0.13	0.326	0.4	0.129	0.186	0.286	0.406	0.125	0.156	0.312	0.382	0.294	0.176	0.147	0.368	0.132	0.184	0.316	0.316	0.177	0.165	0.342	0.39	0.0976	0.171	0.341	0.194	0.145	0.129	0.532	0.252	0.136	0.184	0.427	0.379	0.21	0.0923	0.318	0.403	0.208	0.13	0.26	0.492	0.18	0.0984	0.23	0.291	0.116	0.157	0.436	0.344	0.122	0.133	0.4	0.25	0.278	0.139	0.333	0.483	0.207	0.069	0.241	0.284	0.16	0.148	0.407	0.373	0.218	0.136	0.273	0.277	0.17	0.17	0.383	0.407	0.237	0.186	0.169	0.282	0.134	0.204	0.38	0.37	0.138	0.127	0.365	0.407	0.154	0.0659	0.374	0.407	0.121	0.121	0.35	0.17	0.0619	0.142	0.626
+10  0.598	0.128	0.147	0.127	0.396	0.125	0.146	0.333	0.516	0.144	0.124	0.216	0.34	0.151	0.217	0.292	0.426	0.154	0.169	0.25	0.32	0.26	0.18	0.24	0.326	0.209	0.093	0.372	0.364	0.205	0.182	0.25	0.443	0.0977	0.207	0.253	0.358	0.194	0.149	0.299	0.453	0.151	0.151	0.245	0.293	0.16	0.227	0.32	0.397	0.152	0.12	0.332	0.341	0.171	0.146	0.341	0.25	0.121	0.216	0.414	0.286	0.162	0.214	0.338	0.339	0.145	0.218	0.298	0.491	0.17	0.113	0.226	0.316	0.246	0.14	0.298	0.24	0.115	0.212	0.433	0.362	0.149	0.149	0.34	0.263	0.316	0.132	0.289	0.35	0.1	0.2	0.35	0.273	0.136	0.205	0.386	0.265	0.184	0.184	0.367	0.44	0.2	0.24	0.12	0.25	0.188	0.25	0.312	0.297	0.216	0.216	0.27	0.582	0.165	0.0506	0.203	0.283	0.196	0.0652	0.457	0.395	0.14	0.186	0.279	0.244	0.133	0.133	0.489	0.457	0.13	0.142	0.272	0.517	0.0833	0.167	0.233	0.382	0.303	0.158	0.158	0.303	0.128	0.239	0.33	0.362	0.224	0.19	0.224	0.452	0.129	0.129	0.29	0.407	0.185	0.185	0.222	0.271	0.188	0.167	0.375	0.418	0.134	0.194	0.254	0.361	0.167	0.167	0.306	0.375	0.25	0.188	0.188	0.371	0.143	0.2	0.286	0.279	0.163	0.186	0.372	0.357	0.0714	0.167	0.405	0.203	0.136	0.136	0.525	0.255	0.157	0.167	0.422	0.359	0.217	0.0859	0.338	0.366	0.207	0.134	0.293	0.446	0.215	0.108	0.231	0.291	0.122	0.174	0.413	0.337	0.116	0.158	0.389	0.3	0.25	0.125	0.325	0.357	0.214	0.0714	0.357	0.287	0.138	0.128	0.447	0.377	0.219	0.123	0.281	0.294	0.176	0.157	0.373	0.339	0.271	0.203	0.186	0.261	0.141	0.197	0.401	0.368	0.126	0.121	0.385	0.446	0.145	0.0723	0.337	0.433	0.128	0.121	0.319	0.169	0.0742	0.133	0.625
+11  0.579	0.136	0.15	0.135	0.388	0.112	0.112	0.388	0.483	0.15	0.129	0.238	0.323	0.147	0.221	0.309	0.41	0.16	0.181	0.25	0.286	0.265	0.184	0.265	0.354	0.208	0.0833	0.354	0.347	0.204	0.173	0.276	0.413	0.11	0.2	0.277	0.342	0.178	0.137	0.342	0.435	0.152	0.196	0.217	0.286	0.143	0.247	0.325	0.378	0.167	0.128	0.328	0.354	0.177	0.127	0.342	0.274	0.137	0.194	0.395	0.304	0.164	0.182	0.35	0.391	0.164	0.188	0.258	0.5	0.173	0.115	0.212	0.339	0.268	0.143	0.25	0.21	0.14	0.2	0.45	0.404	0.135	0.173	0.288	0.308	0.256	0.103	0.333	0.261	0.087	0.174	0.478	0.267	0.156	0.222	0.356	0.238	0.19	0.167	0.405	0.409	0.227	0.273	0.0909	0.267	0.133	0.267	0.333	0.282	0.231	0.179	0.308	0.619	0.155	0.0595	0.167	0.261	0.196	0.0652	0.478	0.467	0.156	0.133	0.244	0.253	0.121	0.121	0.505	0.435	0.137	0.143	0.286	0.5	0.117	0.117	0.267	0.389	0.333	0.125	0.153	0.297	0.126	0.261	0.315	0.333	0.238	0.175	0.254	0.394	0.121	0.121	0.364	0.467	0.167	0.167	0.2	0.264	0.189	0.17	0.377	0.417	0.15	0.183	0.25	0.343	0.171	0.2	0.286	0.367	0.267	0.167	0.2	0.314	0.143	0.2	0.343	0.253	0.181	0.229	0.337	0.311	0.0889	0.156	0.444	0.217	0.15	0.133	0.5	0.218	0.168	0.198	0.416	0.324	0.213	0.087	0.377	0.338	0.208	0.13	0.325	0.476	0.206	0.111	0.206	0.273	0.119	0.165	0.443	0.312	0.129	0.161	0.398	0.316	0.263	0.0789	0.342	0.393	0.214	0.0714	0.321	0.266	0.128	0.128	0.479	0.353	0.244	0.101	0.303	0.326	0.196	0.152	0.326	0.328	0.241	0.224	0.207	0.235	0.125	0.206	0.434	0.388	0.137	0.115	0.361	0.389	0.126	0.0737	0.411	0.466	0.12	0.128	0.286	0.165	0.0734	0.126	0.635
+12  0.56	0.149	0.153	0.138	0.382	0.115	0.121	0.382	0.5	0.12	0.127	0.254	0.314	0.168	0.204	0.314	0.397	0.149	0.184	0.27	0.306	0.245	0.143	0.306	0.375	0.175	0.075	0.375	0.387	0.198	0.162	0.252	0.419	0.0946	0.176	0.311	0.284	0.189	0.149	0.378	0.395	0.209	0.209	0.186	0.301	0.137	0.247	0.315	0.39	0.186	0.128	0.297	0.321	0.21	0.123	0.346	0.317	0.135	0.183	0.365	0.311	0.16	0.156	0.373	0.385	0.177	0.208	0.231	0.491	0.175	0.0877	0.246	0.377	0.23	0.164	0.23	0.231	0.144	0.221	0.404	0.373	0.137	0.176	0.314	0.351	0.243	0.0811	0.324	0.25	0.1	0.15	0.5	0.333	0.137	0.157	0.373	0.271	0.125	0.167	0.438	0.391	0.261	0.217	0.13	0.267	0.133	0.267	0.333	0.279	0.209	0.186	0.326	0.647	0.141	0.0471	0.165	0.327	0.163	0.0612	0.449	0.5	0.167	0.146	0.188	0.278	0.13	0.13	0.463	0.426	0.135	0.142	0.298	0.429	0.143	0.0794	0.349	0.41	0.311	0.115	0.164	0.288	0.117	0.27	0.324	0.344	0.213	0.18	0.262	0.424	0.0909	0.121	0.364	0.433	0.2	0.167	0.2	0.269	0.192	0.192	0.346	0.352	0.167	0.222	0.259	0.29	0.161	0.226	0.323	0.29	0.29	0.161	0.258	0.303	0.121	0.303	0.273	0.276	0.158	0.184	0.382	0.31	0.0952	0.143	0.452	0.213	0.148	0.131	0.508	0.241	0.139	0.194	0.426	0.316	0.222	0.0896	0.373	0.337	0.157	0.12	0.386	0.456	0.176	0.103	0.265	0.269	0.144	0.138	0.449	0.286	0.165	0.132	0.418	0.282	0.282	0.0513	0.385	0.407	0.185	0.0741	0.333	0.25	0.13	0.12	0.5	0.331	0.269	0.0923	0.308	0.327	0.184	0.122	0.367	0.291	0.273	0.218	0.218	0.258	0.117	0.203	0.422	0.397	0.13	0.109	0.364	0.375	0.135	0.0729	0.417	0.476	0.127	0.0952	0.302	0.153	0.0923	0.113	0.642
+13  0.547	0.154	0.154	0.145	0.348	0.124	0.124	0.404	0.479	0.157	0.129	0.236	0.289	0.183	0.206	0.321	0.371	0.168	0.189	0.273	0.3	0.2	0.18	0.32	0.385	0.205	0.0513	0.359	0.414	0.18	0.148	0.258	0.387	0.107	0.16	0.347	0.274	0.177	0.145	0.403	0.405	0.238	0.214	0.143	0.308	0.0769	0.231	0.385	0.378	0.203	0.122	0.297	0.289	0.189	0.122	0.4	0.344	0.131	0.164	0.361	0.335	0.147	0.147	0.371	0.361	0.197	0.197	0.246	0.482	0.161	0.107	0.25	0.345	0.207	0.172	0.276	0.231	0.139	0.213	0.417	0.34	0.132	0.151	0.377	0.286	0.257	0.0857	0.371	0.312	0.125	0.188	0.375	0.352	0.148	0.148	0.352	0.318	0.0909	0.182	0.409	0.25	0.35	0.2	0.2	0.308	0.154	0.231	0.308	0.3	0.225	0.2	0.275	0.673	0.129	0.0594	0.139	0.358	0.151	0.0566	0.434	0.51	0.163	0.122	0.204	0.269	0.126	0.134	0.471	0.394	0.153	0.168	0.285	0.422	0.156	0.0625	0.359	0.414	0.276	0.121	0.19	0.331	0.116	0.256	0.298	0.291	0.236	0.182	0.291	0.412	0.118	0.118	0.353	0.414	0.207	0.172	0.207	0.288	0.237	0.169	0.305	0.348	0.152	0.261	0.239	0.257	0.143	0.2	0.4	0.3	0.333	0.133	0.233	0.273	0.152	0.303	0.273	0.247	0.13	0.195	0.429	0.289	0.105	0.158	0.447	0.242	0.0968	0.113	0.548	0.22	0.13	0.22	0.43	0.282	0.259	0.0833	0.375	0.287	0.15	0.113	0.45	0.4	0.217	0.133	0.25	0.304	0.124	0.106	0.466	0.297	0.187	0.11	0.407	0.357	0.238	0.0476	0.357	0.346	0.192	0.0769	0.385	0.284	0.138	0.11	0.468	0.35	0.292	0.073	0.285	0.36	0.14	0.12	0.38	0.28	0.26	0.22	0.24	0.258	0.0968	0.194	0.452	0.412	0.124	0.0773	0.387	0.368	0.113	0.0755	0.443	0.442	0.117	0.108	0.333	0.142	0.105	0.114	0.639
+14  0.552	0.161	0.136	0.151	0.347	0.129	0.124	0.4	0.448	0.164	0.119	0.269	0.302	0.172	0.181	0.344	0.368	0.203	0.173	0.256	0.255	0.235	0.176	0.333	0.385	0.179	0.0769	0.359	0.406	0.196	0.123	0.275	0.393	0.111	0.141	0.356	0.238	0.175	0.159	0.429	0.349	0.256	0.209	0.186	0.32	0.0933	0.2	0.387	0.362	0.198	0.096	0.345	0.236	0.213	0.112	0.438	0.371	0.155	0.121	0.353	0.341	0.142	0.137	0.381	0.395	0.228	0.175	0.202	0.443	0.164	0.0984	0.295	0.364	0.2	0.182	0.255	0.232	0.161	0.214	0.393	0.37	0.13	0.148	0.352	0.303	0.273	0.0909	0.333	0.333	0.111	0.167	0.389	0.339	0.161	0.161	0.339	0.317	0.122	0.171	0.39	0.19	0.381	0.19	0.238	0.333	0.167	0.25	0.25	0.306	0.222	0.167	0.306	0.725	0.108	0.0583	0.108	0.367	0.133	0.0667	0.433	0.592	0.143	0.102	0.163	0.289	0.107	0.132	0.471	0.39	0.154	0.169	0.287	0.358	0.179	0.0597	0.403	0.463	0.259	0.0926	0.185	0.333	0.142	0.217	0.308	0.327	0.204	0.143	0.327	0.467	0.133	0.1	0.3	0.423	0.192	0.231	0.154	0.274	0.242	0.194	0.29	0.386	0.182	0.227	0.205	0.229	0.143	0.2	0.429	0.296	0.296	0.148	0.259	0.276	0.138	0.31	0.276	0.221	0.143	0.195	0.442	0.25	0.0938	0.156	0.5	0.267	0.1	0.1	0.533	0.208	0.123	0.245	0.425	0.276	0.267	0.0733	0.384	0.232	0.159	0.0976	0.512	0.386	0.228	0.14	0.246	0.295	0.127	0.0983	0.48	0.295	0.168	0.0842	0.453	0.341	0.22	0.0488	0.39	0.25	0.143	0.0714	0.536	0.301	0.13	0.122	0.447	0.333	0.319	0.0667	0.281	0.318	0.136	0.114	0.432	0.239	0.304	0.239	0.217	0.273	0.0938	0.164	0.469	0.451	0.133	0.0667	0.349	0.355	0.109	0.0818	0.455	0.419	0.129	0.121	0.331	0.134	0.106	0.104	0.656
+15  0.538	0.171	0.135	0.156	0.293	0.155	0.109	0.443	0.443	0.165	0.122	0.27	0.288	0.175	0.165	0.373	0.326	0.217	0.171	0.287	0.228	0.263	0.211	0.298	0.385	0.231	0.0769	0.308	0.381	0.194	0.135	0.29	0.362	0.157	0.126	0.354	0.2	0.183	0.15	0.467	0.359	0.205	0.256	0.179	0.338	0.108	0.189	0.365	0.341	0.203	0.0714	0.385	0.245	0.234	0.106	0.415	0.358	0.17	0.0849	0.387	0.332	0.151	0.134	0.382	0.407	0.239	0.142	0.212	0.433	0.133	0.1	0.333	0.326	0.174	0.217	0.283	0.232	0.152	0.188	0.429	0.392	0.137	0.157	0.314	0.294	0.265	0.0588	0.382	0.294	0.118	0.176	0.412	0.302	0.17	0.132	0.396	0.333	0.103	0.205	0.359	0.222	0.333	0.167	0.278	0.286	0.143	0.214	0.357	0.25	0.2	0.15	0.4	0.752	0.101	0.0465	0.101	0.388	0.149	0.0597	0.403	0.547	0.132	0.132	0.189	0.292	0.123	0.115	0.469	0.383	0.164	0.164	0.289	0.31	0.169	0.0563	0.465	0.467	0.244	0.133	0.156	0.36	0.126	0.171	0.342	0.415	0.195	0.122	0.268	0.433	0.133	0.1	0.333	0.385	0.231	0.192	0.192	0.258	0.273	0.167	0.303	0.421	0.158	0.211	0.211	0.229	0.143	0.229	0.4	0.296	0.296	0.148	0.259	0.25	0.143	0.286	0.321	0.231	0.154	0.192	0.423	0.258	0.0968	0.129	0.516	0.275	0.137	0.0784	0.51	0.194	0.139	0.241	0.426	0.305	0.25	0.0625	0.383	0.235	0.165	0.0941	0.506	0.327	0.25	0.135	0.288	0.278	0.125	0.0966	0.5	0.267	0.211	0.0889	0.433	0.333	0.19	0.0476	0.429	0.321	0.107	0.0714	0.5	0.321	0.137	0.0992	0.443	0.321	0.336	0.0714	0.271	0.298	0.128	0.0638	0.511	0.25	0.275	0.2	0.275	0.262	0.0902	0.197	0.451	0.455	0.121	0.0505	0.374	0.33	0.0826	0.0734	0.514	0.439	0.13	0.13	0.301	0.151	0.0996	0.0896	0.659
+16  0.524	0.187	0.134	0.155	0.27	0.14	0.118	0.472	0.419	0.19	0.105	0.286	0.292	0.178	0.155	0.374	0.328	0.218	0.168	0.286	0.262	0.246	0.197	0.295	0.378	0.243	0.0811	0.297	0.335	0.208	0.15	0.306	0.375	0.173	0.106	0.346	0.196	0.157	0.157	0.49	0.324	0.243	0.243	0.189	0.273	0.152	0.227	0.348	0.324	0.199	0.0682	0.409	0.233	0.189	0.111	0.467	0.348	0.152	0.13	0.37	0.348	0.142	0.134	0.375	0.427	0.262	0.117	0.194	0.435	0.0968	0.0968	0.371	0.326	0.209	0.186	0.279	0.282	0.146	0.204	0.369	0.34	0.12	0.16	0.38	0.306	0.278	0.0556	0.361	0.368	0.105	0.105	0.421	0.276	0.172	0.138	0.414	0.282	0.128	0.231	0.359	0.2	0.3	0.15	0.35	0.308	0.154	0.154	0.385	0.263	0.158	0.158	0.421	0.769	0.0746	0.0448	0.112	0.48	0.133	0.0533	0.333	0.596	0.135	0.0962	0.173	0.306	0.118	0.104	0.472	0.417	0.158	0.175	0.25	0.351	0.143	0.0519	0.455	0.452	0.238	0.167	0.143	0.343	0.133	0.181	0.343	0.368	0.211	0.132	0.289	0.429	0.143	0.107	0.321	0.391	0.217	0.217	0.174	0.31	0.268	0.155	0.268	0.417	0.139	0.222	0.222	0.207	0.172	0.241	0.379	0.28	0.24	0.2	0.28	0.267	0.133	0.267	0.333	0.27	0.135	0.149	0.446	0.226	0.0968	0.129	0.548	0.231	0.135	0.0769	0.558	0.196	0.131	0.224	0.449	0.296	0.258	0.0674	0.378	0.209	0.128	0.0698	0.593	0.318	0.25	0.136	0.295	0.289	0.116	0.0895	0.505	0.269	0.226	0.0645	0.441	0.341	0.227	0.0455	0.386	0.308	0.115	0.0769	0.5	0.312	0.138	0.101	0.449	0.319	0.319	0.0667	0.296	0.271	0.125	0.0625	0.542	0.306	0.222	0.194	0.278	0.272	0.0702	0.158	0.5	0.453	0.136	0.0421	0.369	0.299	0.0855	0.0598	0.556	0.441	0.136	0.153	0.271	0.159	0.0983	0.0813	0.662
+17  0.527	0.199	0.126	0.148	0.285	0.161	0.108	0.446	0.431	0.216	0.098	0.255	0.333	0.167	0.138	0.362	0.3	0.25	0.158	0.292	0.283	0.226	0.151	0.34	0.351	0.243	0.0811	0.324	0.332	0.207	0.15	0.311	0.374	0.22	0.132	0.275	0.14	0.16	0.14	0.56	0.312	0.25	0.25	0.188	0.279	0.148	0.23	0.344	0.299	0.207	0.0652	0.429	0.233	0.178	0.0889	0.5	0.341	0.165	0.132	0.363	0.333	0.135	0.147	0.385	0.453	0.263	0.0947	0.189	0.41	0.115	0.082	0.393	0.308	0.179	0.205	0.308	0.276	0.162	0.2	0.362	0.37	0.111	0.167	0.352	0.256	0.282	0.0769	0.385	0.368	0.105	0.105	0.421	0.281	0.175	0.123	0.421	0.316	0.158	0.158	0.368	0.105	0.368	0.105	0.421	0.25	0.167	0.167	0.417	0.222	0.194	0.139	0.444	0.784	0.0719	0.0432	0.101	0.524	0.107	0.0476	0.321	0.576	0.136	0.0847	0.203	0.354	0.12	0.0949	0.43	0.435	0.148	0.167	0.25	0.31	0.155	0.0423	0.493	0.486	0.189	0.189	0.135	0.306	0.143	0.184	0.367	0.364	0.182	0.152	0.303	0.44	0.12	0.08	0.36	0.381	0.238	0.19	0.19	0.319	0.29	0.145	0.246	0.353	0.147	0.235	0.265	0.24	0.12	0.24	0.4	0.261	0.304	0.174	0.261	0.241	0.138	0.31	0.31	0.313	0.119	0.119	0.448	0.214	0.107	0.107	0.571	0.213	0.149	0.0851	0.553	0.189	0.113	0.226	0.472	0.292	0.285	0.0614	0.361	0.19	0.119	0.0833	0.607	0.316	0.211	0.132	0.342	0.286	0.111	0.0754	0.528	0.253	0.242	0.0303	0.475	0.325	0.275	0.05	0.35	0.32	0.16	0.08	0.44	0.342	0.141	0.128	0.389	0.291	0.346	0.0551	0.307	0.273	0.0909	0.0682	0.568	0.385	0.154	0.154	0.308	0.279	0.0577	0.192	0.471	0.473	0.139	0.0422	0.346	0.252	0.109	0.0588	0.58	0.466	0.129	0.155	0.25	0.164	0.0891	0.0713	0.676
+18  0.537	0.213	0.106	0.144	0.299	0.17	0.124	0.407	0.473	0.209	0.0769	0.242	0.35	0.17	0.13	0.35	0.328	0.207	0.147	0.319	0.362	0.19	0.138	0.31	0.314	0.257	0.0857	0.343	0.337	0.197	0.155	0.311	0.395	0.186	0.116	0.302	0.136	0.159	0.159	0.545	0.333	0.267	0.2	0.2	0.268	0.161	0.232	0.339	0.328	0.199	0.0645	0.409	0.227	0.182	0.114	0.477	0.337	0.157	0.133	0.373	0.325	0.149	0.165	0.361	0.366	0.312	0.108	0.215	0.424	0.121	0.106	0.348	0.306	0.167	0.167	0.361	0.252	0.153	0.198	0.396	0.388	0.122	0.143	0.347	0.216	0.324	0.0811	0.378	0.4	0.2	0.133	0.267	0.268	0.179	0.107	0.446	0.333	0.194	0.139	0.333	0.1	0.35	0.1	0.45	0.273	0.182	0.182	0.364	0.2	0.229	0.143	0.429	0.778	0.0654	0.0392	0.118	0.571	0.0879	0.044	0.297	0.554	0.123	0.0769	0.246	0.396	0.107	0.107	0.39	0.495	0.137	0.158	0.211	0.373	0.12	0.0533	0.453	0.515	0.182	0.152	0.152	0.299	0.138	0.184	0.379	0.407	0.148	0.148	0.296	0.5	0.136	0.0909	0.273	0.278	0.278	0.222	0.222	0.324	0.282	0.169	0.225	0.324	0.147	0.265	0.265	0.217	0.174	0.217	0.391	0.2	0.35	0.2	0.25	0.241	0.207	0.345	0.207	0.295	0.0984	0.0984	0.508	0.269	0.0769	0.115	0.538	0.188	0.125	0.104	0.583	0.189	0.105	0.232	0.474	0.313	0.3	0.0606	0.327	0.202	0.135	0.0787	0.584	0.25	0.222	0.111	0.417	0.322	0.0976	0.078	0.502	0.248	0.267	0.0297	0.455	0.366	0.244	0.0488	0.341	0.227	0.182	0.0909	0.5	0.331	0.166	0.121	0.382	0.287	0.326	0.062	0.326	0.289	0.0889	0.0667	0.556	0.41	0.154	0.154	0.282	0.31	0.07	0.18	0.44	0.452	0.151	0.0437	0.353	0.27	0.13	0.0609	0.539	0.466	0.147	0.147	0.241	0.173	0.0875	0.0673	0.672
+19  0.544	0.205	0.0943	0.156	0.34	0.177	0.105	0.378	0.415	0.22	0.0854	0.28	0.358	0.147	0.158	0.337	0.333	0.212	0.136	0.318	0.323	0.226	0.145	0.306	0.333	0.214	0.0952	0.357	0.303	0.213	0.154	0.33	0.4	0.2	0.113	0.287	0.128	0.154	0.154	0.564	0.364	0.227	0.182	0.227	0.309	0.145	0.182	0.364	0.311	0.174	0.0632	0.453	0.229	0.181	0.133	0.458	0.287	0.15	0.125	0.438	0.28	0.152	0.168	0.4	0.387	0.301	0.0753	0.237	0.426	0.131	0.115	0.328	0.226	0.226	0.161	0.387	0.25	0.139	0.194	0.417	0.418	0.109	0.109	0.364	0.194	0.333	0.0833	0.389	0.4	0.2	0.133	0.267	0.212	0.192	0.115	0.481	0.333	0.222	0.185	0.259	0.0952	0.333	0.0952	0.476	0.273	0.182	0.182	0.364	0.161	0.258	0.129	0.452	0.774	0.0581	0.0387	0.129	0.543	0.117	0.0426	0.298	0.567	0.0896	0.0746	0.269	0.379	0.112	0.106	0.404	0.511	0.149	0.138	0.202	0.429	0.129	0.0571	0.386	0.469	0.219	0.188	0.125	0.27	0.135	0.18	0.416	0.346	0.154	0.154	0.346	0.5	0.136	0.0909	0.273	0.235	0.294	0.235	0.235	0.313	0.269	0.194	0.224	0.303	0.152	0.303	0.242	0.217	0.174	0.217	0.391	0.222	0.389	0.222	0.167	0.231	0.231	0.269	0.269	0.317	0.117	0.1	0.467	0.233	0.1	0.133	0.533	0.196	0.13	0.109	0.565	0.167	0.0952	0.274	0.464	0.314	0.314	0.0673	0.304	0.209	0.154	0.0879	0.549	0.257	0.257	0.114	0.371	0.322	0.0748	0.0935	0.509	0.245	0.245	0.0364	0.473	0.366	0.22	0.0732	0.341	0.208	0.125	0.125	0.542	0.338	0.172	0.131	0.359	0.283	0.331	0.0551	0.331	0.318	0.114	0.0682	0.5	0.447	0.132	0.158	0.263	0.291	0.0777	0.204	0.427	0.423	0.165	0.0599	0.352	0.282	0.12	0.0769	0.521	0.479	0.149	0.132	0.24	0.176	0.0769	0.0635	0.684
+20  0.557	0.188	0.0911	0.164	0.352	0.181	0.106	0.361	0.408	0.171	0.105	0.316	0.381	0.134	0.165	0.32	0.295	0.185	0.137	0.384	0.324	0.221	0.132	0.324	0.366	0.22	0.0976	0.317	0.261	0.227	0.153	0.358	0.385	0.231	0.123	0.262	0.122	0.146	0.122	0.61	0.364	0.182	0.182	0.273	0.269	0.192	0.212	0.327	0.282	0.138	0.0691	0.511	0.225	0.225	0.113	0.437	0.287	0.161	0.138	0.414	0.243	0.169	0.157	0.431	0.408	0.291	0.0874	0.214	0.4	0.154	0.108	0.338	0.344	0.188	0.156	0.312	0.252	0.138	0.179	0.431	0.434	0.113	0.113	0.34	0.184	0.289	0.105	0.421	0.353	0.235	0.118	0.294	0.189	0.189	0.132	0.491	0.31	0.241	0.172	0.276	0.1	0.3	0.1	0.5	0.231	0.231	0.231	0.308	0.167	0.222	0.111	0.5	0.775	0.0435	0.029	0.152	0.527	0.108	0.0645	0.301	0.522	0.134	0.0746	0.269	0.383	0.123	0.0909	0.403	0.494	0.138	0.115	0.253	0.406	0.116	0.101	0.377	0.484	0.258	0.161	0.0968	0.2	0.125	0.237	0.438	0.269	0.154	0.154	0.423	0.455	0.136	0.0909	0.318	0.25	0.25	0.25	0.25	0.286	0.27	0.206	0.238	0.312	0.188	0.281	0.219	0.263	0.211	0.263	0.263	0.125	0.375	0.312	0.188	0.227	0.227	0.273	0.273	0.362	0.121	0.069	0.448	0.233	0.1	0.133	0.533	0.19	0.143	0.119	0.548	0.153	0.118	0.271	0.459	0.331	0.299	0.0643	0.305	0.226	0.172	0.086	0.516	0.325	0.2	0.1	0.375	0.342	0.0789	0.114	0.465	0.209	0.245	0.0455	0.5	0.326	0.256	0.0698	0.349	0.214	0.143	0.179	0.464	0.294	0.189	0.14	0.378	0.266	0.305	0.0625	0.367	0.333	0.143	0.0714	0.452	0.444	0.139	0.194	0.222	0.315	0.0741	0.241	0.37	0.416	0.164	0.06	0.36	0.245	0.136	0.0727	0.545	0.458	0.125	0.15	0.267	0.181	0.0636	0.0587	0.697
+21  0.572	0.172	0.097	0.159	0.377	0.174	0.101	0.348	0.405	0.162	0.149	0.284	0.391	0.144	0.158	0.307	0.285	0.179	0.132	0.404	0.329	0.178	0.123	0.37	0.378	0.244	0.0667	0.311	0.236	0.218	0.161	0.385	0.4	0.186	0.171	0.243	0.143	0.143	0.114	0.6	0.409	0.182	0.227	0.182	0.288	0.192	0.25	0.269	0.261	0.146	0.0754	0.518	0.211	0.225	0.155	0.408	0.283	0.131	0.162	0.424	0.215	0.176	0.18	0.43	0.365	0.302	0.0938	0.24	0.422	0.156	0.0938	0.328	0.314	0.229	0.171	0.286	0.257	0.114	0.193	0.436	0.396	0.113	0.113	0.377	0.225	0.3	0.1	0.375	0.389	0.278	0.111	0.222	0.2	0.183	0.15	0.467	0.323	0.194	0.161	0.323	0.19	0.238	0.0952	0.476	0.267	0.2	0.2	0.333	0.2	0.2	0.114	0.486	0.741	0.0345	0.0345	0.19	0.511	0.117	0.0638	0.309	0.448	0.149	0.0896	0.313	0.354	0.133	0.0949	0.418	0.5	0.128	0.115	0.256	0.418	0.104	0.119	0.358	0.4	0.267	0.2	0.133	0.19	0.127	0.228	0.456	0.269	0.154	0.154	0.423	0.409	0.136	0.0909	0.364	0.333	0.267	0.2	0.2	0.271	0.254	0.203	0.271	0.207	0.207	0.31	0.276	0.278	0.278	0.278	0.167	0.105	0.368	0.211	0.316	0.238	0.238	0.238	0.286	0.339	0.136	0.0678	0.458	0.226	0.129	0.129	0.516	0.213	0.149	0.128	0.511	0.148	0.148	0.247	0.457	0.351	0.295	0.0667	0.288	0.275	0.175	0.0875	0.463	0.306	0.194	0.111	0.389	0.361	0.0944	0.103	0.442	0.192	0.253	0.0606	0.495	0.364	0.25	0.0682	0.318	0.269	0.154	0.231	0.346	0.274	0.193	0.119	0.415	0.285	0.276	0.0569	0.382	0.341	0.136	0.0682	0.455	0.5	0.075	0.2	0.225	0.294	0.0917	0.257	0.358	0.384	0.155	0.0571	0.404	0.261	0.18	0.0541	0.505	0.469	0.115	0.15	0.265	0.176	0.0596	0.0674	0.697
+22  0.582	0.153	0.0842	0.181	0.417	0.161	0.099	0.323	0.408	0.184	0.145	0.263	0.429	0.122	0.153	0.296	0.303	0.174	0.135	0.387	0.343	0.149	0.104	0.403	0.381	0.214	0.0714	0.333	0.227	0.188	0.169	0.416	0.391	0.156	0.203	0.25	0.2	0.114	0.114	0.571	0.407	0.222	0.148	0.222	0.265	0.184	0.245	0.306	0.262	0.126	0.0841	0.528	0.208	0.182	0.156	0.455	0.287	0.109	0.168	0.436	0.214	0.168	0.179	0.439	0.389	0.289	0.0889	0.233	0.468	0.177	0.0806	0.274	0.333	0.194	0.167	0.306	0.248	0.128	0.206	0.418	0.414	0.0862	0.121	0.379	0.231	0.308	0.128	0.333	0.389	0.278	0.111	0.222	0.203	0.172	0.172	0.453	0.306	0.25	0.139	0.306	0.208	0.208	0.125	0.458	0.357	0.214	0.214	0.214	0.267	0.2	0.1	0.433	0.651	0.0472	0.0377	0.264	0.489	0.1	0.0778	0.333	0.462	0.154	0.0769	0.308	0.305	0.114	0.126	0.455	0.506	0.114	0.0886	0.291	0.458	0.119	0.136	0.288	0.394	0.242	0.152	0.212	0.195	0.134	0.207	0.463	0.207	0.138	0.138	0.517	0.381	0.143	0.0952	0.381	0.357	0.214	0.214	0.214	0.315	0.204	0.222	0.259	0.257	0.171	0.257	0.314	0.235	0.235	0.235	0.294	0.15	0.3	0.25	0.3	0.208	0.25	0.25	0.292	0.305	0.136	0.0508	0.508	0.25	0.188	0.125	0.438	0.22	0.16	0.12	0.5	0.158	0.145	0.263	0.434	0.341	0.313	0.0675	0.278	0.278	0.203	0.0759	0.443	0.351	0.162	0.108	0.378	0.367	0.104	0.112	0.418	0.202	0.222	0.0707	0.505	0.392	0.235	0.0784	0.294	0.259	0.148	0.222	0.37	0.208	0.192	0.131	0.469	0.281	0.248	0.0826	0.388	0.302	0.116	0.116	0.465	0.444	0.0667	0.244	0.244	0.282	0.103	0.248	0.368	0.366	0.166	0.0681	0.4	0.25	0.198	0.0862	0.466	0.427	0.0968	0.145	0.331	0.16	0.0593	0.0729	0.708
+23  0.626	0.126	0.0783	0.169	0.455	0.159	0.0795	0.307	0.379	0.136	0.197	0.288	0.412	0.112	0.166	0.31	0.31	0.165	0.127	0.399	0.323	0.154	0.123	0.4	0.395	0.184	0.0789	0.342	0.221	0.16	0.16	0.458	0.435	0.159	0.188	0.217	0.286	0.0857	0.114	0.514	0.462	0.192	0.154	0.192	0.231	0.173	0.231	0.365	0.263	0.129	0.0804	0.527	0.244	0.218	0.154	0.385	0.291	0.0971	0.136	0.476	0.182	0.167	0.171	0.481	0.34	0.299	0.0928	0.268	0.448	0.19	0.103	0.259	0.359	0.154	0.154	0.333	0.231	0.143	0.17	0.456	0.383	0.0833	0.133	0.4	0.243	0.243	0.162	0.351	0.333	0.333	0.111	0.222	0.19	0.175	0.19	0.444	0.286	0.286	0.114	0.314	0.238	0.19	0.143	0.429	0.357	0.214	0.214	0.214	0.258	0.194	0.129	0.419	0.587	0.0543	0.0435	0.315	0.395	0.132	0.105	0.368	0.409	0.136	0.0909	0.364	0.274	0.119	0.137	0.47	0.544	0.0759	0.0633	0.316	0.4	0.145	0.164	0.291	0.378	0.216	0.108	0.297	0.224	0.118	0.176	0.482	0.241	0.103	0.138	0.517	0.389	0.167	0.111	0.333	0.375	0.188	0.125	0.312	0.286	0.179	0.232	0.304	0.308	0.179	0.205	0.308	0.222	0.222	0.222	0.333	0.174	0.217	0.174	0.435	0.192	0.192	0.269	0.346	0.254	0.169	0.0508	0.525	0.273	0.182	0.121	0.424	0.22	0.16	0.12	0.5	0.167	0.167	0.244	0.423	0.371	0.288	0.0655	0.275	0.367	0.177	0.0759	0.38	0.341	0.146	0.0976	0.415	0.362	0.106	0.132	0.4	0.227	0.206	0.0722	0.495	0.404	0.212	0.0962	0.288	0.303	0.182	0.212	0.303	0.203	0.188	0.143	0.466	0.285	0.228	0.0976	0.39	0.293	0.146	0.122	0.439	0.413	0.0652	0.239	0.283	0.285	0.108	0.223	0.385	0.335	0.161	0.0714	0.433	0.274	0.195	0.0973	0.434	0.375	0.11	0.14	0.375	0.151	0.0681	0.0681	0.713
+24  0.638	0.112	0.0758	0.174	0.45	0.159	0.0795	0.311	0.35	0.133	0.2	0.317	0.392	0.127	0.177	0.304	0.344	0.166	0.108	0.382	0.344	0.148	0.131	0.377	0.4	0.2	0.0857	0.314	0.2	0.139	0.148	0.513	0.478	0.134	0.149	0.239	0.345	0.069	0.138	0.448	0.407	0.185	0.222	0.185	0.217	0.2	0.217	0.367	0.296	0.124	0.0796	0.5	0.25	0.2	0.163	0.388	0.302	0.0943	0.132	0.472	0.18	0.158	0.151	0.511	0.327	0.267	0.109	0.297	0.463	0.185	0.13	0.222	0.359	0.154	0.154	0.333	0.233	0.153	0.16	0.453	0.397	0.0862	0.103	0.414	0.303	0.242	0.152	0.303	0.286	0.381	0.143	0.19	0.15	0.167	0.183	0.5	0.243	0.297	0.135	0.324	0.273	0.227	0.136	0.364	0.286	0.286	0.214	0.214	0.25	0.156	0.125	0.469	0.476	0.0833	0.0595	0.381	0.328	0.164	0.149	0.358	0.369	0.154	0.108	0.369	0.18	0.12	0.162	0.539	0.506	0.0805	0.0575	0.356	0.446	0.125	0.161	0.268	0.351	0.189	0.108	0.351	0.256	0.128	0.174	0.442	0.29	0.0968	0.129	0.484	0.294	0.235	0.118	0.353	0.375	0.188	0.125	0.312	0.294	0.137	0.255	0.314	0.3	0.175	0.2	0.325	0.188	0.25	0.25	0.312	0.227	0.182	0.182	0.409	0.258	0.161	0.226	0.355	0.29	0.194	0.0484	0.468	0.294	0.176	0.118	0.412	0.231	0.173	0.0962	0.5	0.187	0.176	0.253	0.385	0.404	0.251	0.069	0.276	0.412	0.2	0.0625	0.325	0.366	0.122	0.122	0.39	0.364	0.109	0.135	0.393	0.258	0.191	0.0899	0.461	0.418	0.182	0.109	0.291	0.314	0.2	0.229	0.257	0.165	0.19	0.116	0.529	0.303	0.185	0.101	0.412	0.286	0.167	0.143	0.405	0.333	0.111	0.267	0.289	0.289	0.094	0.228	0.389	0.276	0.176	0.081	0.467	0.325	0.179	0.0976	0.398	0.331	0.12	0.143	0.406	0.163	0.0687	0.0755	0.692
+25  0.645	0.0952	0.069	0.19	0.466	0.153	0.0763	0.305	0.279	0.131	0.213	0.377	0.41	0.101	0.181	0.309	0.364	0.172	0.0927	0.371	0.263	0.158	0.14	0.439	0.424	0.152	0.0909	0.333	0.17	0.15	0.14	0.54	0.476	0.143	0.143	0.238	0.308	0.0769	0.115	0.5	0.37	0.222	0.222	0.185	0.197	0.197	0.213	0.393	0.285	0.132	0.0746	0.509	0.276	0.184	0.138	0.402	0.296	0.0926	0.12	0.491	0.182	0.149	0.134	0.535	0.376	0.202	0.101	0.321	0.471	0.157	0.098	0.275	0.371	0.143	0.171	0.314	0.257	0.15	0.157	0.436	0.407	0.0678	0.102	0.424	0.29	0.29	0.161	0.258	0.286	0.333	0.19	0.19	0.145	0.182	0.182	0.491	0.216	0.324	0.135	0.324	0.28	0.2	0.12	0.4	0.312	0.25	0.25	0.188	0.31	0.103	0.103	0.483	0.313	0.134	0.0597	0.493	0.232	0.214	0.179	0.375	0.327	0.164	0.127	0.382	0.13	0.136	0.16	0.574	0.461	0.0899	0.0562	0.393	0.327	0.184	0.163	0.327	0.343	0.171	0.114	0.371	0.244	0.122	0.156	0.478	0.258	0.129	0.0968	0.516	0.167	0.389	0.111	0.333	0.353	0.176	0.118	0.353	0.279	0.14	0.233	0.349	0.286	0.171	0.171	0.371	0.167	0.167	0.278	0.389	0.24	0.16	0.16	0.44	0.3	0.133	0.2	0.367	0.347	0.181	0.0278	0.444	0.278	0.194	0.0833	0.444	0.241	0.19	0.0862	0.483	0.179	0.17	0.264	0.387	0.454	0.197	0.0656	0.284	0.44	0.179	0.0714	0.31	0.372	0.116	0.116	0.395	0.346	0.118	0.132	0.404	0.315	0.141	0.0761	0.467	0.382	0.182	0.109	0.327	0.333	0.179	0.205	0.282	0.153	0.169	0.119	0.559	0.348	0.152	0.125	0.375	0.289	0.2	0.133	0.378	0.311	0.111	0.244	0.333	0.286	0.0844	0.227	0.403	0.26	0.144	0.0698	0.526	0.287	0.186	0.093	0.434	0.288	0.103	0.164	0.445	0.164	0.082	0.0885	0.665
+26  0.688	0.0757	0.0665	0.17	0.434	0.17	0.0849	0.311	0.333	0.14	0.228	0.298	0.446	0.104	0.173	0.277	0.413	0.159	0.0797	0.348	0.327	0.115	0.135	0.423	0.379	0.241	0.103	0.276	0.198	0.146	0.146	0.51	0.414	0.155	0.19	0.241	0.333	0.0833	0.125	0.458	0.357	0.214	0.25	0.179	0.188	0.203	0.203	0.406	0.332	0.153	0.0655	0.45	0.289	0.145	0.145	0.422	0.321	0.0943	0.142	0.443	0.235	0.14	0.132	0.493	0.422	0.19	0.103	0.284	0.489	0.149	0.106	0.255	0.4	0.133	0.133	0.333	0.271	0.171	0.15	0.407	0.438	0.0625	0.125	0.375	0.371	0.229	0.171	0.229	0.286	0.333	0.19	0.19	0.158	0.193	0.175	0.474	0.231	0.308	0.103	0.359	0.318	0.182	0.136	0.364	0.294	0.235	0.235	0.235	0.344	0.0938	0.0938	0.469	0.2	0.164	0.0727	0.564	0.216	0.196	0.216	0.373	0.292	0.188	0.125	0.396	0.142	0.117	0.179	0.562	0.448	0.092	0.069	0.391	0.295	0.182	0.182	0.341	0.324	0.118	0.118	0.441	0.28	0.134	0.171	0.415	0.226	0.129	0.0968	0.548	0.158	0.368	0.105	0.368	0.412	0.118	0.118	0.353	0.255	0.128	0.213	0.404	0.286	0.2	0.114	0.4	0.158	0.211	0.263	0.368	0.24	0.12	0.2	0.44	0.382	0.118	0.176	0.324	0.365	0.176	0.027	0.432	0.281	0.188	0.0938	0.438	0.246	0.193	0.0877	0.474	0.225	0.171	0.234	0.369	0.503	0.126	0.0479	0.323	0.494	0.181	0.0723	0.253	0.395	0.105	0.132	0.368	0.378	0.119	0.143	0.361	0.381	0.119	0.0833	0.417	0.373	0.186	0.136	0.305	0.324	0.216	0.216	0.243	0.148	0.172	0.117	0.562	0.368	0.113	0.142	0.377	0.267	0.2	0.133	0.4	0.347	0.122	0.204	0.327	0.329	0.0838	0.198	0.389	0.287	0.157	0.0417	0.514	0.292	0.194	0.0972	0.417	0.27	0.107	0.17	0.453	0.18	0.0895	0.108	0.622
+27  0.695	0.0775	0.0642	0.163	0.455	0.169	0.0779	0.299	0.326	0.152	0.239	0.283	0.463	0.096	0.164	0.277	0.467	0.162	0.0762	0.295	0.341	0.0976	0.122	0.439	0.346	0.231	0.115	0.308	0.203	0.127	0.152	0.519	0.442	0.154	0.192	0.212	0.4	0.1	0.15	0.35	0.304	0.261	0.261	0.174	0.222	0.204	0.204	0.37	0.353	0.167	0.0588	0.422	0.291	0.139	0.152	0.418	0.326	0.0899	0.146	0.438	0.254	0.134	0.125	0.487	0.423	0.175	0.103	0.299	0.541	0.108	0.108	0.243	0.32	0.16	0.12	0.4	0.284	0.193	0.156	0.367	0.442	0.0698	0.116	0.372	0.419	0.258	0.161	0.161	0.316	0.316	0.211	0.158	0.157	0.196	0.176	0.471	0.206	0.324	0.118	0.353	0.333	0.19	0.143	0.333	0.333	0.2	0.2	0.267	0.37	0.111	0.111	0.407	0.128	0.191	0.0851	0.596	0.205	0.227	0.182	0.386	0.31	0.143	0.143	0.405	0.138	0.11	0.193	0.559	0.466	0.0822	0.0685	0.384	0.306	0.222	0.139	0.333	0.267	0.1	0.133	0.5	0.319	0.139	0.111	0.431	0.241	0.138	0.103	0.517	0.176	0.353	0.118	0.353	0.412	0.118	0.118	0.353	0.244	0.0732	0.244	0.439	0.303	0.182	0.121	0.394	0.167	0.222	0.222	0.389	0.25	0.125	0.167	0.458	0.382	0.118	0.176	0.324	0.358	0.194	0.0299	0.418	0.29	0.194	0.0968	0.419	0.231	0.212	0.0769	0.481	0.243	0.165	0.223	0.369	0.529	0.101	0.058	0.312	0.507	0.178	0.0822	0.233	0.367	0.1	0.133	0.4	0.364	0.123	0.142	0.372	0.437	0.0986	0.0845	0.38	0.373	0.157	0.157	0.314	0.344	0.219	0.188	0.25	0.162	0.145	0.111	0.581	0.398	0.0909	0.159	0.352	0.244	0.195	0.146	0.415	0.354	0.125	0.188	0.333	0.318	0.0878	0.176	0.419	0.277	0.164	0.041	0.518	0.301	0.195	0.105	0.398	0.285	0.118	0.16	0.438	0.182	0.0917	0.116	0.61
+28  0.719	0.0645	0.0484	0.168	0.39	0.203	0.0847	0.322	0.316	0.158	0.211	0.316	0.462	0.0839	0.182	0.273	0.518	0.165	0.0588	0.259	0.387	0.0968	0.161	0.355	0.316	0.211	0.158	0.316	0.22	0.136	0.169	0.475	0.459	0.189	0.162	0.189	0.412	0.118	0.118	0.353	0.263	0.263	0.263	0.211	0.208	0.188	0.188	0.417	0.388	0.171	0.0529	0.388	0.328	0.119	0.134	0.418	0.343	0.0896	0.134	0.433	0.28	0.119	0.109	0.492	0.442	0.151	0.116	0.291	0.586	0.103	0.138	0.172	0.35	0.1	0.1	0.45	0.287	0.237	0.113	0.362	0.459	0.0811	0.108	0.351	0.4	0.2	0.2	0.2	0.25	0.312	0.25	0.188	0.146	0.195	0.146	0.512	0.194	0.355	0.129	0.323	0.278	0.222	0.167	0.333	0.308	0.231	0.231	0.231	0.36	0.12	0.12	0.4	0.122	0.22	0.0732	0.585	0.161	0.258	0.226	0.355	0.351	0.135	0.135	0.378	0.147	0.109	0.194	0.55	0.455	0.0758	0.0758	0.394	0.31	0.241	0.138	0.31	0.286	0.107	0.107	0.5	0.333	0.123	0.105	0.439	0.222	0.148	0.111	0.519	0.188	0.375	0.125	0.312	0.375	0.125	0.125	0.375	0.286	0.0857	0.229	0.4	0.3	0.167	0.133	0.4	0.176	0.176	0.235	0.412	0.3	0.1	0.2	0.4	0.364	0.121	0.182	0.333	0.397	0.19	0.0345	0.379	0.286	0.179	0.107	0.429	0.209	0.209	0.0698	0.512	0.267	0.156	0.222	0.356	0.534	0.0847	0.0593	0.322	0.5	0.171	0.0857	0.243	0.385	0.0769	0.115	0.423	0.352	0.11	0.164	0.374	0.47	0.0909	0.0758	0.364	0.354	0.167	0.167	0.312	0.345	0.241	0.172	0.241	0.162	0.152	0.124	0.562	0.397	0.103	0.167	0.333	0.25	0.222	0.139	0.389	0.317	0.122	0.195	0.366	0.339	0.0866	0.165	0.409	0.275	0.181	0.0468	0.497	0.289	0.175	0.123	0.412	0.273	0.117	0.156	0.453	0.196	0.0988	0.117	0.588
+29  0.75	0.0547	0.043	0.152	0.39	0.244	0.0976	0.268	0.25	0.107	0.25	0.393	0.447	0.0894	0.203	0.26	0.561	0.167	0.0455	0.227	0.407	0.111	0.148	0.333	0.353	0.235	0.176	0.235	0.229	0.167	0.146	0.458	0.5	0.156	0.156	0.188	0.385	0.154	0.154	0.308	0.231	0.231	0.385	0.154	0.227	0.205	0.182	0.386	0.417	0.181	0.0472	0.354	0.36	0.12	0.14	0.38	0.37	0.111	0.13	0.389	0.286	0.104	0.11	0.5	0.436	0.154	0.115	0.295	0.56	0.08	0.16	0.2	0.333	0.133	0.133	0.4	0.328	0.234	0.0938	0.344	0.433	0.1	0.1	0.367	0.429	0.19	0.19	0.19	0.25	0.312	0.25	0.188	0.125	0.219	0.125	0.531	0.208	0.333	0.125	0.333	0.267	0.267	0.133	0.333	0.25	0.25	0.25	0.25	0.364	0.136	0.136	0.364	0.147	0.235	0.0882	0.529	0.192	0.269	0.231	0.308	0.3	0.133	0.133	0.433	0.17	0.12	0.17	0.54	0.426	0.0926	0.0926	0.389	0.296	0.259	0.148	0.296	0.261	0.13	0.13	0.478	0.356	0.111	0.133	0.4	0.261	0.174	0.13	0.435	0.2	0.4	0.133	0.267	0.357	0.143	0.143	0.357	0.3	0.0667	0.2	0.433	0.217	0.217	0.174	0.391	0.214	0.214	0.214	0.357	0.278	0.111	0.167	0.444	0.393	0.107	0.179	0.321	0.42	0.2	0.04	0.34	0.292	0.125	0.125	0.458	0.222	0.167	0.0833	0.528	0.266	0.152	0.215	0.367	0.544	0.068	0.0583	0.33	0.516	0.145	0.0968	0.242	0.364	0.0909	0.136	0.409	0.364	0.104	0.173	0.358	0.509	0.0755	0.0755	0.34	0.333	0.167	0.194	0.306	0.32	0.28	0.2	0.2	0.195	0.149	0.126	0.529	0.413	0.0952	0.143	0.349	0.31	0.276	0.103	0.31	0.344	0.156	0.125	0.375	0.358	0.0755	0.151	0.415	0.286	0.175	0.039	0.5	0.312	0.177	0.104	0.406	0.252	0.136	0.165	0.447	0.215	0.105	0.123	0.557
