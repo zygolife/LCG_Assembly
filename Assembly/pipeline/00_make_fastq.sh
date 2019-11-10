@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 1 --mem 8gb -p short -J split_fastq --out logs/make_fastq.%a.log --time 2:00:00
+#SBATCH --nodes 1 --ntasks 1 --mem 8gb -p short -J makeFastq --out logs/make_fastq.%a.log --time 2:00:00
 
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
@@ -15,9 +15,9 @@ fi
 module load BBMap
 
 OUTDIR=input
-DATA=data/1978_Plate?
-FILE=$(ls $DATA/*.fastq.gz | sed -n ${N}p)
-BASE=$(basename $FILE .fastq.gz)
+#FILE=$(ls $DATA/*.fastq.gz | sed -n ${N}p)
+BASE=$(sed -n ${N}p samples.dat | cut -f1)
+FILE=$(ls data/1978_Plate*/$BASE.fastq.gz)
 
 if [ ! -e $OUTDIR/${BASE}_R1.fq.gz ]; then
 	reformat.sh in=$FILE out1=$OUTDIR/${BASE}_R1.fq.gz out2=$OUTDIR/${BASE}_R2.fq.gz

@@ -35,21 +35,28 @@ if [ ! -f $BASE.AA.blobDB.json ]; then
     blobtools create -i $ASSEMBLY -b $BAM -t $PROTTAX -o $OUT/$BASE.AA
 fi
 pushd $OUT
-
-time blobtools view -r all -i $BASE.NT.blobDB.json
-
-for rank in phylum order
-do
-    if [ ! -f $BASE.NT.blobDB.json.bestsum.$rank.p8.span.100.blobplot.read_cov.bam0.png ]; then
-	blobtools plot -i $BASE.NT.blobDB.json -r $rank
+if [ -f $BASE.NT.blobDB.json ]; then
+    if [ ! -f $BASE.NT.blobDB.table.txt ]; then
+	time blobtools view -r all -i $BASE.NT.blobDB.json
     fi
-done
+        
+    for rank in phylum order
+    do
+	if [ ! -f $BASE.NT.blobDB.json.bestsum.$rank.p8.span.100.blobplot.read_cov.bam0.png ]; then
+	    blobtools plot -i $BASE.NT.blobDB.json -r $rank
+	fi
+    done
+fi
 
-time blobtools view -r all -i $BASE.AA.blobDB.json
-
-for rank in phylum order
-do
-    if [ ! -f $BASE.AA.blobDB.json.bestsum.$rank.p8.span.100.blobplot.read_cov.bam0.png ]; then
-	blobtools plot -i $BASE.AA.blobDB.json -r $rank
+if [ -f $BASE.AA.blobDB.json ]; then
+    if [ ! -f $BASE.AA.blobDB.table.txt ]; then
+	time blobtools view -r all -i $BASE.AA.blobDB.json
+    fi	
+    
+    for rank in phylum order
+    do
+	if [ ! -f $BASE.AA.blobDB.json.bestsum.$rank.p8.span.100.blobplot.read_cov.bam0.png ]; then
+	    blobtools plot -i $BASE.AA.blobDB.json -r $rank
     fi
-done
+    done  
+fi

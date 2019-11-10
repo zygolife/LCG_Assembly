@@ -19,7 +19,8 @@ foreach my $file ( readdir(DIR) ) {
     next unless ( $file =~ /(\S+)\.stats.txt$/);
     my $stem = $1;
     $stem =~ s/\.sorted//;
-    open(my $fh => "$dir/$file") || die $!;
+    warn("$file ($dir)\n");
+    open(my $fh => "$dir/$file") || die "cannot open $dir/$file: $!";
     while(<$fh>) {
 	next if /^\s+$/;
 	s/^\s+//;

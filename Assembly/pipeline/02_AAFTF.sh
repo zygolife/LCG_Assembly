@@ -49,6 +49,7 @@ if [ ! -f $ASMFILE ]; then
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
 	exit
     fi
+    echo "running assemble for $BASE"
     AAFTF assemble -c $CPU --left $LEFT --right $RIGHT  \
 	-o $ASMFILE -w $WORKDIR/spades_$BASE --mem $MEM
     
@@ -60,23 +61,23 @@ if [ ! -f $ASMFILE ]; then
     fi
 fi
 
-if [ ! -f $VECCLEAN ]; then
+if [[ ! -f $VECCLEAN && ! -f $VECCLEAN.gz ]]; then
     AAFTF vecscreen -i $ASMFILE -c $CPU -o $VECCLEAN 
 fi
 
-if [ ! -f $PURGE ]; then
+if [[ ! -f $PURGE && ! -f $PURGE.gz ]]; then
     AAFTF sourpurge -i $VECCLEAN -o $PURGE -c $CPU --phylum $PHYLUM --left $LEFT  --right $RIGHT
 fi
 
-if [ ! -f $CLEANDUP ]; then
+if [[ ! -f $CLEANDUP && ! -f $CLEANDUP.gz ]]; then
    AAFTF rmdup -i $PURGE -o $CLEANDUP -c $CPU -m 1000
 fi
 
-if [ ! -f $PILON ]; then
+if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
    AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT 
 fi
 
-if [ ! -f $PILON ]; then
+if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
     echo "Error running Pilon, did not create file. Exiting"
     exit
 fi

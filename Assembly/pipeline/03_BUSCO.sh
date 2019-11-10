@@ -5,6 +5,8 @@ module load busco
 
 # for augustus training
 export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+# set to a local dir to avoid permission issues and pollution in global
+export AUGUSTUS_CONFIG_PATH=$(realpath augustus/3.3/config)
 
 CPU=${SLURM_CPUS_ON_NODE}
 N=${SLURM_ARRAY_TASK_ID}
@@ -50,7 +52,7 @@ if [ -d "$OUTFOLDER/run_${NAME}" ];  then
     exit
 else
     pushd $OUTFOLDER
-    busco.py -i $GENOMEFILE -l $LINEAGE -o $NAME -m geno --cpu $CPU --tmp $TEMP --long -sp $SEED_SPECIES
+    run_BUSCO.py -i $GENOMEFILE -l $LINEAGE -o $NAME -m geno --cpu $CPU --tmp $TEMP --long -sp $SEED_SPECIES
     popd
 fi
 

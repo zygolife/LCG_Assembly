@@ -37,7 +37,7 @@ set glimmerpath = /opt/linux/centos/7.x/x86_64/pkgs/glimmer/3.02/bin
 set elphbin = /opt/linux/centos/7.x/x86_64/pkgs/ELPH/1.0.1/bin/elph
 
 # add/change glimmer options here
-set glimmeropts = "-o50 -g110 -t30 -l"
+set glimmeropts = "-o50 -g110 -t30"
 
 set numsteps = 8
 
@@ -123,7 +123,7 @@ if  ($onestep == "only")  exit
 step8:
 # Run second Glimmer
 echo "Step 8 of ${numsteps}:  Running second Glimmer3"
-$glimmerpath/glimmer3 $glimmeropts -b $tag.motif -P $startuse $genome $tag.icm $tag
+$glimmerpath/glimmer3 $glimmeropts --linear -b $tag.motif -P $startuse $genome $tag.icm $tag
 if  ($status != 0)  then
   echo "Failed to run Glimmer3"
   exit

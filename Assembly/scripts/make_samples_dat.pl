@@ -1,6 +1,7 @@
 #!/usr/bin/env perl
 #
 my %names = ( Entomophthoromycotina => 'Zoopagomycota',
+	      'Chytridiomycota' => 'Chytridiomycota',
 	      Kickxellomycotina => 'Zoopagomycota',
 		'Mortirellomycotina' => 'Mucoromycota',
 		'Mucoromycotina'       => 'Mucoromycota');
