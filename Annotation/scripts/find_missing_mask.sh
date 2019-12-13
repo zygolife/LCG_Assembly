@@ -13,7 +13,7 @@ tail -n +2 $SAMPFILE | while read ProjID JGISample JGIProjName JGIBarcode SubPhy
 do
  name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g')
  species=$(echo "$Species" | perl -p -e "s/$Strain//")
-
+ echo "$name"
  if [ ! -f $INDIR/${name}.sorted.fasta ]; then
     echo -e "\tCannot find $name.sorted.fasta in $INDIR - may not have been run yet ($N)"
  elif [ ! -f $OUTDIR/${name}.masked.fasta ]; then
