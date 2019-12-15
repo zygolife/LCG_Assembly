@@ -1,20 +1,24 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 16 --nodes 1 --mem 24G --out logs/predict.%a.log
-module unload python
-module unload perl
-module unload perl
-module load perl/5.24.0
-module load miniconda2
+module unload miniconda2
+module load miniconda3
+#module load funannotate/1.5.2-30c1166
 module load funannotate/git-live
 module switch mummer/4.0
 module unload augustus
 module load augustus/3.3
 module load lp_solve
-module load genemarkHMM
 module load diamond
 module unload rmblastn
 module load ncbi-rmblast/2.6.0
-export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+#export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
+
+GMFOLDER=`dirname $(which gmhmme3)`
+#genemark key is needed
+if [ ! -f ~/.gm_key ]; then
+	ln -s $GMFOLDER/.gm_key ~/.gm_key
+fi
 
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then

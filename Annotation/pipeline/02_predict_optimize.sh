@@ -2,9 +2,8 @@
 #SBATCH -p batch --time 2-0:00:00 --ntasks 16 --nodes 1 --mem 24G --out logs/predict.%a.log
 module unload python
 module unload perl
-module unload perl
-module load perl/5.24.0
-module load miniconda2
+module unload miniconda2
+module load miniconda3
 module load funannotate/git-live
 module switch mummer/4.0
 module unload augustus
@@ -14,7 +13,15 @@ module load genemarkHMM
 module load diamond
 module unload rmblastn
 module load ncbi-rmblast/2.6.0
-export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+#export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
+#
+GMFOLDER=`dirname $(which gmhmme3)`
+
+# make genemark key link required to run it
+if [ ! -f ~/.gm_key ]; then
+	ln -s $GMFOLDER/.gm_key ~/.gm_key
+fi
 
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
@@ -61,7 +68,7 @@ do
 	fi
  	mkdir $name.predict.$$
  	pushd $name.predict.$$
-    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --optimize_augustus --strain "$Strain" --min_training_models 50 \
+    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --optimize_augustus --strain "$Strain" --min_training_models 50 --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
       -i ../$INDIR/$name.masked.fasta --name $JGIProjName --protein_evidence ../lib/informant.2.aa \
       -s "$species"  -o ../$OUTDIR/$name --busco_seed_species $SEED_SPECIES
 	popd

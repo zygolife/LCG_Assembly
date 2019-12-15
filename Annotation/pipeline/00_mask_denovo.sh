@@ -8,7 +8,8 @@ fi
 
 INDIR=genomes
 OUTDIR=genomes
-LIBRARY=lib/zygo_repeats.fasta
+
+#LIBRARY=lib/zygo_repeats.fasta
 SAMPFILE=samples.csv
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -44,21 +45,23 @@ do
 if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
 
     module load funannotate/git-live
+    #1.5.2-30c1166
     module unload rmblastn
     module load ncbi-rmblast/2.6.0
     export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 
-   # export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
-
     #funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
     if [ -f repeat_library/${name}.repeatmodeler-library.fasta ]; then
 	    LIBRARY=repeat_library/${name}.repeatmodeler-library.fasta
+    	    LIBRARY=$(realpath $LIBRARY)
     fi
-    LIBRARY=$(realpath $LIBRARY)
     mkdir $name.mask.$$
     pushd $name.mask.$$
-    funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta -l $LIBRARY
-    mv funannotate-mask.log ../logs/${name}.mask.log
+    if [ ! -z $LIBRARY ]; then
+    	funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta -l $LIBRARY
+    else	
+	    funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
+    fi
     popd
     rmdir $name.mask.$$
 else 
