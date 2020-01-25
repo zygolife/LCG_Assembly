@@ -16,7 +16,7 @@ my %header_seen;
 opendir(DIR,$dir) || die $!;
 my $first = 1;
 foreach my $file ( readdir(DIR) ) {
-    next unless ( $file =~ /(\S+)\.stats.txt$/);
+    next unless ( $file =~ /(\S+)(\.fasta)?\.stats.txt$/);
     my $stem = $1;
     $stem =~ s/\.sorted//;
     warn("$file ($dir)\n");
@@ -38,7 +38,7 @@ foreach my $file ( readdir(DIR) ) {
 	}
     }
     if ( $first ) { 
-	push @header, qw(BUSCO_Complete BUSCO_Single BUSCO_Single BUSCO_Single
+	push @header, qw(BUSCO_Complete BUSCO_Single BUSCO_Duplicate
                  BUSCO_Fragmented BUSCO_Missing BUSCO_NumGenes
                  );
     }
