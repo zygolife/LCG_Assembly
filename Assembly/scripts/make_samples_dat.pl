@@ -10,6 +10,7 @@ my (%seen,%skip);
 if ( -f "ignore_samples.txt" ) {
     open(my $in => "ignore_samples.txt") || die $!;
     while(<$in>) {
+	    next if /^\#/;
 	chomp;
 	my ($name,$note) = split(/,/,$_);
 	$skip{$name}++;
