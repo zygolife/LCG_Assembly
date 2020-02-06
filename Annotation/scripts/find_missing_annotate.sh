@@ -10,7 +10,7 @@ IFS=,
 N=1
 mkdir -p empty
 
-m=$(tail -n +2 $SAMPFILE | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+m=$(cat $SAMPFILE | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
  name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g')
  species=$(echo "$Species" | perl -p -e "chomp; s/$Strain//; s/\s+/_/g;")
