@@ -20,14 +20,14 @@ if [ ! $N ]; then
     fi
 fi
 MAX=$(wc -l $SAMPFILE | awk '{print $1}')
-if [ $N -gt $(expr $MAX - 1) ]; then
-    MAXSMALL=$(expr $MAX - 1)
+if [ $N -gt $MAX ]; then
+    MAXSMALL=$MAX
     echo "$N is too big, only $MAXSMALL lines in $SAMPFILE" 
     exit
 fi
 
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
  name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g')
  fixedname=$(echo $name | perl -p -e 's/\+/Plus/')
@@ -42,10 +42,16 @@ do
  fi
 
 if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
+module unload python
+module unload perl
+module unload miniconda2
+module unload miniconda3
+module load anaconda3
+module load funannotate/development
+source activate funannotate
+module unload rmblastn
+module load ncbi-rmblast/2.6.0
 
-    module load funannotate/git-live
-    module unload rmblastn
-    module load ncbi-rmblast/2.6.0
     export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 
    # export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config

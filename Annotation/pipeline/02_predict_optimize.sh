@@ -3,14 +3,17 @@
 module unload python
 module unload perl
 module unload miniconda2
-module load miniconda3
-module load funannotate/git-live
-module switch mummer/4.0
-module unload augustus
-module load augustus/3.3
-module load lp_solve
-module load genemarkHMM
-module load diamond
+module unload miniconda3
+module load anaconda3
+module load funannotate/development
+source activate funannotate
+#module switch mummer/4.0
+#module unload augustus
+#module load augustus/3.3
+#module load lp_solve
+#module load genemarkHMM
+#module load diamond
+module load genemarkESET/4.38
 module unload rmblastn
 module load ncbi-rmblast/2.6.0
 #export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
@@ -48,7 +51,7 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
 	name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
  	species=$(echo "$Species" | perl -p -e "s/$Strain//")
@@ -68,7 +71,7 @@ do
 	fi
  	mkdir $name.predict.$$
  	pushd $name.predict.$$
-    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --optimize_augustus --strain "$Strain" --min_training_models 50 --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
+    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --optimize_augustus --strain "$Strain" --min_training_models 30 --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
       -i ../$INDIR/$name.masked.fasta --name $JGIProjName --protein_evidence ../lib/informant.2.aa \
       -s "$species"  -o ../$OUTDIR/$name --busco_seed_species $SEED_SPECIES
 	popd

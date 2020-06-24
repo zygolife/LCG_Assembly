@@ -9,10 +9,13 @@ module unload perl
 module unload python
 source activate funannotate
 module load iprscan
+module unload perl
 CPU=1
 if [ ! -z $SLURM_CPUS_ON_NODE ]; then
     CPU=$SLURM_CPUS_ON_NODE
 fi
+# let's pick this more hard-codeed based on the number of embeded workers that will run
+SPLIT_CPU=5
 OUTDIR=annotate
 SAMPFILE=samples.csv
 N=${SLURM_ARRAY_TASK_ID}
@@ -30,7 +33,7 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
 	name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
  	species=$(echo "$Species" | perl -p -e "s/$Strain//")
@@ -43,6 +46,6 @@ do
 	XML=$OUTDIR/$name/annotate_misc/iprscan.xml
 	IPRPATH=$(which interproscan.sh)
 	if [ ! -f $XML ]; then
-	    funannotate iprscan -i $OUTDIR/$name -o $XML -m local -c $CPU --iprscan_path $IPRPATH
+	    funannotate iprscan -i $OUTDIR/$name -o $XML -m local -c $SPLIT_CPU --iprscan_path $IPRPATH -n 100
 	fi
 done

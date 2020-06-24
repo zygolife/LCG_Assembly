@@ -14,8 +14,7 @@ module load phobius
 module load diamond
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
-SAMPFILE=strains.csv
-PREFIXES=samples_prefix.csv
+SAMPFILE=samples.csv
 BUSCO=/srv/projects/db/BUSCO/v9/fungi_odb9
 if [ ! $CPUS ]; then
  CPUS=1
@@ -23,9 +22,6 @@ fi
 N=${SLURM_ARRAY_TASK_ID}
 INDIR=genomes
 OUTDIR=annotate
-
-SAMPFILE=samples.csv
-N=${SLURM_ARRAY_TASK_ID}
 
 if [ ! $N ]; then
     N=$1
@@ -55,13 +51,20 @@ do
 	LOCUSTAG=$(python scripts/get_locus.py $name)
 	if [ -z $LOCUSTAG ]; then
 		echo " no LOCUSTAG for $Species"
-		exit
+		#exit
+	fi
+	ANTISMASHRESULT=$OUTDIR/$name/annotate_misc/antiSMASH.results.gbk
+	echo "$name $species"
+	if [[ ! -f $ANTISMASHRESULT && -d $OUTDIR/$name/antismash_local ]]; then
+		ANTISMASH=$(ls $OUTDIR/$name/antismash_local/*__*.gbk | awk '{print $1}')
+		rsync -a $ANTISMASH $ANTISMASHRESULT
 	fi
 	if [ -z $LOCUSTAG ]; then
 		echo "cannot find locus for $name"
-		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --cpus $CPUS $MOREFEATURE $EXTRAANNOT
+		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --cpus $CPUS
 	else
-		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --rename $LOCUSTAG --cpus $CPUS $MOREFEATURE $EXTRAANNOT
+		echo "will rename genes to $LOCUSTAG"
+		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --rename $LOCUSTAG --cpus $CPUS 
 	fi
 
 done

@@ -21,14 +21,14 @@ if [ ! $N ]; then
     fi
 fi
 MAX=$(wc -l $SAMPFILE | awk '{print $1}')
-if [ $N -gt $(expr $MAX - 1) ]; then
-    MAXSMALL=$(expr $MAX - 1)
+if [ $N -gt $MAX ]; then
+    MAXSMALL=$MAX 
     echo "$N is too big, only $MAXSMALL lines in $SAMPFILE" 
     exit
 fi
 
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
  name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g')
  fixedname=$(echo $name | perl -p -e 's/\+/Plus/')
@@ -44,10 +44,15 @@ do
 
 if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
 
-    module load funannotate/git-live
-    #1.5.2-30c1166
-    module unload rmblastn
-    module load ncbi-rmblast/2.6.0
+module unload python
+module unload perl
+module unload miniconda2
+module unload miniconda3
+module load anaconda3
+module load funannotate/1.7.4
+source activate funannotate
+module unload rmblastn
+module load ncbi-rmblast/2.6.0
     export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 
     #funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
@@ -58,9 +63,9 @@ if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
     mkdir $name.mask.$$
     pushd $name.mask.$$
     if [ ! -z $LIBRARY ]; then
-    	funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta -l $LIBRARY
+    	funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta -l $LIBRARY -m repeatmasker
     else	
-	    funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
+	funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta -m repeatmodeler
     fi
     popd
     rmdir $name.mask.$$
