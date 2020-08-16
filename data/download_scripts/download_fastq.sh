@@ -21,11 +21,11 @@ do
  if [ $url ];  then
      echo "$JGIBarcode $url $n"
      if [ ! -s $ODIR/$n.fastq.gz ]; then
-    	 echo "$HOST$url $n.fastq.gz $ODIR/$n.fastq.gz  -- filter-FUNGAL"
+    	 echo "'$HOST$url' $n.fastq.gz $ODIR/$n.fastq.gz  -- filter-FUNGAL"
 	 curl "$HOST$url" -b cookies > $ODIR/$n.fastq.gz
      fi
      if [ ! -s $ODIR/$n.fastq.gz ]; then
-	echo "did not download $n $Species $JGIBarcode"
+	echo "Failed to download $n $Species $JGIBarcode"
      fi
      continue
  fi
