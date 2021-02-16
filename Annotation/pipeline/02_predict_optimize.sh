@@ -3,21 +3,14 @@
 module unload python
 module unload perl
 module unload miniconda2
-module unload miniconda3
-module load anaconda3
-module load funannotate/development
-source activate funannotate
-#module switch mummer/4.0
-#module unload augustus
-#module load augustus/3.3
-#module load lp_solve
-#module load genemarkHMM
-#module load diamond
+module load miniconda3
+module load funannotate/1.8.4
 module load genemarkESET/4.38
 module unload rmblastn
-module load ncbi-rmblast/2.6.0
+module load ncbi-rmblast/2.9.0-p2
 #export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
+export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 #
 GMFOLDER=`dirname $(which gmhmme3)`
 

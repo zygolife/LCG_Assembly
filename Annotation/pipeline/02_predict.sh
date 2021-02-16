@@ -1,26 +1,15 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/predict.%a.log
 module unload miniconda2
-module unload miniconda3
-module load anaconda3
-#module load miniconda3
-#module load funannotate/1.5.2-30c1166
-module load funannotate/development
+module unload anaconda3
+module load funannotate/1.8.4
+source activate funannotate-1.8
 module unload perl
 module unload python
-source activate funannotate
-
-#module switch mummer/4.0
-#module unload augustus
-#module load augustus/3.3
-#module load lp_solve
-#module load diamond
-module load genemarkESET/4.38
 module unload rmblastn
-module load ncbi-rmblast/2.6.0
-#export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+module load ncbi-rmblast/2.9.0-p2
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
-
+export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 GMFOLDER=`dirname $(which gmhmme3)`
 #genemark key is needed
 if [ ! -f ~/.gm_key ]; then
@@ -77,7 +66,7 @@ do
 	fi
  	mkdir $name.predict.$$
  	pushd $name.predict.$$
-    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --strain "$Strain" \
+    	funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI --busco_db fungi_odb9 --strain "$Strain" --min_training_models 100 \
       -i ../$INDIR/$name.masked.fasta --name $LOCUSTAG --protein_evidence ../lib/informant.2.aa \
       -s "$species"  -o ../$OUTDIR/$name --busco_seed_species $SEED_SPECIES
 	popd
