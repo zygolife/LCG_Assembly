@@ -6,12 +6,10 @@
 #SBATCH -p intel -J annotfunc
 module unload miniconda2
 module unload miniconda3
-module load funannotate/development
+module load funannotate/1.8.4
 module unload perl
 module unload python
-source activate funannotate
 module load phobius
-module load diamond
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
 SAMPFILE=samples.csv
