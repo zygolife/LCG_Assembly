@@ -1,5 +1,5 @@
 #!/usr/bin/bash
-SAMPFILE=samples.csv.plus_files
+SAMPFILE=samples.csv
 IFS=,
 tail -n +2 $SAMPFILE | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do

@@ -8,15 +8,19 @@ with open(prefix_name,"rU") as prefixes:
     proj = csv.reader(prefixes)
     header = next(proj)
 #    print("header is ",header)
-    #SPECIES,JGILIBRARY,BIOSAMPLE,BIOPROJECT,SRA,LOCUSTAG
+    #SPECIES,STRAIN,JGILIBRARY,BIOSAMPLE,BIOPROJECT,SRA,LOCUSTAG,TEMPLATETYPE
     for row in proj:
         species = row[0]
         if len(species) == 0:
             continue
-        stem = re.sub(r' ','_',species)
-        prj = row[3]
-        samp = row[2]
-        template_name = row[6]
+        stem = re.sub(r' ','_',species+"_"+row[1])
+        strain = row[1]
+        prj = row[4]
+        samp = row[3]
+        if len(row) < 7:
+            print("error on line ",row)
+            break
+        template_name = row[7]
         templatefile = template%(template_name)
         if not os.path.exists("%s/%s.sbt"%(outdir,stem)):
             print("perl -p -e 's/BIOPROJECTID/%s/; s/BIOSAMPLEID/%s/' %s > %s/%s.sbt"%(
