@@ -27,48 +27,18 @@ Submit-block ::= {
       names std {
         {
           name name {
-            last "Vandepol",
-            first "Natalie",
+            last "Stajich",
+            first "Jason",
             middle "",
-            initials "",
+            initials "E.",
             suffix "",
             title ""
           }
         },
         {
           name name {
-            last "Liber",
-            first "Julian",
-            middle "",
-            initials "",
-            suffix "",
-            title ""
-          }
-        },
-        {
-          name name {
-            last "Desiro",
-            first "Alessandro",
-            middle "",
-            initials "",
-            suffix "",
-            title ""
-          }
-        },
-        {
-          name name {
-            last "Na",
-            first "Hyunsoo",
-            middle "",
-            initials "",
-            suffix "",
-            title ""
-          }
-        },
-        {
-          name name {
-            last "Kennedy",
-            first "Megan",
+            last "Chang",
+            first "Ying",
             middle "",
             initials "",
             suffix "",
@@ -78,7 +48,7 @@ Submit-block ::= {
         {
           name name {
             last "Barry",
-            first "Kerrie",
+            first "Kerry",
             middle "",
             initials "",
             suffix "",
@@ -90,6 +60,16 @@ Submit-block ::= {
             last "Grigoriev",
             first "Igor",
             middle "",
+            initials "V.",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Mondo",
+            first "Stephen",
+            middle "",
             initials "",
             suffix "",
             title ""
@@ -97,10 +77,30 @@ Submit-block ::= {
         },
         {
           name name {
-            last "Miller",
-            first "Andrew",
+            last "Carter-House",
+            first "Derreck",
             middle "",
-            initials "N.",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Pena",
+            first "Jesus",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Ortanez",
+            first "Jericho",
+            middle "",
+            initials "",
             suffix "",
             title ""
           }
@@ -117,10 +117,30 @@ Submit-block ::= {
         },
         {
           name name {
-            last "Stajich",
-            first "Jason",
+            last "Smith",
+            first "Matthew",
             middle "",
-            initials "E.",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Benny",
+            first "Gerald",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Reynolds",
+            first "Nicole",
+            middle "",
+            initials "",
             suffix "",
             title ""
           }
@@ -128,7 +148,47 @@ Submit-block ::= {
         {
           name name {
             last "Bonito",
-            first "Gregory",
+            first "Greg",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Vandepol",
+            first "Natalie",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Gryganskyi",
+            first "Andrii",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Doehring",
+            first "Gail",
+            middle "",
+            initials "",
+            suffix "",
+            title ""
+          }
+        },
+        {
+          name name {
+            last "Spatafora",
+            first "Joseph",
             middle "",
             initials "",
             suffix "",
@@ -157,48 +217,18 @@ Seqdesc ::= pub {
         names std {
           {
             name name {
-              last "Vandepol",
-              first "Natalie",
+              last "Stajich",
+              first "Jason",
               middle "",
-              initials "",
+              initials "E.",
               suffix "",
               title ""
             }
           },
           {
             name name {
-              last "Liber",
-              first "Julian",
-              middle "",
-              initials "",
-              suffix "",
-              title ""
-            }
-          },
-          {
-            name name {
-              last "Desiro",
-              first "Alessandro",
-              middle "",
-              initials "",
-              suffix "",
-              title ""
-            }
-          },
-          {
-            name name {
-              last "Na",
-              first "Hyunsoo",
-              middle "",
-              initials "",
-              suffix "",
-              title ""
-            }
-          },
-          {
-            name name {
-              last "Kennedy",
-              first "Megan",
+              last "Chang",
+              first "Ying",
               middle "",
               initials "",
               suffix "",
@@ -208,7 +238,7 @@ Seqdesc ::= pub {
           {
             name name {
               last "Barry",
-              first "Kerrie",
+              first "Kerry",
               middle "",
               initials "",
               suffix "",
@@ -220,6 +250,16 @@ Seqdesc ::= pub {
               last "Grigoriev",
               first "Igor",
               middle "",
+              initials "V.",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Mondo",
+              first "Stephen",
+              middle "",
               initials "",
               suffix "",
               title ""
@@ -227,10 +267,30 @@ Seqdesc ::= pub {
           },
           {
             name name {
-              last "Miller",
-              first "Andrew",
+              last "Carter-House",
+              first "Derreck",
               middle "",
-              initials "N.",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Pena",
+              first "Jesus",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Ortanez",
+              first "Jericho",
+              middle "",
+              initials "",
               suffix "",
               title ""
             }
@@ -247,10 +307,30 @@ Seqdesc ::= pub {
           },
           {
             name name {
-              last "Stajich",
-              first "Jason",
+              last "Smith",
+              first "Matthew",
               middle "",
-              initials "E.",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Benny",
+              first "Gerald",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Reynolds",
+              first "Nicole",
+              middle "",
+              initials "",
               suffix "",
               title ""
             }
@@ -258,7 +338,47 @@ Seqdesc ::= pub {
           {
             name name {
               last "Bonito",
-              first "Gregory",
+              first "Greg",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Vandepol",
+              first "Natalie",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Gryganskyi",
+              first "Andrii",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Doehring",
+              first "Gail",
+              middle "",
+              initials "",
+              suffix "",
+              title ""
+            }
+          },
+          {
+            name name {
+              last "Spatafora",
+              first "Joseph",
               middle "",
               initials "",
               suffix "",
@@ -267,27 +387,8 @@ Seqdesc ::= pub {
           }
         }
       },
-      title "Resolving the Mortierellaceae phylogeny through synthesis of
- Multi-Locus Sequence Typing (MLST) and phylogenomics"
-    }
-  }
-}
-Seqdesc ::= user {
-  type str "DBLink",
-  data {
-    {
-      label str "BioProject",
-      num 1,
-      data strs {
-        "PRJNA340567"
-      }
-    },
-    {
-      label str "BioSample",
-      num 1,
-      data strs {
-        "SAMN05720439"
-      }
+      title "Phylogenomic resolution of zygomycete lineages with Low coverage
+ genome sequencing"
     }
   }
 }
