@@ -1,8 +1,9 @@
 #!/usr/bin/env perl
-#
-my %names = ( Entomophthoromycotina => 'Zoopagomycota',
+
+my %names = ('Entomophthoromycotina' => 'Zoopagomycota',
 	      'Chytridiomycota' => 'Chytridiomycota',
-	      Kickxellomycotina => 'Zoopagomycota',
+	      'Blastocladiomycota' => 'Blastocladiomycota',
+	      'Kickxellomycotina' => 'Zoopagomycota',
 		'Mortirellomycotina' => 'Mucoromycota',
 		'Mucoromycotina'       => 'Mucoromycota');
 use strict;
@@ -20,6 +21,7 @@ opendir(DAT,"data") || die $!;
 for my $file (readdir(DAT)) {
 	next unless $file =~ /^1978\S+\.csv$/ || $file =~ /^(UFL|UCR)\.csv$/;
 	open(my $in => "data/$file") || die $!;
+	warn("opening $file");
 	my $header = <$in>;
 	while( <$in>) { 
 		next if /^\s+$/;
