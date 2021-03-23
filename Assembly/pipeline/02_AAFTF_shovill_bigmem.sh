@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --nodes 1 --ntasks 16 --mem 120gb -J zygoShovill --out logs/AAFTF_shovill.%a.%A.log -p intel --time 64:00:00
-source ~/.bashrc
 hostname
 MEM=120
 CPU=$SLURM_CPUS_ON_NODE
@@ -24,20 +23,20 @@ ASM=genomes
 TMPDIR=/scratch/$USER
 MINLEN=500
 
-mkdir -p $ASM
+mkdir -p $ASM $TMPDIR
 
 if [ -z $CPU ]; then
     CPU=1
 fi
 
-ASMFILE=$ASM/${BASE}.spades.fasta
+ASMFILE=$ASM/${BASE}.spades_shovill.fasta
 WORKDIR=working_AAFTF
-VECCLEAN=$ASM/${BASE}.vecscreen.fasta
-PURGE=$ASM/${BASE}.sourpurge.fasta
-CLEANDUP=$ASM/${BASE}.rmdup.fasta
-PILON=$ASM/${BASE}.pilon.fasta
-SORTED=$ASM/${BASE}.sorted.fasta
-STATS=$ASM/${BASE}.sorted.stats.txt
+VECCLEAN=$ASM/${BASE}.vecscreen_shovill.fasta
+PURGE=$ASM/${BASE}.sourpurge_shovill.fasta
+CLEANDUP=$ASM/${BASE}.rmdup_shovill.fasta
+PILON=$ASM/${BASE}.pilon_shovill.fasta
+SORTED=$ASM/${BASE}.sorted_shovill.fasta
+STATS=$ASM/${BASE}.sorted_shovill.stats.txt
 
 LEFT=$WORKDIR/${BASE}_filtered_1.fastq.gz
 RIGHT=$WORKDIR/${BASE}_filtered_2.fastq.gz
@@ -53,8 +52,7 @@ if [ ! -f $ASMFILE ]; then
     fi
     module unload miniconda2
     module load miniconda3
-    module unload perl
-    conda activate shovill
+    module load shovill
 
     shovill --cpu $CPU --ram $MEM --outdir $WORKDIR/shovill_${BASE} \
 	--R1 $LEFT --R2 $RIGHT --nocorr --depth 90 --tmpdir $TMPDIR --minlen $MINLEN
@@ -65,7 +63,7 @@ if [ ! -f $ASMFILE ]; then
 	echo "Cannot find $WORKDIR/shovill_${BASE}/contigs.fa"
 	exit
     fi
-    conda deactivate 
+    module unload shovill
     
     if [ -s $ASMFILE ]; then
 	rm -rf $WORKDIR/shovill_${BASE}
