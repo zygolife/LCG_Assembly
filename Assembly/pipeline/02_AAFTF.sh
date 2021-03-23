@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 96gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p intel --time 48:00:00
+#SBATCH --nodes 1 --ntasks 8 --mem 128gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p intel --time 48:00:00
 
 hostname
-MEM=96
+MEM=128
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -42,8 +42,9 @@ RIGHT=$WORKDIR/${BASE}_filtered_2.fastq.gz
 
 mkdir -p $WORKDIR
 
-echo "$BASE"
+echo "$BASE assembly is $ASMFILE"
 if [ ! -f $ASMFILE ]; then    
+	echo "No $ASMFILE will run assembly"
     if [ ! -f $LEFT ]; then
 	echo "Cannot find LEFT $LEFT or RIGHT $RIGHT - did you run"
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
