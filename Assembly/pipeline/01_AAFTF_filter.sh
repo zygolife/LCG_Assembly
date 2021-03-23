@@ -1,10 +1,10 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 16 --mem 64gb -p batch -J zygoAFTF1 --out logs/AAFTF_filter.%a.%A.log --time 36:00:00
+#SBATCH --nodes 1 --ntasks 24 --mem 128gb -p batch -J zygoAFTF1 --out logs/AAFTF_filter.%a.%A.log --time 36:00:00
 
 #--nodes 1 --ntasks 8 --mem 256gb -p highmem -J zygoAFTF1 --out logs/AAFTF_filter.%a.%A.log --time 24:00:00
 
 hostname
-MEM=64
+MEM=128
 
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
