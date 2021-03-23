@@ -1,6 +1,5 @@
 #!/bin/bash
 #SBATCH --nodes 1 --ntasks 16 --mem 48gb -J zygoShovill --out logs/AAFTF_shovill.%a.%A.log -p intel --time 64:00:00
-source ~/.bashrc
 hostname
 MEM=48
 CPU=$SLURM_CPUS_ON_NODE
