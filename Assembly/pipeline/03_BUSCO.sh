@@ -4,7 +4,7 @@
 module load busco
 
 # for augustus training
-export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
+#export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
 # set to a local dir to avoid permission issues and pollution in global
 export AUGUSTUS_CONFIG_PATH=$(realpath augustus/3.3/config)
 
@@ -43,6 +43,8 @@ elif [[ $SubPhyla == "Entomophthoromycotina" ]]; then
 	SEED_SPECIES="Conidiobolus_coronatus"
 elif [[ $SubPhyla == "Kickxellomycotina" ]]; then
 	SEED_SPECIES="coemansia_umbellata__bcrc_34882"
+elif [[ $SubPhyla == "Chytridiomycota" ]]; then
+	SEED_SPECIES = "homolaphlyctis_polyrhiza"
 fi
 GENOMEFILE=$(realpath $GENOMEFOLDER/${NAME}.${EXT})
 LINEAGE=$(realpath $LINEAGE)
