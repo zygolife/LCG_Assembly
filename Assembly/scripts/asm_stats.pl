@@ -5,7 +5,7 @@ use strict;
 use warnings;
 
 my %stats;
-
+my $model = 'fungi_odb10';
 
 my $read_map_stat = 'mapping_report';
 my $dir = shift || 'genomes';
@@ -44,8 +44,8 @@ foreach my $file ( readdir(DIR) ) {
     }
 
 
-    my $busco_file = File::Spec->catfile("BUSCO",sprintf("run_%s",$stem),
-					 sprintf("short_summary_%s.txt",$stem));
+    my $busco_file = File::Spec->catfile("BUSCO",$stem, 
+					 sprintf("short_summary.specific.%s.%s.txt",$model,$stem));
 
     if ( -f $busco_file ) {
 
