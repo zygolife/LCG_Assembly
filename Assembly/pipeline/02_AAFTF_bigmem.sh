@@ -1,11 +1,11 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 192gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p intel --time 48:00:00
+#SBATCH --nodes 1 --ntasks 16 --mem 192gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p intel,batch --time 60:00:00
 
 hostname
 MEM=192
+MIN_LEN=1000
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
-MIN_LEN=1000
 
 if [ ! $N ]; then
     N=$1
@@ -16,7 +16,6 @@ if [ ! $N ]; then
 fi
 
 module load AAFTF
-
 
 OUTDIR=input
 SAMPLEFILE=samples.dat
@@ -44,15 +43,17 @@ RIGHT=$WORKDIR/${BASE}_filtered_2.fastq.gz
 
 mkdir -p $WORKDIR
 
-echo "$BASE"
+echo "$BASE assembly is $ASMFILE"
 if [ ! -f $ASMFILE ]; then    
+	echo "No $ASMFILE will run assembly"
     if [ ! -f $LEFT ]; then
 	echo "Cannot find LEFT $LEFT or RIGHT $RIGHT - did you run"
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
 	exit
     fi
-    AAFTF assemble -c $CPU --left $LEFT --right $RIGHT --memory $MEM \
-	-o $ASMFILE -w $WORKDIR/spades_$BASE
+    echo "running assemble for $BASE"
+    AAFTF assemble -c $CPU --left $LEFT --right $RIGHT  \
+	-o $ASMFILE -w $WORKDIR/spades_$BASE --mem $MEM
     
     if [ -s $ASMFILE ]; then
 	rm -rf $WORKDIR/spades_${BASE}
@@ -62,23 +63,23 @@ if [ ! -f $ASMFILE ]; then
     fi
 fi
 
-if [ ! -f $VECCLEAN ]; then
+if [[ ! -f $VECCLEAN && ! -f $VECCLEAN.gz ]]; then
     AAFTF vecscreen -i $ASMFILE -c $CPU -o $VECCLEAN 
 fi
 
-if [ ! -f $PURGE ]; then
+if [[ ! -f $PURGE && ! -f $PURGE.gz ]]; then
     AAFTF sourpurge -i $VECCLEAN -o $PURGE -c $CPU --phylum $PHYLUM --left $LEFT  --right $RIGHT
 fi
 
-if [ ! -f $CLEANDUP ]; then
+if [[ ! -f $CLEANDUP && ! -f $CLEANDUP.gz ]]; then
    AAFTF rmdup -i $PURGE -o $CLEANDUP -c $CPU -m $MIN_LEN
 fi
 
-if [ ! -f $PILON ]; then
-   AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT 
+if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
+   AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT   --mem $MEM
 fi
 
-if [ ! -f $PILON ]; then
+if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
     echo "Error running Pilon, did not create file. Exiting"
     exit
 fi

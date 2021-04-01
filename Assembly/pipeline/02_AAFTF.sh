@@ -1,8 +1,8 @@
 #!/bin/bash
-#SBATCH --nodes 1 --ntasks 8 --mem 128gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p intel --time 48:00:00
+#SBATCH --nodes 1 --ntasks 8 --mem 64gb -J zygoAsmAAFTF --out logs/AAFTF2_asm.%a.%A.log -p batch,intel --time 48:00:00
 
 hostname
-MEM=128
+MEM=64
 CPU=$SLURM_CPUS_ON_NODE
 N=${SLURM_ARRAY_TASK_ID}
 
@@ -75,7 +75,7 @@ if [[ ! -f $CLEANDUP && ! -f $CLEANDUP.gz ]]; then
 fi
 
 if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
-   AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT 
+   AAFTF pilon -i $CLEANDUP -o $PILON -c $CPU --left $LEFT  --right $RIGHT  --mem $MEM
 fi
 
 if [[ ! -f $PILON && ! -f $PILON.gz ]]; then
