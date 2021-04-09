@@ -42,9 +42,7 @@ do
  fi
 
 if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
-module unload python
-module unload perl
-module load funannotate/1.8.0
+module load funannotate
 
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 

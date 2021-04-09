@@ -24,13 +24,13 @@ if os.path.exists(outsamples):
 with open(insamples,"rU") as infh, open(outsamples,"w",newline="") as outfh:
     outcsv    = csv.writer(outfh,delimiter=",")
     outcsv.writerow(['SPECIES','STRAIN','JGILIBRARY',
-                     'BIOSAMPLE','BIOPROJECT','SRA','LOCUSTAG'])
+                     'BIOSAMPLE','BIOPROJECT','SRA','LOCUSTAG','TEMPLATE'])
 
     samplescsv = csv.reader(infh,delimiter=",")
     for row in samplescsv:
-        outrow = [row[5],row[2]]
-        strain = row[5]
-        if strain in seen and len(seen[strain][2]) > 0 and len(seen[strain][3]) > 0:
+        outrow = [row[5],row[6],row[2]]
+        strain = row[6]
+         if strain in seen and len(seen[strain][2]) > 0 and len(seen[strain][3]) > 0:
             outrow = seen[strain]
             outcsv.writerow(outrow)
             continue
@@ -42,6 +42,7 @@ with open(insamples,"rU") as infh, open(outsamples,"w",newline="") as outfh:
         BIOPROJECT = ""
         LOCUSTAG = ""
         BIOPROJECTID=""
+        TEMPLATE="ZygoLCG"
         for biosampleid in record["IdList"]:
             handle = Entrez.efetch(db="biosample", id=biosampleid)
             tree = ET.parse(handle)
@@ -50,12 +51,12 @@ with open(insamples,"rU") as infh, open(outsamples,"w",newline="") as outfh:
                 BIOSAMPLE = sample.attrib['accession']
                 for ids in root.iter('Ids'):
                     for id in ids.iter('Id'):
-                        if id.attrib['db'] == "SRA":
+                        if 'db' in id.attrib and id.attrib['db'] == "SRA":
                             SRA = id.text
                 for links in root.iter('Links'):
                     for link in links:
                         linkdat = link.attrib
-                        if linkdat['type'] == 'entrez':
+                        if linkdat['type'] == 'entrez' and 'label' in linkdat:
                             BIOPROJECT = linkdat['label']
                             BIOPROJECTID = link.text
         if BIOPROJECTID:
@@ -66,5 +67,5 @@ with open(insamples,"rU") as infh, open(outsamples,"w",newline="") as outfh:
             lt = projroot.iter('LocusTagPrefix')
             for locus in lt:
                 LOCUSTAG = locus.text
-        outrow.extend([BIOSAMPLE,BIOPROJECT,SRA,LOCUSTAG])
+        outrow.extend([BIOSAMPLE,BIOPROJECT,SRA,LOCUSTAG,TEMPLATE])
         outcsv.writerow(outrow)

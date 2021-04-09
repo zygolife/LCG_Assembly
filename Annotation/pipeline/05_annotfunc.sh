@@ -4,16 +4,13 @@
 #SBATCH --output=logs/annotfunc.%a.log
 #SBATCH --time=2-0:00:00
 #SBATCH -p intel -J annotfunc
-module unload miniconda2
 module unload miniconda3
-module load funannotate/1.8.4
-module unload perl
-module unload python
+module load funannotate
 module load phobius
 CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
 SAMPFILE=samples.csv
-BUSCO=/srv/projects/db/BUSCO/v9/fungi_odb9
+BUSCO=/srv/projects/db/BUSCO/v10/lineages/fungi_odb10
 if [ ! $CPUS ]; then
  CPUS=1
 fi

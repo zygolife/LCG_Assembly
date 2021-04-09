@@ -13,12 +13,12 @@ with open(prefix_name,"rU") as prefixes:
         species = row[0]
         if len(species) == 0:
             continue
-        stem = re.sub(r' ','_',species+"_"+row[1])
+        stem = re.sub(r' ','_',species)
         strain = row[1]
         prj = row[4]
         samp = row[3]
-        if len(row) < 7:
-            print("error on line ",row)
+        if len(row) < 8:
+            print("error on line {} is length {}".format(row,len(row)))
             break
         template_name = row[7]
         templatefile = template%(template_name)

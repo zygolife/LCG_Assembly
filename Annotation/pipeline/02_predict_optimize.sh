@@ -1,13 +1,6 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 16 --nodes 1 --mem 24G --out logs/predict.%a.log
-module unload python
-module unload perl
-module unload miniconda2
-module load miniconda3
-module load funannotate/1.8.4
-module load genemarkESET/4.38
-module unload rmblastn
-module load ncbi-rmblast/2.9.0-p2
+module load funannotate
 #export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
