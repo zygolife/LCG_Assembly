@@ -54,7 +54,7 @@ if [[ ! -f $ASMFILE || ! -f $SORTED ]]; then
 	echo "$OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz"
 	#if [ ! -f $LEFTTRIM ]; then
 	echo "Running Trim on $OUTDIR/${BASE}_R1.fq.gz and $OUTDIR/${BASE}_R2.fq.gz"
-	rsync -a -v $OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz $TMPTRIM
+	rsync -aL -v $OUTDIR/${BASE}_R1.fq.gz $OUTDIR/${BASE}_R2.fq.gz $TMPTRIM
 	AAFTF trim --method bbduk --memory $MEM --left $TMPTRIM/${BASE}_R1.fq.gz --right $TMPTRIM/${BASE}_R2.fq.gz -c $CPU -o $TMPTRIM/${BASE}
 	#AAFTF trim --method bbduk --memory $MEM --left $OUTDIR/${BASE}_R1.fq.gz --right $OUTDIR/${BASE}_R2.fq.gz -c $CPU -o $WORKDIR/${BASE}
 	#fi
