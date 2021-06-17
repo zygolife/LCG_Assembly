@@ -1,8 +1,9 @@
 #!/usr/bin/bash
 n=1
 while read strain domain; 
-do 
-    if [[ ! -f genomes/${strain}.spades.fasta && ! -f working_AAFTF/${strain}_filtered_1.fastq.gz ]]; then 
+do
+    if [[ ! -f genomes/${strain}.spades.fasta && ! -f genomes/${strain}.spades.fasta.gz && ! -f working_AAFTF/${strain}_filtered_1.fastq.gz 
+		&& ! -f genomes/${strain}.sorted.fasta ]]; then 
 	echo "$n $strain"
     fi 
     n=$(expr $n + 1);
@@ -11,7 +12,8 @@ done < samples.dat
 n=1
 
 m=$(while read strain domain; do 
-    if [[ ! -f genomes/${strain}.spades.fasta && ! -f working_AAFTF/${strain}_filtered_1.fastq.gz ]]; then 
+    if [[ ! -f genomes/${strain}.spades.fasta && ! -f genomes/${strain}.sorted.fasta && 
+		! -f genomes/${strain}.spades.fasta.gz && ! -f working_AAFTF/${strain}_filtered_1.fastq.gz ]]; then 
 	echo "$n"
     fi
     n=$(expr $n + 1); 
