@@ -52,14 +52,20 @@ if __name__ == '__main__':
             h = next(incsv)
             for row in incsv:
                 key = re.sub(r'\s+','_',row[0] + "_" + row[1])
-                row[2] = set([row[2]])
+
+                if len(row) > 4 and row[8] is not None:
+                    if row[2] is None:
+                        row[2] = set()
+                    else:
+                        row[2] = set(row[2].split(";"))
+                    row[8] = set(row[8].split(";"))
                 outrows[key] = row
 
-
     with open(args.input,"rU") as infh, open(args.output,"wt",newline="") as outfh:
-        outcsv    = csv.writer(outfh,delimiter=separator)
+        outcsv    = csv.writer(outfh,delimiter=separator,lineterminator="\n")
         outcsv.writerow(['SPECIES','STRAIN','JGILIBRARY',
-                         'BIOSAMPLE','BIOPROJECT','TAXONOMY_ID','ORGANISM_NAME','SRA_SAMPID','SRA_RUNID',
+                         'BIOSAMPLE','BIOPROJECT','TAXONOMY_ID',
+                         'ORGANISM_NAME','SRA_SAMPID','SRA_RUNID',
                          'LOCUSTAG','TEMPLATE'])
 
         samplescsv = csv.reader(infh,delimiter=separator)
@@ -85,7 +91,7 @@ if __name__ == '__main__':
             BIOPROJECTID=""
             TAXONOMY_ID = ''
             TAXONOMY_NAME = ''
-            SRA_RUNID = []
+            SRA_RUNID = set([])
             TEMPLATE="ZygoLCG"
             for biosampleid in record["IdList"]:
                 handle = Entrez.efetch(db="biosample", id=biosampleid)
