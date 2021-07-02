@@ -28,7 +28,7 @@ if os.path.exists(outsamples):
             seen[name] = row
 
 with open(insamples,"rU") as infh, open(outsamples,"w") as outfh:
-    outcsv    = csv.writer(outfh,delimiter=",")
+    outcsv    = csv.writer(outfh,delimiter=",",lineterminator="\n")
     outcsv.writerow(['SPECIES','STRAIN','JGILIBRARY','BIOSAMPLE','BIOPROJECT','SRA','LOCUSTAG','TEMPLATE'])
 
     samplescsv = csv.reader(infh,delimiter=",")

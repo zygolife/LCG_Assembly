@@ -8,7 +8,7 @@ out1="prefix_samples.templates.csv"
 with open(in1,"rU") as i1, open(in2,"rU") as i2, open(out1,"w") as o1:
     r1 = csv.reader(i1)
     r2 = csv.reader(i2)
-    out = csv.writer(o1)
+    out = csv.writer(o1,lineterminator="\n")
     dat = {}
     hdr1 = next(r1)
 

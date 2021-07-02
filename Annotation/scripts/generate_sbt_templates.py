@@ -20,7 +20,7 @@ with open(prefix_name,"rU") as prefixes:
         if len(row) < 8:
             print("error on line {} is length {}".format(row,len(row)))
             break
-        template_name = row[7]
+        template_name = row[-1]
         templatefile = template%(template_name)
         if not os.path.exists("%s/%s.sbt"%(outdir,stem)):
             print("perl -p -e 's/BIOPROJECTID/%s/; s/BIOSAMPLEID/%s/' %s > %s/%s.sbt"%(
