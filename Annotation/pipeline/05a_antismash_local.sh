@@ -2,10 +2,7 @@
 #SBATCH --nodes 1 --ntasks 8 --mem 16G --out logs/antismash.%a.log -J antismash
 
 module unload miniconda2
-module unload miniconda3
-module load anaconda3
-module load antismash/5.1.1
-module load antismash/5.1.1
+module load antismash/5.2.0
 which perl
 which antismash
 
@@ -14,7 +11,7 @@ if [ ! -z $SLURM_CPUS_ON_NODE ]; then
     CPU=$SLURM_CPUS_ON_NODE
 fi
 OUTDIR=annotate
-SAMPFILE=samples.csv
+SAMPFILE=samples_prefix.csv
 N=${SLURM_ARRAY_TASK_ID}
 if [ ! $N ]; then
     N=$1
@@ -33,19 +30,20 @@ fi
 IFS=,
 INPUTFOLDER=predict_results
 
-cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+IFS=,
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
 do
-	name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
- 	species=$(echo "$Species" | perl -p -e "s/$Strain//")
-
-
-	if [ ! -d $OUTDIR/$name ]; then
-		echo "No annotation dir for ${name}"
-		exit
- 	fi
-	if [[ ! -d $OUTDIR/$name/antismash_local && ! -s $OUTDIR/$name/antismash_local/index.html ]]; then
-		antismash --taxon fungi --output-dir $OUTDIR/$name/antismash_local  --genefinding-tool none \
+    name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+    species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
+    
+    
+    if [ ! -d $OUTDIR/$name ]; then
+	echo "No annotation dir for ${name}"
+	exit
+    fi
+    if [[ ! -d $OUTDIR/$name/antismash_local && ! -s $OUTDIR/$name/antismash_local/index.html ]]; then
+	antismash --taxon fungi --output-dir $OUTDIR/$name/antismash_local  --genefinding-tool none \
 	    --asf --fullhmmer --cassis --clusterhmmer --asf --cb-general --pfam2go --cb-subclusters --cb-knownclusters -c $CPU \
 	    $OUTDIR/$name/$INPUTFOLDER/*.gbk
-	fi
+    fi
 done

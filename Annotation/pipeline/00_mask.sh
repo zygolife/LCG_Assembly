@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p batch --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/mask.%a.%A.log
+#SBATCH -p batch,intel --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/mask.%a.%A.log
 module load workspace/scratch
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
@@ -57,7 +57,9 @@ do
      LIBRARY=$(realpath $LIBRARY)
      cwd=`pwd`
      pushd $SCRATCH
-     funannotate mask --cpus $CPU -i $INDIR/${name}.sorted.fasta -o $OUTDIR/${name}.masked.fasta -l $LIBRARY -m repeatmasker
+     rsync -La $INDIR/${name}.sorted.fasta .
+     funannotate mask --cpus $CPU -i ${name}.sorted.fasta -o ${name}.masked.fasta -l $LIBRARY -m repeatmasker
+     mv ${name}.masked.fasta $OUTDIR
      mv funannotate-mask.log $cwd/logs/${name}.mask.log
      popd
  else 

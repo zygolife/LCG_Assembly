@@ -7,16 +7,20 @@
 module unload miniconda3
 module load funannotate
 module load phobius
-CPUS=$SLURM_CPUS_ON_NODE
 OUTDIR=annotate
-SAMPFILE=samples.csv
 BUSCO=/srv/projects/db/BUSCO/v10/lineages/fungi_odb10
-if [ ! $CPUS ]; then
- CPUS=1
+
+if [ -z $SLURM_CPUS_ON_NODE ]; then
+	CPUS=1
+else
+ CPUS=$SLURM_CPUS_ON_NODE
 fi
-N=${SLURM_ARRAY_TASK_ID}
+
 INDIR=genomes
 OUTDIR=annotate
+SAMPFILE=samples_prefix.csv
+
+N=${SLURM_ARRAY_TASK_ID}
 
 if [ ! $N ]; then
     N=$1
@@ -32,22 +36,23 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
 do
-	name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
- 	species=$(echo "$Species" | perl -p -e "s/$Strain//")
+    name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+    species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
 	MOREFEATURE=""
 	TEMPLATE=$(realpath submit_files/${name}.sbt)
 	if [ ! -f $TEMPLATE ]; then
-		echo "NO TEMPLATE for $name"
+		echo "NO TEMPLATE for $name (no file $TEMPLATE)"
 		exit
 	fi
 	# need to add detect for antismash and then add that
-	LOCUSTAG=$(python scripts/get_locus.py $name)
-	if [ -z $LOCUSTAG ]; then
-		echo " no LOCUSTAG for $Species"
-		#exit
-	fi
+
+	#LOCUSTAG=$(python scripts/get_locus.py $name)
+	#if [ -z $LOCUSTAG ]; then
+	#	echo " no LOCUSTAG for $Species"
+	#	#exit
+	#fi
 	ANTISMASHRESULT=$OUTDIR/$name/annotate_misc/antiSMASH.results.gbk
 	echo "$name $species"
 	if [[ ! -f $ANTISMASHRESULT && -d $OUTDIR/$name/antismash_local ]]; then
