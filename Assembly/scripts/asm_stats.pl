@@ -29,6 +29,7 @@ foreach my $file ( readdir(DIR) ) {
 	    my ($name,$val) = ($1,$2);	    
 	    $name =~ s/\s*$//;
 	    $stats{$stem}->{$name} = $val;
+
 #	    warn("'$name'"," '", $val,"'\n");
 	    $cols{$name}++;
 	    if( ! exists $header_seen{$name} ) {
@@ -95,7 +96,7 @@ foreach my $file ( readdir(DIR) ) {
     $first = 0;
 }
 
-print join("\t", qw(SampleID), @header), "\n";
+print join("\t", qw(SampleID), map { s/\s+/_/g; } @header), "\n";
 foreach my $sp ( sort keys %stats ) {    
     print join("\t", $sp, map { $stats{$sp}->{$_} || 'NA' } @header), "\n";
 }
