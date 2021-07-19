@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH -p short logs/find_missing_anofunc.log
+#SBATCH -p short --out logs/find_missing_anofunc.log
 
 CPU=1
 
