@@ -18,7 +18,7 @@ do
     elif [ ! -f $INDIR/${name}.masked.fasta ]; then
 	echo "need to run mask on $name ($N)" 1>&2
     elif [ ! -f $ipr ]; then
-        echo "need to run annotateifunc on $name ($N) no $ipr " 1>&2
+        echo "need to run annotate func on $name ($N) no $ipr " 1>&2
 	echo $N
     fi
     N=$(expr $N + 1)

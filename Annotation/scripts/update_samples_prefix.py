@@ -131,7 +131,7 @@ if __name__ == '__main__':
                 sra_root   = sra_tree.getroot()
                 for runset in sra_root.iter('RUN_SET'):
                     for run in runset:
-                        SRA_RUNID.append(run.attrib['accession'])
+                        SRA_RUNID.add(run.attrib['accession'])
 
             if BIOPROJECTID:
                 bioproject_handle = Entrez.efetch(db="bioproject",id = BIOPROJECTID)

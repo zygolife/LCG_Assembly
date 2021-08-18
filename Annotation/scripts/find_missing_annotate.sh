@@ -12,10 +12,10 @@ mkdir -p empty
 TORUN=()
 tail -n +2 $SAMPFILE | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
 do
-    name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+    name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
 #    echo "SP=$SPECIES strain=$STRAIN"
-    species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//; s/\s+/_/g;")
-    strain=$(echo $STRAIN | perl -p -e 'chomp; s/\s+/_/g')
+    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//; chomp; s/\s+/_/g; s/_$//;")
+    strain=$(echo -n $STRAIN | perl -p -e 'chomp; s/\s+/_/g')
     if [ ! -z $strain ]; then
 	outname="${species}_$strain"
     else
