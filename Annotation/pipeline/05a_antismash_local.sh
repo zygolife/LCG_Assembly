@@ -33,8 +33,8 @@ INPUTFOLDER=predict_results
 IFS=,
 tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
 do
-    name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
-    species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
+    name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
     
     
     if [ ! -d $OUTDIR/$name ]; then

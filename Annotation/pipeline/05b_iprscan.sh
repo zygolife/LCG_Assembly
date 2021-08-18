@@ -28,8 +28,8 @@ fi
 IFS=,
 tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
 do
-    name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
-    species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
+    name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
     if [ ! -d $OUTDIR/$name ]; then
 	echo "No annotation dir for ${name}"
 	exit
@@ -41,8 +41,13 @@ do
 	module unload anaconda3
 	module unload miniconda3
 	module load funannotate
-	module load iprscan
+	module load iprscan/5.51-85.0
+	module load workspace/scratch
+	export TMPDIR=$SCRATCH
+	export TEMP=$SCRATCH
+	export TMP=$SCRATCH
     	IPRPATH=$(which interproscan.sh)
+	echo $IPRPATH
 	time funannotate iprscan -i $OUTDIR/$name -o $XML -m local -c $SPLIT_CPU --iprscan_path $IPRPATH -n $JOBSPLIT
     fi
 done

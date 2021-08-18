@@ -43,8 +43,8 @@ fi
 IFS=,
 cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 do
-	name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
- 	species=$(echo "$Species" | perl -p -e "s/$Strain//")
+	name=$(echo -n "$Species" | perl -p -e 'chomp; s/\s+/_/g; ')
+ 	species=$(echo -n "$Species" | perl -p -e "s/$Strain//")
  	SEED_SPECIES="anidulans"
 	if [[ $SubPhyla == "Mucoromycotina" ]]; then
 		SEED_SPECIES="mucor_circinelloides_f._lusitanicus__nrrl_3629"
