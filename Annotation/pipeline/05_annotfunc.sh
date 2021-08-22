@@ -1,9 +1,9 @@
 #!/usr/bin/bash
 #SBATCH --nodes=1
-#SBATCH --ntasks=16 --mem 16gb
+#SBATCH --ntasks=16 --mem 48gb
 #SBATCH --output=logs/annotfunc.%a.log
 #SBATCH --time=2-0:00:00
-#SBATCH -p intel -J annotfunc
+#SBATCH -p intel,batch -J annotfunc
 module unload miniconda3
 module load funannotate
 module load phobius

@@ -1,20 +1,13 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/predict.%a.log
+module unload miniconda3
 module unload miniconda2
 module unload anaconda3
-module load funannotate/1.8.4
-source activate funannotate-1.8
 module unload perl
 module unload python
-module unload rmblastn
-module load ncbi-rmblast/2.9.0-p2
+module load funannotate
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
-GMFOLDER=`dirname $(which gmhmme3)`
-#genemark key is needed
-if [ ! -f ~/.gm_key ]; then
-	ln -s $GMFOLDER/.gm_key ~/.gm_key
-fi
 
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
