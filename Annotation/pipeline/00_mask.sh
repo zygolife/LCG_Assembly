@@ -23,15 +23,14 @@ fi
 MAX=$(wc -l $SAMPFILE | awk '{print $1}')
 if [ $N -gt $MAX ]; then
     MAXSMALL=$MAX
-    echo "$N is too big, only $MAXSMALL lines in $SAMPFILE" 
+    echo "$N is too big, only $MAXSMALL lines in $SAMPFILE"
     exit
 fi
 
 IFS=,
-#SPECIES,STRAIN,JGILIBRARY,BIOSAMPLE,BIOPROJECT,TAXONOMY_ID,ORGANISM_NAME,SRA_SAMPID,SRA_RUNID,LOCUSTAG,TEMPLATE
-#ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
 
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
+
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
  name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
  fixedname=$(echo $name | perl -p -e 's/\+/Plus/')
@@ -49,7 +48,7 @@ do
      module load funannotate
      export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
    # export AUGUSTUS_CONFIG_PATH=/bigdata/stajichlab/shared/pkg/augustus/3.3/config
-     
+
      #funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
      if [ -f repeat_library/${name}.repeatmodeler-library.fasta ]; then
 	 LIBRARY=repeat_library/${name}.repeatmodeler-library.fasta
@@ -62,7 +61,7 @@ do
      mv ${name}.masked.fasta $OUTDIR
      mv funannotate-mask.log $cwd/logs/${name}.mask.log
      popd
- else 
+ else
      echo "Skipping ${name} as masked already"
  fi
 done

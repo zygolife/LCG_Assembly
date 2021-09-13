@@ -1,6 +1,8 @@
 #!/bin/bash
 #SBATCH -p batch --time 2-0:00:00 --ntasks 8 --nodes 1 --mem 24G --out logs/mask.%a.%A.log
 
+export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
+
 CPU=1
 if [ $SLURM_CPUS_ON_NODE ]; then
   CPU=$SLURM_CPUS_ON_NODE
@@ -28,15 +30,11 @@ if [ $N -gt $MAX ]; then
 fi
 
 IFS=,
-cat $SAMPFILE | sed -n ${N}p | while read ProjID JGISample JGIProjName JGIBarcode SubPhyla Species Strain Note
+tail -n +2 $SAMPFILE | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
-  name=$(echo "$Species" | perl -p -e 'chomp; s/\s+/_/g')
-  fixedname=$(echo $name | perl -p -e 's/\+/Plus/')
+  name=$(echo "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
+  species=$(echo "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
 
-  if [[ $name != $fixedname ]]; then
-    echo "A plus in the name $name, need to rename to $fixednamed"
-    exit
-  fi
   if [ ! -f $INDIR/${name}.sorted.fasta ]; then
     echo "Cannot find $name in $INDIR - may not have been run yet"
     exit
@@ -44,15 +42,10 @@ do
 
   if [ ! -f $OUTDIR/${name}.masked.fasta ]; then
 
-    module unload python
-    module unload perl
-    module load funannotate/1.8.4
-    source activate funannotate-1.8
-    module unload rmblastn
-    module load ncbi-rmblast/2.9.0-p2
-    module switch RepeatModeler/1.0.11
 
-    export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
+    module unload miniconda3
+    module unload miniconda2
+    module unload anaconda3
 
     #funannotate mask --cpus $CPU -i ../$INDIR/${name}.sorted.fasta -o ../$OUTDIR/${name}.masked.fasta
     if [ -f repeat_library/${name}.repeatmodeler-library.fasta ]; then
@@ -62,7 +55,8 @@ do
     if [ ! -z $LIBRARY ]; then
       funannotate mask --cpus $CPU -i $INDIR/${name}.sorted.fasta -o $OUTDIR/${name}.masked.fasta -l $LIBRARY -m repeatmasker
     else
-      funannotate mask --cpus $CPU -i $INDIR/${name}.sorted.fasta -o $OUTDIR/${name}.masked.fasta -m repeatmodeler
+      echo "running tantan not repeatmasker as we need to sort out a pre-run of repeatmodeler to proceed with repeatmasker"
+      funannotate mask --cpus $CPU -i $INDIR/${name}.sorted.fasta -o $OUTDIR/${name}.masked.fasta -m tantan
     fi
     popd
     rmdir $name.mask.$$

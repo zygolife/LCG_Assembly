@@ -1,8 +1,12 @@
 #!/bin/bash
 #SBATCH -p intel,batch --time 2-0:00:00 --ntasks 16 --nodes 1 --mem 24G --out logs/predict.%a.log
+module unload miniconda3
+module unload miniconda2
+module unload anaconda3
 module load funannotate
 module load workspace/scratch
 
+BUSCO=mucoromycota_odb10
 export AUGUSTUS_CONFIG_PATH=$(realpath lib/augustus/3.3/config)
 export FUNANNOTATE_DB=/bigdata/stajichlab/shared/lib/funannotate_db
 #
@@ -38,32 +42,33 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
     name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
-    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
+    species=$(echo -n "$SPECIES" | perl -p -e "chomp; s/\s*\Q$STRAIN\E//; chomp")
     SEED_SPECIES="anidulans"
     if [[ $SubPhyla == "Mucoromycotina" ]]; then
-	SEED_SPECIES="mucor_circinelloides_f._lusitanicus__nrrl_3629"
+      SEED_SPECIES="mucor_circinelloides_f._lusitanicus__nrrl_3629"
     elif [[ $SubPhyla == "Mortirellomycotina" ]]; then
-	SEED_SPECIES="Mortierella_verticillata_CRF"
+      SEED_SPECIES="Mortierella_verticillata_CRF"
     elif [[ $SubPhyla == "Entomophthoromycotina" ]]; then
-	SEED_SPECIES="Conidiobolus_coronatus"
+      SEED_SPECIES="Conidiobolus_coronatus"
     elif [[ $SubPhyla == "Kickxellomycotina" ]]; then
-	SEED_SPECIES="coemansia_umbellata__bcrc_34882"
+      SEED_SPECIES="coemansia_umbellata__bcrc_34882"
     fi
     if [ ! -f $INDIR/$name.masked.fasta ]; then
-	echo "No genome for $INDIR/$name.masked.fasta yet - run 00_mash.sh $N"
-	exit
+      echo "No genome for $INDIR/$name.masked.fasta yet - run 00_mash.sh $N"
+      exit
     fi
     prefix=$LOCUSTAG
     if [ -z $prefix ]; then
-	prefix=$JGILIBRARY
+      prefix=$JGILIBRARY
     fi
 
     pushd $SCRATCH
+    echo "running -s '$species' --strain '$STRAIN'"
     funannotate predict --cpus $CPU --keep_no_stops --SeqCenter JGI \
-	--busco_db fungi_odb9 --optimize_augustus --strain "$STRAIN" \
+	--busco_db $BUSCO --optimize_augustus --strain "$STRAIN" \
 	--min_training_models 30 --AUGUSTUS_CONFIG_PATH $AUGUSTUS_CONFIG_PATH \
 	-i $INDIR/$name.masked.fasta --name $prefix \
 	--protein_evidence $INFORMANT \

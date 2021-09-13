@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/bash -l
 #SBATCH --nodes=1
 #SBATCH --ntasks=16 --mem 48gb
 #SBATCH --output=logs/annotfunc.%a.log
@@ -36,35 +36,35 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
     name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
-    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
-	MOREFEATURE=""
-	TEMPLATE=$(realpath submit_files/${name}.sbt)
-	if [ ! -f $TEMPLATE ]; then
-		echo "NO TEMPLATE for $name (no file $TEMPLATE)"
-		exit
-	fi
-	# need to add detect for antismash and then add that
+    species=$(echo -n "$SPECIES" | perl -p -e "s/\s*\Q$STRAIN\E//; chomp;")
+    MOREFEATURE=""
+    TEMPLATE=$(realpath submit_files/${name}.sbt)
+    if [ ! -f $TEMPLATE ]; then
+	echo "NO TEMPLATE for $name (no file $TEMPLATE)"
+	exit
+    fi
+    # need to add detect for antismash and then add that
 
-	#LOCUSTAG=$(python scripts/get_locus.py $name)
-	#if [ -z $LOCUSTAG ]; then
-	#	echo " no LOCUSTAG for $Species"
-	#	#exit
-	#fi
-	ANTISMASHRESULT=$OUTDIR/$name/annotate_misc/antiSMASH.results.gbk
-	echo "$name $species"
-	if [[ ! -f $ANTISMASHRESULT && -d $OUTDIR/$name/antismash_local ]]; then
-		ANTISMASH=$(ls $OUTDIR/$name/antismash_local/*__*.gbk | awk '{print $1}')
-		rsync -a $ANTISMASH $ANTISMASHRESULT
-	fi
-	if [ -z $LOCUSTAG ]; then
-		echo "cannot find locus for $name"
-		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --cpus $CPUS
-	else
-		echo "will rename genes to $LOCUSTAG"
-		funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$Strain" --rename $LOCUSTAG --cpus $CPUS 
-	fi
+    #LOCUSTAG=$(python scripts/get_locus.py $name)
+    #if [ -z $LOCUSTAG ]; then
+    #	echo " no LOCUSTAG for $Species"
+    #	#exit
+    #fi
+    ANTISMASHSTAGE=$OUTDIR/$name/annotate_misc/antiSMASH.results.gbk
+    ANTISMASHRUN=$OUTDIR/$name/antismash_local/$name.gbk
 
+    echo "$name $species $STRAIN"
+    if [[ -f $ANTISMASHRUN ]]; then
+	rsync -a $ANTISMASHRUN $ANTISMASHSTAGE
+    fi
+    if [ -z $LOCUSTAG ]; then
+	echo "cannot find locus for $name"
+	funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$STRAIN" --cpus $CPUS
+    else
+	echo "will rename genes to $LOCUSTAG"
+	funannotate annotate --sbt $TEMPLATE --busco_db $BUSCO -i $OUTDIR/$name --species "$species" --strain "$STRAIN" --rename $LOCUSTAG --cpus $CPUS
+    fi
 done

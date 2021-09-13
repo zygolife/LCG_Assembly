@@ -26,10 +26,10 @@ if [ $N -gt $MAX ]; then
     exit
 fi
 IFS=,
-tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
+tail -n +2 $SAMPFILE | sed -n ${N}p | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
     name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
-    species=$(echo -n "$SPECIES" | perl -p -e "s/\Q$STRAIN\E//")
+    species=$(echo -n "$SPECIES" | perl -p -e "s/\s*\Q$STRAIN\E//; chomp'")
     if [ ! -d $OUTDIR/$name ]; then
 	echo "No annotation dir for ${name}"
 	exit
