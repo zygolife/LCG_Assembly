@@ -10,7 +10,7 @@ IFS=,
 N=1
 mkdir -p empty
 TORUN=()
-tail -n +2 $SAMPFILE | while read SPECIES STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE
+tail -n +2 $SAMPFILE | while read SPECIES PHYLUM STRAIN JGILIBRARY BIOSAMPLE BIOPROJECT TAXONOMY_ID ORGANISM_NAME SRA_SAMPID SRA_RUNID LOCUSTAG TEMPLATE KEEPLCG DEPOSITASM
 do
     name=$(echo -n "$SPECIES" | perl -p -e 'chomp; s/\s+/_/g')
 #    echo "SP=$SPECIES strain=$STRAIN"
@@ -37,7 +37,7 @@ do
 	if [ ! -s annotate/${name}/predict_misc/genemark/genemark.gtf ]; then
 		 echo "rm -rf annotate/${name}/predict_misc/genemark*" >> delete_$$.sh
 	fi
-	TORUN+=($N)	
+	TORUN+=($N)
     fi
     N=$(expr $N + 1)
 done
