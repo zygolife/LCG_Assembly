@@ -132,20 +132,32 @@ NCBI_TAXONID, GENOME).
 Hold-until-publication or immediate release (decision below); update the
 sheet with GCA accessions; link the BioProjects to an umbrella project.
 
-## Decisions needed
-1. Release timing: at submission, or hold until the LCG paper.
-2. Re-annotate and update the 249 genomes already public, or leave them.
-3. Deposit reads (and genomes) for the 79 "Keep: No" samples?
-4. Organism-name policy for B12 flags without rDNA checks (rename, check, or
-   keep the deposited name with a note).
-5. Thamnidium elegans NRRL 2467 (public, possible mixup): correct, suppress,
-   or leave with a note.
-6. One umbrella BioProject for the paper.
+## Decisions (curator, J. Stajich, 2026-10-04)
+1. **Release on submission** (no hold for the paper).
+2. **Leave the 249 public genomes as they are for now**; re-annotation focuses on
+   the undeposited genomes. Updating the public ones is a later task.
+3. **"Keep: No" samples (79): unknown.** First find out whether each is truly
+   contaminated or broken (FCS-GX, BUSCO, assembly stats, rDNA); decide after.
+4. **rDNA check for every genome** (not only B12 flags), to set names from first
+   principles where the rDNA allows; conflicts between rDNA, BUSCO tree, sheet
+   name and NCBI name are decided case by case and recorded.
+5. **Thamnidium elegans NRRL 2467: correct the public record if the name is
+   wrong.** Compile the evidence that it is wrong (BUSCO trees, rDNA, MAT
+   genes, the same-strain comparison) into a note first; then request the
+   correction from NCBI. Side project; must not be forgotten (tracked in
+   `HANDOFF.md`).
+6. **Keep the individual BioProjects; link them all to one umbrella BioProject.**
+   The curator may already have made one: check the NCBI submitter account.
 
 ## Next steps (in order)
-1. Review this plan; answer the decisions.
+1. Check the NCBI account for an existing umbrella BioProject (curator).
 2. Phase 0 sheet cleanup (`lcg_master.tsv`).
-3. rDNA check for the B12 flags not yet checked; finalize names (Phase 1).
-4. Submit the 29 missing read sets (Phase 2).
-5. Pilot re-annotation of 10 genomes with nf_funannotate1 rc.6, then the 565.
-6. Pilot genome submission, then batches.
+3. rDNA check (barrnap + ITSx + BLAST vs type material, the MATPredict B12
+   method) for all genomes; name table with rDNA, BUSCO-tree, sheet and NCBI
+   names; curator rules on conflicts (Phase 1).
+4. QC of the 79 "Keep: No" samples (FCS-GX, BUSCO, assembly stats, rDNA).
+5. Submit the 29 missing read sets (Phase 2).
+6. Pilot re-annotation of 10 undeposited genomes with nf_funannotate1 and
+   funannotate 1.9.0-rc.6, then the 565.
+7. Pilot genome submission (released on submission), then batches.
+8. Side project: evidence note for T. elegans NRRL 2467, then the NCBI correction.

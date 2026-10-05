@@ -27,16 +27,30 @@ Read `PLAN.md` first. This file says where things are and what to do next.
   funannotate 1.9.0-rc.6 (the conda config currently pins rc.5; check the
   container/env for rc.6 before the pilot).
 
+## Decisions made (2026-10-04; details in PLAN.md)
+Release on submission; leave the 249 public genomes for later; QC the 79
+"Keep: No" samples before deciding; rDNA check for all genomes to set names;
+correct T. elegans NRRL 2467 after compiling the evidence; individual
+BioProjects + one umbrella (check whether it exists).
+
 ## Next steps
-1. Curator answers the six decisions in `PLAN.md`.
+1. Curator: check the NCBI account for an umbrella BioProject.
 2. Phase 0: build `deposit/lcg_master.tsv`; fix flags, duplicate BioSample
    SAMN11510657, the "?" row, 47 missing taxids, 23 missing locus tags.
-3. Phase 1: rDNA check for B12 flags not yet checked (method:
-   MATPredict `results/2026-10-01_lcg_name_check/its_check/extract_one.sh`);
-   final organism names.
-4. Phase 2: SRA for the 29 genomes without a public run.
-5. Phase 3: nf_funannotate1 rc.6 pilot (10 genomes, mixed orders), then the 565.
-6. Phase 4: pilot genome submission, then batches; track in `submissions.tsv`.
+3. Phase 1: rDNA check for all 895 genomes (method: MATPredict
+   `results/2026-10-01_lcg_name_check/its_check/extract_one.sh`, about 20 s per
+   genome plus BLAST); name table; curator rules on conflicts.
+4. QC of the 79 "Keep: No" samples.
+5. Phase 2: SRA for the 29 genomes without a public run.
+6. Phase 3: nf_funannotate1 rc.6 pilot (10 undeposited genomes), then the 565.
+7. Phase 4: pilot genome submission, then batches; track in `submissions.tsv`.
+
+## Do not forget
+- **T. elegans NRRL 2467** (public assembly under that name; likely
+  Syncephalastrum): compile the evidence note (BUSCO trees, rDNA, MAT genes,
+  same-strain comparison with Pilaira anomala RSA 1997; MATPredict
+  `analysis/2026-10-02_lcg-overrides-manual-review.md`), then ask NCBI to
+  correct the organism.
 
 ## Cautions
 - NCBI "not found" means not public; private or embargoed records look the same.
